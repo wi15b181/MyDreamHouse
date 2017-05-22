@@ -1,0 +1,1 @@
+-- to be  executed on uninstall

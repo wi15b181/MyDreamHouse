@@ -1,0 +1,160 @@
+21:37:45  [main] 	Initialisere Control Panel
+21:37:45  [main] 	Windows Version: Windows Server 2008 R2 SP1 64-bit
+21:37:45  [main] 	XAMPP Version: 7.0.13
+21:37:45  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+21:37:45  [main] 	Mit Administratorrechten gestartet - gut!
+21:37:45  [main] 	XAMPP Installationsverzeichnis: "c:\xampp\"
+21:37:45  [main] 	Voraussetzungen werden geprüft
+21:37:45  [main] 	Alle Voraussetzungen sind erfüllt
+21:37:45  [main] 	Initialisiere Module
+21:37:45  [main] 	Starte Check-Timer
+21:37:45  [main] 	Control Panel bereit
+21:37:47  [Apache] 	Versuche Apache zu starten...
+21:37:47  [Apache] 	Statusänderung erkannt: gestartet
+21:37:48  [mysql] 	Versuche MySQL zu starten...
+21:37:48  [mysql] 	Statusänderung erkannt: gestartet
+21:37:48  [filezilla] 	Versuche FileZilla zu starten...
+21:37:48  [filezilla] 	Statusänderung erkannt: gestartet
+19:12:27  [Apache] 	stoppe Modul Apache (PID: 4248)
+19:12:27  [Apache] 	stoppe Modul Apache (PID: 3332)
+19:12:27  [Apache] 	Statusänderung erkannt: gestoppt
+19:12:39  [Apache] 	Versuche Apache zu starten...
+19:12:40  [Apache] 	Statusänderung erkannt: gestartet
+22:23:09  [Apache] 	stoppe Modul Apache (PID: 216)
+22:23:09  [Apache] 	stoppe Modul Apache (PID: 4852)
+22:23:09  [Apache] 	Statusänderung erkannt: gestoppt
+22:26:19  [Apache] 	Versuche Apache zu starten...
+22:26:19  [Apache] 	Statusänderung erkannt: gestartet
+23:20:03  [mercury] 	Versuche Mercury zu starten...
+23:20:03  [mercury] 	Statusänderung erkannt: gestartet
+23:51:45  [Apache] 	stoppe Modul Apache (PID: 4152)
+23:51:45  [Apache] 	stoppe Modul Apache (PID: 2856)
+23:51:45  [Apache] 	Statusänderung erkannt: gestoppt
+23:51:46  [Apache] 	Versuche Apache zu starten...
+23:51:46  [Apache] 	Statusänderung erkannt: gestartet
+19:22:10  [Apache] 	stoppe Modul Apache (PID: 2768)
+19:22:10  [Apache] 	stoppe Modul Apache (PID: 2264)
+19:22:10  [Apache] 	Statusänderung erkannt: gestoppt
+19:22:12  [Apache] 	Versuche Apache zu starten...
+19:22:12  [Apache] 	Statusänderung erkannt: gestartet
+19:30:31  [mysql] 	Versuche MySQL zu beenden...
+19:30:32  [mysql] 	Statusänderung erkannt: gestoppt
+19:30:33  [mysql] 	Versuche MySQL zu starten...
+19:30:33  [mysql] 	Statusänderung erkannt: gestartet
+19:35:30  [Apache] 	stoppe Modul Apache (PID: 2012)
+19:35:30  [Apache] 	stoppe Modul Apache (PID: 4408)
+19:35:30  [Apache] 	Statusänderung erkannt: gestoppt
+19:37:50  [Apache] 	Problem festgestellt!
+19:37:50  [Apache] 	Port 443 in Benutzung von "c:\xampp\mysql\bin\mysqld.exe" (PID 696)!
+19:37:50  [Apache] 	Apache wird NICHT starten, wenn die konfigurierten Ports nicht frei sind!
+19:37:50  [Apache] 	Die blockierende Anwendung muss deinstalliert/deaktiviert/rekonfiguriert werden oder
+19:37:50  [Apache] 	Apache und das Control Panel müssen auf einen anderen Port zu lauschen
+19:37:50  [Apache] 	Versuche Apache zu starten...
+19:37:51  [Apache] 	Statusänderung erkannt: gestartet
+20:26:34  [Apache] 	stoppe Modul Apache (PID: 3916)
+20:26:34  [Apache] 	stoppe Modul Apache (PID: 5104)
+20:26:34  [Apache] 	Statusänderung erkannt: gestoppt
+20:26:36  [Apache] 	Problem festgestellt!
+20:26:36  [Apache] 	Port 80 in Benutzung von "Unable to get info" (PID 3916)!
+20:26:36  [Apache] 	Apache wird NICHT starten, wenn die konfigurierten Ports nicht frei sind!
+20:26:36  [Apache] 	Die blockierende Anwendung muss deinstalliert/deaktiviert/rekonfiguriert werden oder
+20:26:36  [Apache] 	Apache und das Control Panel müssen auf einen anderen Port zu lauschen
+20:26:36  [Apache] 	Problem festgestellt!
+20:26:36  [Apache] 	Port 443 in Benutzung von "c:\xampp\mysql\bin\mysqld.exe" (PID 696)!
+20:26:36  [Apache] 	Apache wird NICHT starten, wenn die konfigurierten Ports nicht frei sind!
+20:26:36  [Apache] 	Die blockierende Anwendung muss deinstalliert/deaktiviert/rekonfiguriert werden oder
+20:26:36  [Apache] 	Apache und das Control Panel müssen auf einen anderen Port zu lauschen
+20:26:36  [Apache] 	Versuche Apache zu starten...
+20:26:36  [Apache] 	Statusänderung erkannt: gestartet
+17:58:50  [main] 	Deinitialisiere Module
+17:58:50  [main] 	Deinitialisiere Control Panel
+
+19:31:58  [main] 	Initialisere Control Panel
+19:31:58  [main] 	Windows Version: Windows Server 2008 R2 SP1 64-bit
+19:31:58  [main] 	XAMPP Version: 7.0.13
+19:31:58  [main] 	Control Panel Version: 3.2.2  [ Compiled: Nov 12th 2015 ]
+19:31:58  [main] 	Mit Administratorrechten gestartet - gut!
+19:31:58  [main] 	XAMPP Installationsverzeichnis: "c:\xampp\"
+19:31:58  [main] 	Voraussetzungen werden geprüft
+19:32:03  [main] 	Alle Voraussetzungen sind erfüllt
+19:32:03  [main] 	Initialisiere Module
+19:32:03  [main] 	Starte Check-Timer
+19:32:03  [main] 	Control Panel bereit
+19:32:20  [mysql] 	Versuche MySQL zu starten...
+19:32:20  [mysql] 	Statusänderung erkannt: gestartet
+19:32:25  [Apache] 	Problem festgestellt!
+19:32:25  [Apache] 	Port 443 in Benutzung von "c:\xampp\mysql\bin\mysqld.exe" (PID 2948)!
+19:32:25  [Apache] 	Apache wird NICHT starten, wenn die konfigurierten Ports nicht frei sind!
+19:32:25  [Apache] 	Die blockierende Anwendung muss deinstalliert/deaktiviert/rekonfiguriert werden oder
+19:32:25  [Apache] 	Apache und das Control Panel müssen auf einen anderen Port zu lauschen
+19:32:25  [Apache] 	Versuche Apache zu starten...
+19:32:25  [Apache] 	Statusänderung erkannt: gestartet
+20:53:22  [mysql] 	Versuche MySQL zu beenden...
+20:53:25  [mysql] 	Statusänderung erkannt: gestoppt
+20:53:26  [mysql] 	Versuche MySQL zu starten...
+20:53:26  [mysql] 	Statusänderung erkannt: gestartet
+21:19:37  [mysql] 	Versuche MySQL zu beenden...
+21:19:39  [mysql] 	Statusänderung erkannt: gestoppt
+21:19:40  [mysql] 	Versuche MySQL zu starten...
+21:19:40  [mysql] 	Statusänderung erkannt: gestartet
+21:20:30  [mysql] 	Versuche MySQL zu beenden...
+21:20:32  [mysql] 	Statusänderung erkannt: gestoppt
+21:20:34  [mysql] 	Versuche MySQL zu starten...
+21:20:34  [mysql] 	Statusänderung erkannt: gestartet
+21:22:32  [mysql] 	Versuche MySQL zu beenden...
+21:22:34  [mysql] 	Statusänderung erkannt: gestoppt
+21:22:35  [mysql] 	Versuche MySQL zu starten...
+21:22:35  [mysql] 	Statusänderung erkannt: gestartet
+21:24:32  [Apache] 	stoppe Modul Apache (PID: 2000)
+21:24:32  [Apache] 	stoppe Modul Apache (PID: 1908)
+21:24:32  [Apache] 	Statusänderung erkannt: gestoppt
+21:24:34  [Apache] 	Versuche Apache zu starten...
+21:24:34  [Apache] 	Statusänderung erkannt: gestartet
+21:26:03  [mysql] 	Versuche MySQL zu beenden...
+21:26:03  [mysql] 	Statusänderung erkannt: gestoppt
+21:26:05  [Apache] 	stoppe Modul Apache (PID: 672)
+21:26:05  [Apache] 	stoppe Modul Apache (PID: 3856)
+21:26:05  [Apache] 	Statusänderung erkannt: gestoppt
+21:26:08  [Apache] 	Versuche Apache zu starten...
+21:26:08  [Apache] 	Statusänderung erkannt: gestartet
+21:26:09  [mysql] 	Versuche MySQL zu starten...
+21:26:09  [mysql] 	Statusänderung erkannt: gestartet
+21:26:55  [mysql] 	Versuche MySQL zu beenden...
+21:26:55  [mysql] 	Statusänderung erkannt: gestoppt
+21:26:56  [mysql] 	Versuche MySQL zu starten...
+21:26:56  [mysql] 	Statusänderung erkannt: gestartet
+21:27:39  [mysql] 	Versuche MySQL zu beenden...
+21:27:39  [mysql] 	Statusänderung erkannt: gestoppt
+21:27:40  [Apache] 	stoppe Modul Apache (PID: 2124)
+21:27:40  [Apache] 	stoppe Modul Apache (PID: 2892)
+21:27:40  [Apache] 	Statusänderung erkannt: gestoppt
+21:27:41  [mysql] 	Versuche MySQL zu starten...
+21:27:41  [mysql] 	Statusänderung erkannt: gestartet
+21:27:44  [Apache] 	Versuche Apache zu starten...
+21:27:44  [Apache] 	Statusänderung erkannt: gestartet
+21:39:32  [mysql] 	Versuche MySQL zu beenden...
+21:39:32  [mysql] 	Statusänderung erkannt: gestoppt
+21:39:34  [mysql] 	Versuche MySQL zu starten...
+21:39:34  [mysql] 	Statusänderung erkannt: gestartet
+21:41:33  [mysql] 	Versuche MySQL zu beenden...
+21:41:35  [mysql] 	Statusänderung erkannt: gestoppt
+21:41:36  [mysql] 	Versuche MySQL zu starten...
+21:41:36  [mysql] 	Statusänderung erkannt: gestartet
+21:47:22  [mysql] 	Versuche MySQL zu beenden...
+21:47:22  [mysql] 	Statusänderung erkannt: gestoppt
+21:47:35  [mysql] 	Statusänderung erkannt: gestartet
+21:47:45  [mysql] 	Statusänderung erkannt: gestoppt
+21:47:49  [mysql] 	Versuche MySQL zu starten...
+21:47:49  [mysql] 	Statusänderung erkannt: gestartet
+21:59:10  [mysql] 	Versuche MySQL zu beenden...
+21:59:12  [mysql] 	Statusänderung erkannt: gestoppt
+22:00:48  [mysql] 	Versuche MySQL zu starten...
+22:00:48  [mysql] 	Statusänderung erkannt: gestartet
+08:15:54  [Apache] 	stoppe Modul Apache (PID: 672)
+08:15:54  [Apache] 	stoppe Modul Apache (PID: 3128)
+08:15:55  [Apache] 	Statusänderung erkannt: gestoppt
+08:15:56  [mysql] 	Versuche MySQL zu beenden...
+08:15:59  [mysql] 	Statusänderung erkannt: gestoppt
+08:16:05  [main] 	Deinitialisiere Module
+08:16:05  [main] 	Deinitialisiere Control Panel
+

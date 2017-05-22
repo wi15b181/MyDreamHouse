@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="KOMPONENTE_NAME">
+		<message>KOMPONENTE_NAME_BESCHREIBUNG</message>
+	</layout>
+	<fields
+			name="request"
+			addfieldpath="/administrator/components/com_helloworld/models/fields"
+			>
+		<fieldset name="request">
+			<field
+					name="id"
+					type="helloworld"
+					label="KOMPONENTE_NAME_BEGRUESSUNG_LABEL"
+					description="KOMPONENTE_NAME_BEGRUESSUNG_BESCHREIBUNG"
+					/>
+		</fieldset>
+	</fields>
+</metadata>

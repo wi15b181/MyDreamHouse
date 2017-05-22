@@ -1,0 +1,28 @@
+T 20161225 232050 58605424 Connection from 127.0.0.1
+T 20161225 232050 58605424 HELO W16-BBB3-FST-02.wi.technikum-wien.at
+T 20161225 232050 58605424 MAIL FROM:<wi15b181@technikum-wien.at>
+T 20161225 232050 58605424 RCPT TO:<spamto@gmx.at>
+E 20161225 232050 58605424 Relay attempt by 127.0.0.1: from <wi15b181@technikum-wien.at> to <spamto@gmx.at>.
+T 20161225 232050 58605424 QUIT
+T 20161225 232050 58605424 Connection closed with 127.0.0.1, 0 sec. elapsed.
+T 20161225 232050 58605425 Connection from 127.0.0.1
+T 20161225 232050 58605425 HELO W16-BBB3-FST-02.wi.technikum-wien.at
+T 20161225 232050 58605425 MAIL FROM:<wi15b181@technikum-wien.at>
+T 20161225 232050 58605425 RCPT TO:<spamto@gmx.at>
+E 20161225 232050 58605425 Relay attempt by 127.0.0.1: from <wi15b181@technikum-wien.at> to <spamto@gmx.at>.
+T 20161225 232050 58605425 QUIT
+T 20161225 232050 58605425 Connection closed with 127.0.0.1, 0 sec. elapsed.
+T 20161225 232233 58605426 Connection from 127.0.0.1
+T 20161225 232233 58605426 EHLO wi-gate.technikum-wien.at
+T 20161225 232233 58605426 MAIL FROM:<wi15b181@technikum-wien.at>
+T 20161225 232233 58605426 RCPT TO:<wi15b181@technikum-wien.at>
+E 20161225 232233 58605426 Relay attempt by 127.0.0.1: from <wi15b181@technikum-wien.at> to <wi15b181@technikum-wien.at>.
+T 20161225 232233 58605426 QUIT
+T 20161225 232233 58605426 Connection closed with 127.0.0.1, 0 sec. elapsed.
+T 20161225 232234 58605427 Connection from 127.0.0.1
+T 20161225 232234 58605427 EHLO wi-gate.technikum-wien.at
+T 20161225 232234 58605427 MAIL FROM:<wi15b181@technikum-wien.at>
+T 20161225 232234 58605427 RCPT TO:<wi15b181@technikum-wien.at>
+E 20161225 232234 58605427 Relay attempt by 127.0.0.1: from <wi15b181@technikum-wien.at> to <wi15b181@technikum-wien.at>.
+T 20161225 232234 58605427 QUIT
+T 20161225 232234 58605427 Connection closed with 127.0.0.1, 0 sec. elapsed.
