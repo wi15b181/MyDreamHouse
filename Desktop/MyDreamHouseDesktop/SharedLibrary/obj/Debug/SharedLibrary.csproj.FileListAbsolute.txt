@@ -1,0 +1,4 @@
+D:\csharp\MyDreamHouseDesktop\SharedLibrary\bin\Debug\SharedLibrary.dll
+D:\csharp\MyDreamHouseDesktop\SharedLibrary\bin\Debug\SharedLibrary.pdb
+D:\csharp\MyDreamHouseDesktop\SharedLibrary\obj\Debug\SharedLibrary.dll
+D:\csharp\MyDreamHouseDesktop\SharedLibrary\obj\Debug\SharedLibrary.pdb

@@ -1,0 +1,5 @@
+D:\csharp\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.dll.config
+D:\csharp\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.dll
+D:\csharp\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.pdb
+D:\csharp\MyDreamHouseSync\SynchronisationService\obj\Release\SynchronisationService.dll
+D:\csharp\MyDreamHouseSync\SynchronisationService\obj\Release\SynchronisationService.pdb

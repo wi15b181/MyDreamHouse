@@ -1,0 +1,8 @@
+D:\csharp\MyDreamHouseSync\SynchronisationHosting\bin\Release\SynchronisationHosting.exe.config
+D:\csharp\MyDreamHouseSync\SynchronisationHosting\bin\Release\SynchronisationHosting.exe
+D:\csharp\MyDreamHouseSync\SynchronisationHosting\bin\Release\SynchronisationHosting.pdb
+D:\csharp\MyDreamHouseSync\SynchronisationHosting\bin\Release\SynchronisationService.dll
+D:\csharp\MyDreamHouseSync\SynchronisationHosting\bin\Release\SynchronisationService.pdb
+D:\csharp\MyDreamHouseSync\SynchronisationHosting\obj\Release\SynchronisationHosting.csprojResolveAssemblyReference.cache
+D:\csharp\MyDreamHouseSync\SynchronisationHosting\obj\Release\SynchronisationHosting.exe
+D:\csharp\MyDreamHouseSync\SynchronisationHosting\obj\Release\SynchronisationHosting.pdb

@@ -1,0 +1,5 @@
+D:\csharp\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.dll.config
+D:\csharp\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.dll
+D:\csharp\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.pdb
+D:\csharp\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.dll
+D:\csharp\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.pdb
