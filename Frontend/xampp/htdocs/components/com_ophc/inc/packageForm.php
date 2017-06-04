@@ -94,7 +94,7 @@ foreach ($attributeTypes as $attr) {
 	</div>
 </div>
 
-<input type="button" value="Zur&uuml;cksetzen" class="form-btn" onclick="resetList();"/>
+<input type="button" value="Zur&uuml;cksetzen" class="form-btn reset-btn" onclick="resetList();"/>
 
 <div style="clear: both"></div>
 </div>
