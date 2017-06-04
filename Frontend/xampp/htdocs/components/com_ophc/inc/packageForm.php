@@ -73,24 +73,24 @@ foreach ($attributeTypes as $attr) {
   	<input type="text" id="living-span-max" class="slider-input-display" readonly="readonly"><span class="ophc-form-label">m<sup>2</sup></span>
   	<div id="living-slider" class="form-elem-slider"></div>
 </div>
- <div class="form-elem"  style="height:auto; padding-bottom:10px;">
+ <div class="form-elem" id="extra_group" style="height:auto; padding-bottom:10px;">
 	<label class="ophc-form-label ">
 		Extras
 	</label>
 	<div class="checkbox">
-	  <label><input id="PAR_GARAGE" type="checkbox" value="garage">Garage</label>
+	  <label><input id="PAR_GARAGE" type="checkbox" value="no">Garage</label>
 	</div>
 	<div class="checkbox">
-	  <label><input id="PAR_CARPORT" type="checkbox" value="carport">Carport</label>
+	  <label><input id="PAR_CARPORT" type="checkbox" value="no">Carport</label>
 	</div>
 	<div class="checkbox">
-	  <label><input id="PAR_POOL" type="checkbox" value="pool">Pool</label>
+	  <label><input id="PAR_POOL" type="checkbox" value="no">Pool</label>
 	</div>
 	<div class="checkbox">
-	  <label><input id="PAR_LANDSCAPING" type="checkbox" value="landscaping">Landscaping</label>
+	  <label><input id="PAR_LANDSCAPING" type="checkbox" value="no">Landscaping</label>
 	</div>
 	<div class="checkbox">
-	  <label><input id="PAR_CELLAR" type="checkbox" value="cellar">Cellar</label>
+	  <label><input id="PAR_CELLAR" type="checkbox" value="no">Cellar</label>
 	</div>
 </div>
 
@@ -116,6 +116,12 @@ jQuery( document ).ready(function() {
 	    }
 	});
 
+	jQuery( "#extra_group input[type=checkbox]").change(function() {
+		if(this.checked)
+			jQuery(this).val('yes');
+		else
+			jQuery(this).val('no');
+	});
 	jQuery( "#price-slider" ).slider({
 	    range: true,
 	    min: 150000,
