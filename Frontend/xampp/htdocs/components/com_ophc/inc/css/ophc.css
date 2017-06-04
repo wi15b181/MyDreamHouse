@@ -6,6 +6,7 @@
 	padding-left: 20px;
 	padding-right: 20px;
 	background-color: #d3d3d3;
+	position:relative;
 }
 
 .ophc-form-label {
@@ -31,6 +32,9 @@
 }
 .form-elem label>input,select {
 	width: 292px;
+}
+.form-elem label>input[type=checkbox] {
+	width:auto;
 }
 
 .form-elem .form-elem-slider {
@@ -166,6 +170,9 @@
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  position:absolute;
+  bottom:20px;
+  right:20px;
 }
 
 .form-btn.finish {

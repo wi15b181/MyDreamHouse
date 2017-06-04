@@ -73,14 +73,29 @@ foreach ($attributeTypes as $attr) {
   	<input type="text" id="living-span-max" class="slider-input-display" readonly="readonly"><span class="ophc-form-label">m<sup>2</sup></span>
   	<div id="living-slider" class="form-elem-slider"></div>
 </div>
-  		
-<div class="form-elem" style="width: 292px;">
+ <div class="form-elem"  style="height:auto; padding-bottom:10px;">
+	<label class="ophc-form-label ">
+		Extras
+	</label>
+	<div class="checkbox">
+	  <label><input id="PAR_GARAGE" type="checkbox" value="garage">Garage</label>
+	</div>
+	<div class="checkbox">
+	  <label><input id="PAR_CARPORT" type="checkbox" value="carport">Carport</label>
+	</div>
+	<div class="checkbox">
+	  <label><input id="PAR_POOL" type="checkbox" value="pool">Pool</label>
+	</div>
+	<div class="checkbox">
+	  <label><input id="PAR_LANDSCAPING" type="checkbox" value="landscaping">Landscaping</label>
+	</div>
+	<div class="checkbox">
+	  <label><input id="PAR_CELLAR" type="checkbox" value="cellar">Cellar</label>
+	</div>
 </div>
-<div class="form-elem" style="width: 292px;">
-</div>
-<div class="form-elem" style="width: 292px;">
+
 <input type="button" value="Zur&uuml;cksetzen" class="form-btn" onclick="resetList();"/>
-</div>
+
 <div style="clear: both"></div>
 </div>
 
