@@ -1,0 +1,2452 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DDTek.Data.Common</name>
+    </assembly>
+    <members>
+        <member name="M:DDInt.Common.CommonConnectionOptions.GetOptionName(System.String)">
+            <summary>
+            Return the actual option name against this key
+            </summary>
+            <param name="keyName">Key or Synonym</param>
+            <returns>Option Name</returns>
+        </member>
+        <member name="T:DDInt.Common.CommonCsvDbType">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.Char">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.VarChar">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.LongVarChar">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.UnicodeChar">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.UnicodeVarChar">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.UnicodeLongVarChar">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.Decimal">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.Bit">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.TinyInt">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.SmallInt">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.Integer">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.BigInt">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.UnsignedTinyInt">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.UnsignedSmallInt">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.UnsignedInteger">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.UnsignedBigInt">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.DecFloat16">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.DecFloat34">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.SinglePrecision">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.DoublePrecision">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.Binary">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.VarBinary">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.LongVarBinary">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.Date">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.Time">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.DateTime">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.DateTimeWithTz">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalMonth">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalYear">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalYearToMonth">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalDay">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalHour">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalMinute">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalSecond">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalDayToHour">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalDayToMinute">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalDayToSecond">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalHourToMinute">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalHourToSecond">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.IntervalMinuteToSecond">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.Guid">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.XmlText">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DDInt.Common.CommonCsvDbType.XmlBinary">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:DDInt.Common.CEM">
+            <summary>
+            The CEM (shorthand for CommonErrorManagement) is a set of static methods
+            for raising exceptions through a standard manner.  By using these methods
+            to raise exceptions, we can trace all exceptions thrown by the common layer,
+            obtain error strings from a resource file and map error conditions to
+            the appropriate exception.
+            </summary>
+        </member>
+        <member name="T:DDTek.Common.CommonStrings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BAD_CONNECTION">
+            <summary>
+              Looks up a localized string similar to Connection must be valid and open.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BAD_FIELD_OFFSET">
+            <summary>
+              Looks up a localized string similar to Field offset is greater than length..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BULK_COPY_ABORTED">
+            <summary>
+              Looks up a localized string similar to The bulk copy operation has been aborted..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BULK_COPY_CONFLICTING_TRANSACTION_OPTION">
+            <summary>
+              Looks up a localized string similar to Must not specify the BulkCopyOption UseInternalTransaction and pass an external Transaction at the same time..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BULK_COPY_CONVERSION_FAILED">
+            <summary>
+              Looks up a localized string similar to The bulk copy operation has failed due to a conversion error between a source column value and destination column value..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BULK_COPY_IN_PROGRESS_CHANGES_PROHIBITED">
+            <summary>
+              Looks up a localized string similar to A ColumnMappingCollection cannot be changed during the execution of a bulk copy operation..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BULK_COPY_INVALID_DESTINATION_TABLE">
+            <summary>
+              Looks up a localized string similar to Cannot access destination table &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BULK_COPY_NON_UNIFORM_COLUMN_MAPPING_COLLECTION">
+            <summary>
+              Looks up a localized string similar to The mappings in a ColumnMappingCollection must be uniform: either all integer/integer pairs, all string/string pairs, all integer/string pairs, or all string/integer pairs..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BULK_COPY_ROW_LIMIT_EXCEEDED">
+             <summary>
+               Looks up a localized string similar to This Progress DataDirect Connect for ADO.NET Bulk Load feature you are attempting to use is an Evaluation copy. The Bulk Load row count limit has been exceeded. If you would like to license a provider to remove this limit, please contact Progress DataDirect. USA and Canada: 800-876-3101
+            United Kingdom: Toll-free: 0800 169 1907 or Tel: +44 (0) 1753-218 930 
+            Benelux: Toll-free: (French) 0800 12 045, Toll-free: (Dutch) 0800 12 046, Toll-free: (Netherlands) 0800 022 0524 or Tel: +32 15 30 77 00
+            France: Toll- [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BULK_COPY_UNDEFINED_COLUMN_MAPPING">
+            <summary>
+              Looks up a localized string similar to A ColumnMapping must define a source and destination column..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.BULK_SOURCE_COLUMN_NOT_FOUND">
+            <summary>
+              Looks up a localized string similar to The given ColumnName &apos;{0}&apos; does not match up with any column in data source..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CANNOT_CHANGE_CURRENTUSER">
+            <summary>
+              Looks up a localized string similar to Changing the &apos;CurrentUser&apos; requires the Reauthentication Enabled connection option be set to true.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CANNOT_GENERATE_COMMAND">
+            <summary>
+              Looks up a localized string similar to command object is not suitable for command generation..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CANNOT_GENERATE_DELETE">
+             <summary>
+               Looks up a localized string similar to Dynamic SQL generation for the DeleteCommand is not supported against a SelectCommand that does not return any key column information.
+            .
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CANNOT_GENERATE_UPDATE">
+             <summary>
+               Looks up a localized string similar to Dynamic SQL generation for the UpdateCommand is not supported against a SelectCommand that does not return any key column information.
+            .
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CANNOT_GENERATE_UPDATE2">
+            <summary>
+              Looks up a localized string similar to Dynamic SQL generation for the UpdateCommand is not supported against a SelectCommand that does not return any modifiable columns..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CANNOT_SPECIFY_OPTION_AGAIN">
+            <summary>
+              Looks up a localized string similar to The &apos;{0}&apos; option or its alias cannot be specified more than once in a connection string..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CANNOT_UPDATE_JOIN">
+             <summary>
+               Looks up a localized string similar to Dynamic SQL generation is not supported against multiple base tables.
+            .
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CANNOT_USE_ARRAY_BINDING">
+            <summary>
+              Looks up a localized string similar to Only ExecuteNonQuery can use parameter array binding..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Category_Advanced">
+            <summary>
+              Looks up a localized string similar to Advanced.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Category_BulkLoad">
+            <summary>
+              Looks up a localized string similar to Bulk Load.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Category_ClientMonitoring">
+            <summary>
+              Looks up a localized string similar to Client Monitoring.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Category_ConnectionPooling">
+            <summary>
+              Looks up a localized string similar to Connection Pooling.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Category_Failover">
+            <summary>
+              Looks up a localized string similar to Failover.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Category_Performance">
+            <summary>
+              Looks up a localized string similar to Performance.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Category_SchemaInformation">
+            <summary>
+              Looks up a localized string similar to Schema Information.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Category_Security">
+            <summary>
+              Looks up a localized string similar to Security.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Category_StandardConnection">
+            <summary>
+              Looks up a localized string similar to Standard Connection.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Category_Tracing">
+            <summary>
+              Looks up a localized string similar to Tracing.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CMDTXT_NOT_INITIALIZED">
+            <summary>
+              Looks up a localized string similar to CommandText property has not been initialized..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.COLLECTION_INDEX_INT32">
+            <summary>
+              Looks up a localized string similar to Invalid index {0} for this {1} with Count={2}..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.COLLECTION_INDEX_STRING">
+             <summary>
+               Looks up a localized string similar to An {0} with {1} &apos;{2}&apos; is not contained by this {3}.
+            .
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.COLLECTION_INVALID_TYPE">
+            <summary>
+              Looks up a localized string similar to The {0} only accepts non-null {1} type objects, not {2} objects..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.COLLECTION_IS_NOT_PARENT">
+             <summary>
+               Looks up a localized string similar to The {0} is already contained by another {1}.
+            .
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.COLLECTION_IS_PARENT">
+             <summary>
+               Looks up a localized string similar to The {0} with is already contained by this {1}.
+            .
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.COLLECTION_NULL_VALUE">
+            <summary>
+              Looks up a localized string similar to The {0} only accepts non-null {1} type objects..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.COLLECTION_REMOVE_INVALID_OBJECT">
+            <summary>
+              Looks up a localized string similar to Attempted to remove an {0} that is not contained by this {1}..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.COLLECTION_TIMED_OUT">
+            <summary>
+              Looks up a localized string similar to Unable to build the &apos;{0}&apos; collection because the execution of the command timed out.  The &apos;Schema Collection Timeout&apos; connect option may need to be increased..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.COLUMN_INDEX_OUT_OF_RANGE">
+            <summary>
+              Looks up a localized string similar to Couldn&apos;t find specified column in results.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CONNECTION_ALREADY_OPEN">
+            <summary>
+              Looks up a localized string similar to The connection is already Open (state=Open)..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CONNECTION_POOL_TIMEOUT">
+            <summary>
+              Looks up a localized string similar to Timeout expired.  The timeout period elapsed prior to obtaining a connection from the pool.  This may have occurred because all pooled connections were in use and max pool size was reached..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CONNECTION_REQUIRED">
+            <summary>
+              Looks up a localized string similar to Operation requires connection object in SELECT command..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CONNECTION_REQUIRED_TO_DERIVE_PARAMS">
+            <summary>
+              Looks up a localized string similar to The DeriveParameters method requires that the given command object references an open connection..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CONNECTION_STATE_CLOSED">
+            <summary>
+              Looks up a localized string similar to The connection&apos;s current state is closed..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CONNECTION_STATE_OPEN">
+            <summary>
+              Looks up a localized string similar to The connection&apos;s current state is open..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CONNECTION_STRING_SYNTAX">
+            <summary>
+              Looks up a localized string similar to Format of the initialization string does not conform to specification starting at index {0}..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CONSTR_NOT_INITIALIZED">
+            <summary>
+              Looks up a localized string similar to The ConnectionString property has not been initialized..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CPU_COUNT_VIOLATION">
+             <summary>
+               Looks up a localized string similar to This system includes a licensed version of Progress DataDirect Connect for ADO.NET which may run on systems that  include up to {0} processors.  The current system is configured with {1} processors.  The 15 day grace period has expired – please contact Progress DataDirect to upgrade this license.
+            USA and Canada: 800-876-3101
+            United Kingdom: Toll-free: 0800 169 1907 or Tel: +44 (0) 1753-218 930
+            Benelux: Toll-free: (French) 0800 12 045, Toll-free: (Dutch) 0800 12 046, Toll-free: (Netherlands) 0800 022 0524 [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.CPU_COUNT_WARN">
+             <summary>
+               Looks up a localized string similar to This system includes a licensed version of Progress DataDirect Connect for ADO.NET which may run on systems that include up to {0} processors.  The current system is configured with {1} processors.  Please contact Progress DataDirect within the next 15 days to upgrade the license.
+            USA and Canada: 800-876-3101
+            United Kingdom: Toll-free: 0800 169 1907 or Tel: +44 (0) 1753-218 930
+            Benelux: Toll-free: (French) 0800 12 045, Toll-free: (Dutch) 0800 12 046, Toll-free: (Netherlands) 0800 022 0524 or Tel: +32 15  [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.DATA_READER_IS_CLOSED">
+            <summary>
+              Looks up a localized string similar to Invalid attempt to {0} when reader is closed..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.DATA_READER_NO_DATA">
+            <summary>
+              Looks up a localized string similar to No data exists for the row or column..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_AlternateServers">
+            <summary>
+              Looks up a localized string similar to A list of database servers to which the data provider will try to connect if the primary database server is unavailable..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_BulkLoadProtocol">
+            <summary>
+              Looks up a localized string similar to Specifies the Bulk Load Protocol to be used..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_CommonWorkArounds">
+            <summary>
+              Looks up a localized string similar to Use this field only when instructed by Progress DataDirect Technical Support..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_ConnectionPoolBehavior">
+            <summary>
+              Looks up a localized string similar to Specifies the connection pool algorithm used by the pooling mechanism. When set to LeastRecentlyUsed (the default), the pooling mechanism organizes connections in the pool using a queue processing technique. When set to MostRecentlyUsed, pooling mechanism organizes connections in the pool using a stack technique. When set to MostFrequentlyUsed, the pooling mechanism keeps track of how many times a connection has been used from the pool and provides the connection with the highest count when a connection is  [rest of string was truncated]&quot;;.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_ConnectionReset">
+            <summary>
+              Looks up a localized string similar to When true, the connection state is reset when the connection is removed from the connection pool..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_ConnectionRetryCount">
+            <summary>
+              Looks up a localized string similar to The number of times the data provider tries to connect to the primary server, and, if specified, the alternate servers after the initial unsuccessful attempt..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_ConnectionRetryDelay">
+            <summary>
+              Looks up a localized string similar to The number of seconds the data provider waits after the initial unsuccessful connection attempt before retrying a connection to the primary server, and, if specified, the alternate servers..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_ConnectionTimeout">
+            <summary>
+              Looks up a localized string similar to The number of seconds after which the attempted connection to the server will fail if not yet connected..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_DefaultSchemaRestriction">
+            <summary>
+              Looks up a localized string similar to The default value to use when the Schema restriction is omitted from GetSchema calls.  The initial default is an empty string (no restriction)..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_EnableTrace">
+            <summary>
+              Looks up a localized string similar to When set to 1 or higher, enables tracing. When set to 0, tracing is disabled..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_Enlist">
+            <summary>
+              Looks up a localized string similar to When true, the data provider automatically attempts to enlist the connection in creating the thread&apos;s current transaction context..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_GssClient">
+            <summary>
+              Looks up a localized string similar to Specifies which GSS client library the provider should use to communicate with the Key Distribution Center (KDC) when authentication in a MIT Kerberos environment.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_HostNameInCertificate">
+            <summary>
+              Looks up a localized string similar to Defines the host name in the certificate used as part of the SSL Server Certificate validation..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_InitialCommandTimeout">
+            <summary>
+              Looks up a localized string similar to The initial (default) CommandTimeout for commands that use this connection.  Setting the CommandTimeout property on the command will override this option..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_LicensePath">
+            <summary>
+              Looks up a localized string similar to The fully qualified path to the DDTek.lic license file..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_LoadBalanceTimeout">
+            <summary>
+              Looks up a localized string similar to The time (from 1 to 65535 seconds, or 0 for unlimited time) to keep connections in a connection pool. .
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_LoadBalancing">
+            <summary>
+              Looks up a localized string similar to When true, client load balancing is used in attempts to connect to primary and alternate database servers..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_MaxPoolSize">
+            <summary>
+              Looks up a localized string similar to The maximum number of connections within a single pool..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_MaxPoolSizeBehavior">
+            <summary>
+              Looks up a localized string similar to When set to HardCap (the default), the pooling mechanism will not allow more than MaxPoolSize connections to be created. When set to SoftCap, if MaxPoolSize connections are in use and another connection is requested, a new connection will be created. However, the pooling mechanism will not allow more than MaxPoolSize connections to be pooled..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_MaxStatementCacheSize">
+            <summary>
+              Looks up a localized string similar to The Max Statement Cache Size limits the size of the statement cache.  The default is 10.  Setting this size to 0 will disable the statement cache..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_MinPoolSize">
+            <summary>
+              Looks up a localized string similar to The minimum number of connections that are opened and placed in a connection pool when it is created..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_ParameterMode">
+            <summary>
+              Looks up a localized string similar to When set to ANSI, &apos;?&apos; are processed as Parameter Markers and bound ordinally. When set to BindByOrdinal, native parameters markers are used and bound ordinally. When set to BindByName, native parameter markers are used and bound by name..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_PersistSecurityInfo">
+            <summary>
+              Looks up a localized string similar to When true, secure information is displayed in clear text in the ConnectionString property of the Connection object..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_Pooling">
+            <summary>
+              Looks up a localized string similar to When true, connections are pooled..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_ReauthenticationEnabled">
+            <summary>
+              Looks up a localized string similar to Specifies if a provider may Reauthenticate.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_SchemaCollectionTimeout">
+            <summary>
+              Looks up a localized string similar to The number of seconds after which the attempted schema collection operation to the server will fail if not yet completed..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_SchemaOptions">
+            <summary>
+              Looks up a localized string similar to Specifies a schema option that influences how a provider returns schema meta data..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_StatementCacheMode">
+            <summary>
+              Looks up a localized string similar to The Statement Cache Mode controls the behavior of the statement cache.  By default the statements will only be cached when the command is explicity set.  This mode can be changed to automatically cache statements..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_SynchronizeConnection">
+            <summary>
+              Looks up a localized string similar to Specifies whether synchronization on the connection is required.  Typically, this is not required.  This is normally only needed if a connection is being shared across multiple threads.  The default is false..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_ThrottleCollectionsData">
+            <summary>
+              Looks up a localized string similar to Specifies whether a provider returns very large collection meta data..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_TraceFile">
+            <summary>
+              Looks up a localized string similar to The path and name of the trace file..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_TransactionTimeout">
+            <summary>
+              Looks up a localized string similar to Controls the length of time the provider will wait when committing or rolling back a transaction.  0 implies the provider should not timeout.  Any positive integer represents the number of seconds the provider should wait before timing out.  -1, the default, implies the the provider will use the connection timeout setting..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_UseCurrentSchema">
+            <summary>
+              Looks up a localized string similar to Indicates whether the schema collections should automatically restrict using the current schema when the schema restriction is omitted..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.Description_ValidateServerCertificate">
+            <summary>
+              Looks up a localized string similar to Specifies whether the server certificate is verified as valid according to a Certificate Authority..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.EMPTY_DATABASE_NAME">
+            <summary>
+              Looks up a localized string similar to Database cannot be null, the empty string, or string of only whitespace..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.ENLIST_FAILED">
+            <summary>
+              Looks up a localized string similar to Error occured when enlisting connection in distributed transaction..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_ERROR">
+            <summary>
+              Looks up a localized string similar to Security Services Error: {0}.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_APPL_EXPIRED">
+            <summary>
+              Looks up a localized string similar to This application has expired.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_BAD_ENCTYPE">
+            <summary>
+              Looks up a localized string similar to Bad encryption type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_BAD_KEYSIZE">
+            <summary>
+              Looks up a localized string similar to Key size is incompatible with encryption type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_BAD_MSIZE">
+            <summary>
+              Looks up a localized string similar to Message size is incompatible with encryption type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_BADMSGTYPE">
+            <summary>
+              Looks up a localized string similar to Invalid message type specified for encoding.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CC_BADNAME">
+            <summary>
+              Looks up a localized string similar to Credential cache name malformed.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CC_END">
+            <summary>
+              Looks up a localized string similar to End of credential cache reached.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CC_FORMAT">
+            <summary>
+              Looks up a localized string similar to Bad format in credentials cache.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CC_IO">
+            <summary>
+              Looks up a localized string similar to Credentials cache I/O operation failed XXX.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CC_NOMEM">
+            <summary>
+              Looks up a localized string similar to No more memory to allocate (in credentials cache code).
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CC_NOTFOUND">
+            <summary>
+              Looks up a localized string similar to Matching credential not found.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CC_TYPE_EXISTS">
+            <summary>
+              Looks up a localized string similar to Credentials cache type is already registered..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CC_UNKNOWN_TYPE">
+            <summary>
+              Looks up a localized string similar to Unknown credential cache type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CC_WRITE">
+            <summary>
+              Looks up a localized string similar to Error writing to credentials cache.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CCACHE_BADVNO">
+            <summary>
+              Looks up a localized string similar to Unsupported credentials cache format version number.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CHPW_FAIL">
+            <summary>
+              Looks up a localized string similar to Password change failed.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CHPW_PWDNULL">
+            <summary>
+              Looks up a localized string similar to New password cannot be zero length.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CONFIG_BADFORMAT">
+            <summary>
+              Looks up a localized string similar to Improper format of Kerberos configuration file.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CONFIG_CANTOPEN">
+            <summary>
+              Looks up a localized string similar to Can&apos;t open/find Kerberos configuration file.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CONFIG_ETYPE_NOSUPP">
+            <summary>
+              Looks up a localized string similar to No supported encryption types (config file error?).
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CONFIG_NODEFREALM">
+            <summary>
+              Looks up a localized string similar to Configuration file does not specify default realm.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CONFIG_NOTENUFSPACE">
+            <summary>
+              Looks up a localized string similar to Insufficient space to return complete information.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_CRYPTO_INTERNAL">
+            <summary>
+              Looks up a localized string similar to Cryptosystem internal error.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_EAI_FAIL">
+            <summary>
+              Looks up a localized string similar to unknown getaddrinfo failure.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_EAI_NODATA">
+            <summary>
+              Looks up a localized string similar to no data available for host/domain name.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_EAI_NONAME">
+            <summary>
+              Looks up a localized string similar to host/domain name not found.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_EAI_SERVICE">
+            <summary>
+              Looks up a localized string similar to service name unknown.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_ERR_BAD_HOSTNAME">
+            <summary>
+              Looks up a localized string similar to Hostname cannot be canonicalized.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_ERR_HOST_REALM_UNKNOWN">
+            <summary>
+              Looks up a localized string similar to Cannot determine realm for host.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_ERR_NUMERIC_REALM">
+            <summary>
+              Looks up a localized string similar to Cannot determine realm for numeric host address.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_ERR_RCSID">
+            <summary>
+              Looks up a localized string similar to (RCS Id string for the krb5 error table).
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_FCC_INTERNAL">
+            <summary>
+              Looks up a localized string similar to Internal credentials cache error.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_FCC_NOFILE">
+            <summary>
+              Looks up a localized string similar to No credentials cache found.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_FCC_PERM">
+            <summary>
+              Looks up a localized string similar to Credentials cache file permissions incorrect.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_FWD_BAD_PRINCIPAL">
+            <summary>
+              Looks up a localized string similar to Bad principal name while trying to forward credentials.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_GET_IN_TKT_LOOP">
+            <summary>
+              Looks up a localized string similar to Looping detected inside krb5_get_in_tkt.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_IN_TKT_REALM_MISMATCH">
+            <summary>
+              Looks up a localized string similar to Client/server realm mismatch in initial ticket request.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_INVALID_FLAGS">
+            <summary>
+              Looks up a localized string similar to Invalid KDC option combination (library internal error) [for dual tgt library calls].
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KDC_UNREACH">
+            <summary>
+              Looks up a localized string similar to Cannot contact any KDC for requested realm.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KDCREP_MODIFIED">
+            <summary>
+              Looks up a localized string similar to KDC reply did not match expectations.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KDCREP_SKEW">
+            <summary>
+              Looks up a localized string similar to Clock skew too great in KDC reply.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KEYTAB_BADVNO">
+            <summary>
+              Looks up a localized string similar to Unsupported key table format version number.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KT_BADNAME">
+            <summary>
+              Looks up a localized string similar to Key table name malformed.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KT_END">
+            <summary>
+              Looks up a localized string similar to End of key table reached.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KT_FORMAT">
+            <summary>
+              Looks up a localized string similar to Bad format in keytab.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KT_IOERR">
+            <summary>
+              Looks up a localized string similar to Error writing to key table.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KT_KVNONOTFOUND">
+            <summary>
+              Looks up a localized string similar to Key version number for principal in key table is incorrect.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KT_NAME_TOOLONG">
+            <summary>
+              Looks up a localized string similar to Keytab name too long.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KT_NOTFOUND">
+            <summary>
+              Looks up a localized string similar to Key table entry not found.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KT_NOWRITE">
+            <summary>
+              Looks up a localized string similar to Cannot write to specified key table.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KT_TYPE_EXISTS">
+            <summary>
+              Looks up a localized string similar to Key table type is already registered..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_KT_UNKNOWN_TYPE">
+            <summary>
+              Looks up a localized string similar to Unknown Key table type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_LIB_EXPIRED">
+            <summary>
+              Looks up a localized string similar to This Krb5 library has expired.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_LIBOS_BADLOCKFLAG">
+            <summary>
+              Looks up a localized string similar to Invalid flag for file lock mode.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_LIBOS_BADPWDMATCH">
+            <summary>
+              Looks up a localized string similar to Password mismatch.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_LIBOS_CANTREADPWD">
+            <summary>
+              Looks up a localized string similar to Cannot read password.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_LIBOS_PWDINTR">
+            <summary>
+              Looks up a localized string similar to Password read interrupted.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_LNAME_BADFORMAT">
+            <summary>
+              Looks up a localized string similar to Improper format of translation database entry.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_LNAME_CANTOPEN">
+            <summary>
+              Looks up a localized string similar to Can&apos;t open/find lname translation database.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_LNAME_NOTRANS">
+            <summary>
+              Looks up a localized string similar to No translation available for requested principal.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_MUTUAL_FAILED">
+            <summary>
+              Looks up a localized string similar to Mutual authentication failed.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_NO_2ND_TKT">
+            <summary>
+              Looks up a localized string similar to Request missing second ticket [for dual tgt library calls].
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_NO_LOCALNAME">
+            <summary>
+              Looks up a localized string similar to No local name found for principal name.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_NO_TKT_IN_RLM">
+            <summary>
+              Looks up a localized string similar to Cannot find ticket for requested realm.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_NO_TKT_SUPPLIED">
+            <summary>
+              Looks up a localized string similar to Request did not supply a ticket.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_NOCREDS_SUPPLIED">
+            <summary>
+              Looks up a localized string similar to No credentials supplied to library routine.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_NOPERM_ETYPE">
+            <summary>
+              Looks up a localized string similar to Encryption type not permitted.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_OBSOLETE_FN">
+            <summary>
+              Looks up a localized string similar to Program called an obsolete, deleted function.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_PARSE_ILLCHAR">
+            <summary>
+              Looks up a localized string similar to Illegal character in component name.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_PARSE_MALFORMED">
+            <summary>
+              Looks up a localized string similar to Malformed representation of principal.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_PREAUTH_BAD_TYPE">
+            <summary>
+              Looks up a localized string similar to Unsupported preauthentication type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_PREAUTH_FAILED">
+            <summary>
+              Looks up a localized string similar to Generic preauthentication failure.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_PREAUTH_NO_KEY">
+            <summary>
+              Looks up a localized string similar to Required preauthentication key not supplied.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_PRINC_NOMATCH">
+            <summary>
+              Looks up a localized string similar to Requested principal and ticket don&apos;t match.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_PROG_ATYPE_NOSUPP">
+            <summary>
+              Looks up a localized string similar to Program lacks support for address type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_PROG_ETYPE_NOSUPP">
+            <summary>
+              Looks up a localized string similar to Program lacks support for encryption type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_PROG_KEYTYPE_NOSUPP">
+            <summary>
+              Looks up a localized string similar to Program lacks support for key type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_PROG_SUMTYPE_NOSUPP">
+            <summary>
+              Looks up a localized string similar to Program lacks support for checksum type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_IO">
+            <summary>
+              Looks up a localized string similar to Replay I/O operation failed XXX.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_IO_EOF">
+            <summary>
+              Looks up a localized string similar to End-of-file on replay cache I/O.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_IO_IO">
+            <summary>
+              Looks up a localized string similar to I/O error in replay cache i/o code.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_IO_MALLOC">
+            <summary>
+              Looks up a localized string similar to No more memory to allocate (in replay cache I/O code).
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_IO_PERM">
+            <summary>
+              Looks up a localized string similar to Permission denied in replay cache code.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_IO_SPACE">
+            <summary>
+              Looks up a localized string similar to Insufficient system space to store replay information.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_IO_UNKNOWN">
+            <summary>
+              Looks up a localized string similar to Generic unknown RC/IO error.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_MALLOC">
+            <summary>
+              Looks up a localized string similar to No more memory to allocate (in replay cache code).
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_NOIO">
+            <summary>
+              Looks up a localized string similar to Replay cache type does not support non-volatile storage.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_PARSE">
+            <summary>
+              Looks up a localized string similar to Replay cache name parse/format error.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_REPLAY">
+            <summary>
+              Looks up a localized string similar to Message is a replay.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_REQUIRED">
+            <summary>
+              Looks up a localized string similar to Message replay detection requires rcache parameter.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_TYPE_EXISTS">
+            <summary>
+              Looks up a localized string similar to Replay cache type is already registered.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_TYPE_NOTFOUND">
+            <summary>
+              Looks up a localized string similar to Replay cache type is unknown.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RC_UNKNOWN">
+            <summary>
+              Looks up a localized string similar to Generic unknown RC error.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_RCACHE_BADVNO">
+            <summary>
+              Looks up a localized string similar to Unsupported replay cache format version number.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_REALM_CANT_RESOLVE">
+            <summary>
+              Looks up a localized string similar to Cannot resolve KDC for requested realm.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_REALM_UNKNOWN">
+            <summary>
+              Looks up a localized string similar to Cannot find KDC for requested realm.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_SAM_UNSUPPORTED">
+            <summary>
+              Looks up a localized string similar to Bad SAM flags in obtain_sam_padata.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_SENDAUTH_BADAPPLVERS">
+            <summary>
+              Looks up a localized string similar to Bad application version was sent (via sendauth).
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_SENDAUTH_BADAUTHVERS">
+            <summary>
+              Looks up a localized string similar to Bad sendauth version was sent.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_SENDAUTH_BADRESPONSE">
+            <summary>
+              Looks up a localized string similar to Bad response (during sendauth exchange).
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_SENDAUTH_REJECTED">
+            <summary>
+              Looks up a localized string similar to Server rejected authentication (during sendauth exchange).
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_SERVICE_UNKNOWN">
+            <summary>
+              Looks up a localized string similar to Kerberos service unknown.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_SNAME_UNSUPP_NAMETYPE">
+            <summary>
+              Looks up a localized string similar to Conversion to service principal undefined for name type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_TKT_NOT_FORWARDABLE">
+            <summary>
+              Looks up a localized string similar to Requesting ticket can&apos;t get forwardable tickets.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_TRANS_BADFORMAT">
+            <summary>
+              Looks up a localized string similar to Improper format of realm translation file.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_TRANS_CANTOPEN">
+            <summary>
+              Looks up a localized string similar to Can&apos;t open/find realm translation file.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5_WRONG_ETYPE">
+            <summary>
+              Looks up a localized string similar to Requested encryption type not used in message.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5DES_BAD_KEYPAR">
+            <summary>
+              Looks up a localized string similar to DES key has bad parity.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5DES_WEAK_KEY">
+            <summary>
+              Looks up a localized string similar to DES key is a weak key.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_BAD_PVNO">
+            <summary>
+              Looks up a localized string similar to Requested protocol version not supported.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_BADOPTION">
+            <summary>
+              Looks up a localized string similar to KDC can&apos;t fulfill requested option.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_C_OLD_MAST_KVNO">
+            <summary>
+              Looks up a localized string similar to Client&apos;s key is encrypted in an old master key.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_C_PRINCIPAL_UNKNOWN">
+            <summary>
+              Looks up a localized string similar to Client not found in Kerberos database.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_CANNOT_POSTDATE">
+            <summary>
+              Looks up a localized string similar to Ticket is ineligible for postdating.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_CLIENT_NOTYET">
+            <summary>
+              Looks up a localized string similar to Client not yet valid - try again later.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_CLIENT_REVOKED">
+            <summary>
+              Looks up a localized string similar to Clients credentials have been revoked.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_ETYPE_NOSUPP">
+            <summary>
+              Looks up a localized string similar to KDC has no support for encryption type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_KEY_EXP">
+            <summary>
+              Looks up a localized string similar to Password has expired.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_NAME_EXP">
+            <summary>
+              Looks up a localized string similar to Client&apos;s entry in database has expired.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_NEVER_VALID">
+            <summary>
+              Looks up a localized string similar to Requested effective lifetime is negative or too short.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_NULL_KEY">
+            <summary>
+              Looks up a localized string similar to Client or server has a null key.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_PADATA_TYPE_NOSUPP">
+            <summary>
+              Looks up a localized string similar to KDC has no support for padata type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_POLICY">
+            <summary>
+              Looks up a localized string similar to KDC policy rejects request.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_PREAUTH_FAILED">
+            <summary>
+              Looks up a localized string similar to Preauthentication failed.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_PREAUTH_REQUIRED">
+            <summary>
+              Looks up a localized string similar to Additional pre-authentication required.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_PRINCIPAL_NOT_UNIQUE">
+            <summary>
+              Looks up a localized string similar to Principal has multiple entries in Kerberos database.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_S_OLD_MAST_KVNO">
+            <summary>
+              Looks up a localized string similar to Server&apos;s key is encrypted in an old master key.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_S_PRINCIPAL_UNKNOWN">
+            <summary>
+              Looks up a localized string similar to Server not found in Kerberos database.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_SERVER_NOMATCH">
+            <summary>
+              Looks up a localized string similar to Requested server and ticket don&apos;t match.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_SERVICE_EXP">
+            <summary>
+              Looks up a localized string similar to Server&apos;s entry in database has expired.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_SERVICE_NOTYET">
+            <summary>
+              Looks up a localized string similar to Server not yet valid - try again later.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_SERVICE_REVOKED">
+            <summary>
+              Looks up a localized string similar to Credentials for server have been revoked.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_SUMTYPE_NOSUPP">
+            <summary>
+              Looks up a localized string similar to KDC has no support for checksum type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_TGT_REVOKED">
+            <summary>
+              Looks up a localized string similar to TGT has been revoked.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KDC_ERR_TRTYPE_NOSUPP">
+            <summary>
+              Looks up a localized string similar to KDC has no support for transited type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_BAD_INTEGRITY">
+            <summary>
+              Looks up a localized string similar to Decrypt integrity check failed.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_BADADDR">
+            <summary>
+              Looks up a localized string similar to Incorrect net address.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_BADDIRECTION">
+            <summary>
+              Looks up a localized string similar to Incorrect message direction.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_BADKEYVER">
+            <summary>
+              Looks up a localized string similar to Key version is not available.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_BADMATCH">
+            <summary>
+              Looks up a localized string similar to Ticket/authenticator don&apos;t match.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_BADORDER">
+            <summary>
+              Looks up a localized string similar to Message out of order.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_BADSEQ">
+            <summary>
+              Looks up a localized string similar to Incorrect sequence number in message.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_BADVERSION">
+            <summary>
+              Looks up a localized string similar to Protocol version mismatch.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_ILL_CR_TKT">
+            <summary>
+              Looks up a localized string similar to Illegal cross-realm ticket.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_INAPP_CKSUM">
+            <summary>
+              Looks up a localized string similar to Inappropriate type of checksum in message.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_METHOD">
+            <summary>
+              Looks up a localized string similar to Alternative authentication method required.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_MODIFIED">
+            <summary>
+              Looks up a localized string similar to Message stream modified.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_MSG_TYPE">
+            <summary>
+              Looks up a localized string similar to Invalid message type.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_MUT_FAIL">
+            <summary>
+              Looks up a localized string similar to Mutual authentication failed.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_NOKEY">
+            <summary>
+              Looks up a localized string similar to Service key not available.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_NOT_US">
+            <summary>
+              Looks up a localized string similar to The ticket isn&apos;t for us.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_REPEAT">
+            <summary>
+              Looks up a localized string similar to Request is a replay.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_SKEW">
+            <summary>
+              Looks up a localized string similar to Clock skew too great.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_TKT_EXPIRED">
+            <summary>
+              Looks up a localized string similar to Ticket expired.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_TKT_INVALID">
+            <summary>
+              Looks up a localized string similar to Ticket has invalid flag set.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_TKT_NYV">
+            <summary>
+              Looks up a localized string similar to Ticket not yet valid.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_ERR_V4_REPLY">
+            <summary>
+              Looks up a localized string similar to Initial Ticket response appears to be Version 4 error.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_PATH_NOT_ACCEPTED">
+            <summary>
+              Looks up a localized string similar to Policy rejects transited path.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_AP_WRONG_PRINC">
+            <summary>
+              Looks up a localized string similar to Wrong principal in request.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_ERR_FIELD_TOOLONG">
+            <summary>
+              Looks up a localized string similar to Field is too long for this implementation.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_ERR_GENERIC">
+            <summary>
+              Looks up a localized string similar to Generic error (see e-text).
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.GSS_KRB5KRB_ERR_RESPONSE_TOO_BIG">
+            <summary>
+              Looks up a localized string similar to Response too big for UDP, retry with TCP.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.HELPER_NOT_FOUND">
+            <summary>
+              Looks up a localized string similar to The {0} assembly with assembly version number of {1} failed to load.  .
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.INVALID_COLUMN_INDEX">
+            <summary>
+              Looks up a localized string similar to The index specified must non-negative and less than the number of columns in the reader..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.INVALID_CONNECTION_OPTION_VALUE">
+            <summary>
+              Looks up a localized string similar to Invalid value for key &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.INVALID_ENUMERATION_VALUE">
+            <summary>
+              Looks up a localized string similar to The {0} enumeration value, {1}, is invalid..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.INVALID_MIN_MAX_POOL_SIZE_VALUES">
+            <summary>
+              Looks up a localized string similar to Invalid min or max pool size values, min pool size cannot be greater than the max pool size..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.INVALID_OFFSET_VALUE">
+            <summary>
+              Looks up a localized string similar to Invalid parameter Offset value &apos;{0}&apos;. The value must be greater than or equal to 0..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.INVALID_PARAMETER_DBTYPE">
+            <summary>
+              Looks up a localized string similar to Invalid parameter DbType..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.INVALID_PARAMETER_DIRECTION">
+            <summary>
+              Looks up a localized string similar to Invalid parameter direction..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.INVALID_PARAMETER_SIZE">
+            <summary>
+              Looks up a localized string similar to Invalid parameter size..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.INVALID_PARAMETER_SOURCE">
+            <summary>
+              Looks up a localized string similar to Invalid parameter source..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.INVALID_SIZE_VALUE">
+            <summary>
+              Looks up a localized string similar to Invalid parameter Size value &apos;{0}&apos;. The value must be greater than or equal to 0..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.KEYWORD_NOT_SUPPORTED">
+            <summary>
+              Looks up a localized string similar to Keyword not supported: {0}..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.MISSING_RESTRICTION_DEFAULT">
+            <summary>
+              Looks up a localized string similar to Missing restriction default..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.MUTUALLY_EXCLUSIVE_OPTIONS">
+            <summary>
+              Looks up a localized string similar to The &apos;{0}&apos; option and the &apos;{1}&apos; option cannot be specified together in the same connection string..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.NAMED_PARAMETER_MARKER_MISMATCH">
+            <summary>
+              Looks up a localized string similar to Named parameter marker mismatch. Cannot match named parameter marker {0} within the Parameter collection.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.NEED_ADAPTER">
+            <summary>
+              Looks up a localized string similar to The DataAdapter.SelectCommand property needs to be initialized..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.NO_DTC_INSTALLATION">
+            <summary>
+              Looks up a localized string similar to The optional DTC support components cannot be located.  Please make sure you have installed them and that they are on your path.  See the product documentation for more details..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.NO_DTC_LICENSE">
+             <summary>
+               Looks up a localized string similar to The Progress DataDirect ADO.NET Data Provider you are attempting to use is not licensed for use in Distributed Transactions.  A Server license is required for this feature.  If you would like to purchase a Server license, please contact Progress DataDirect. USA and Canada: 800-876-3101
+            United Kingdom: Toll-free: 0800 169 1907 or Tel: +44 (0) 1753-218 930 
+            Benelux: Toll-free: (French) 0800 12 045, Toll-free: (Dutch) 0800 12 046, Toll-free: (Netherlands) 0800 022 0524 or Tel: +32 15 30 77 00
+            France: Toll-f [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.NO_DTC_SUPPORT_PLATFORM">
+            <summary>
+              Looks up a localized string similar to The DTC is only supported on Windows 2000 or later..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.NO_DTC_TRANSACTION">
+            <summary>
+              Looks up a localized string similar to Not in distributed transaction..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.NO_PARALLEL_TRANSACTIONS">
+            <summary>
+              Looks up a localized string similar to Parallel transactions not supported..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.OBJECT_DISPOSED">
+            <summary>
+              Looks up a localized string similar to Cannot use a disposed object..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.ODBC_CALL_ESCAPE_NOT_SUPPORTED">
+            <summary>
+              Looks up a localized string similar to ODBC CALL escape is not supported..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.OPEN_CONNECTION_PROPERTY_SET">
+            <summary>
+              Looks up a localized string similar to Not allowed to change the &apos;{0}&apos; property. {1}.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.PREPARE_REQUIRES_PARAM_SIZE">
+            <summary>
+              Looks up a localized string similar to Prepare method requires all variable length parameters to have an explicitly set non-zero Size..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.PREPARE_REQUIRES_PARAM_TYPE">
+            <summary>
+              Looks up a localized string similar to Prepare method requires all parameters to have an explicitly set type..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.QUERY_FAILED">
+            <summary>
+              Looks up a localized string similar to Unable to build the &apos;{0}&apos; collection because execution of the command failed with the following error: {1}.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.READER_ALREADY_ACTIVE_FOR_CONNECTION">
+            <summary>
+              Looks up a localized string similar to A data reader is already active for this connection..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.READER_NOT_ON_ROW">
+            <summary>
+              Looks up a localized string similar to Operation not supported when reader is not positioned to a row..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.READER_OPEN">
+            <summary>
+              Looks up a localized string similar to A DataReader object is already open for this command..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.REQUIRED_ARGUMENT_WAS_NULL">
+            <summary>
+              Looks up a localized string similar to A required argument was null..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.REQUIRED_RESTRICTION_NOT_SPECIFIED">
+            <summary>
+              Looks up a localized string similar to The required restriction, {0}, was not specified..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.SUPERSEDED_OPTIONS_CANT_COEXIST">
+            <summary>
+              Looks up a localized string similar to The &apos;{0}&apos; option has been superseded by the &apos;{1}&apos; option. They cannot be specified together in the same connection string..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.TOO_MANY_RESTRICTIONS">
+            <summary>
+              Looks up a localized string similar to More restrictions were provided than the requested schema (&apos;{0}&apos;) supports..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.TRANSACTION_CONNECTION_MISMATCH">
+            <summary>
+              Looks up a localized string similar to The transaction object for this command does not match the connection object for this command..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.TRANSACTION_PRESENT">
+            <summary>
+              Looks up a localized string similar to Cannot enlist in the distributed transaction because an existing transaction is in progress on the connection.  Finish existing transaction and retry..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.TRANSACTION_REQURED">
+             <summary>
+               Looks up a localized string similar to Execute requires the command to have a
+            transaction object when the connection assigned to the command is in a
+            pending local transaction.  The Transaction property of the command has
+            not been initialized..
+             </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.TRANSACTION_ZOMBIED">
+            <summary>
+              Looks up a localized string similar to Operation invalid on a inactive transaction object..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.TXN_NOT_ACTIVE">
+            <summary>
+              Looks up a localized string similar to Transaction already commited or rolled back..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UNABLE_TO_LOAD_ASSEMBLY">
+            <summary>
+              Looks up a localized string similar to EnableLoggingApplicationBlock is set to true but the assembly specified for LABAssemblyName failed to load &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UNABLE_TO_LOAD_METHOD">
+            <summary>
+              Looks up a localized string similar to Unable to load the method or constructor &apos;{0}.{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UNABLE_TO_LOAD_TYPE">
+            <summary>
+              Looks up a localized string similar to Unable to load the type &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UNDEFINED_COLLECTION">
+            <summary>
+              Looks up a localized string similar to The requested collection ({0}) is not defined..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UNSUPPORTED_PARAMETER_MODE">
+            <summary>
+              Looks up a localized string similar to Unsupported Parameter Mode. Uses are restricted to ANSI, BindByOrdinal or BindByName.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UNSUPPORTED_VERSION">
+            <summary>
+              Looks up a localized string similar to The requested collection ({0}) is not supported by this version of the provider..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_BAD_BINDINGS">
+            <summary>
+              Looks up a localized string similar to Incorrect channel bindings were supplied..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_BAD_MECH">
+            <summary>
+              Looks up a localized string similar to The requested mechanism is unavailable..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_BAD_NAME">
+            <summary>
+              Looks up a localized string similar to An invalid name was supplied..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_BAD_NAMETYPE">
+            <summary>
+              Looks up a localized string similar to A supplied name was of an unsupported type..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_BAD_QOP">
+            <summary>
+              Looks up a localized string similar to The requested quality of protection could not be provided by the context..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_BAD_SIG">
+            <summary>
+              Looks up a localized string similar to A token had an invalid MIC..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_BAD_STATUS">
+            <summary>
+              Looks up a localized string similar to An invalid status code was supplied..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_BUFFER_OVERFLOW">
+            <summary>
+              Looks up a localized string similar to Output buffer overflow.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_CONTEXT_EXPIRED">
+            <summary>
+              Looks up a localized string similar to The context has already expired..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_CREDENTIALS_EXPIRED">
+            <summary>
+              Looks up a localized string similar to The credentials could not be acquired because they have expired..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_DEFECTIVE_CREDENTIAL">
+            <summary>
+              Looks up a localized string similar to The referenced credentials were invalid..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_DEFECTIVE_TOKEN">
+            <summary>
+              Looks up a localized string similar to Consistency checks on input token failed..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_DUPLICATE_ELEMENT">
+            <summary>
+              Looks up a localized string similar to The requested credential element already exists..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_FAILURE">
+            <summary>
+              Looks up a localized string similar to Unspecified error at the GSS layer..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_NAME_NOT_MN">
+            <summary>
+              Looks up a localized string similar to The provided name was not a mechanism name..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_NO_CONTEXT">
+            <summary>
+              Looks up a localized string similar to No context has been established..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_NO_CRED">
+            <summary>
+              Looks up a localized string similar to No credentials were found for the specified name..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_NO_SERVICE_PRINCIPLE">
+            <summary>
+              Looks up a localized string similar to No Service Principle Name.
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_UNAUTHORIZED">
+            <summary>
+              Looks up a localized string similar to The operation is forbidden by local security policy..
+            </summary>
+        </member>
+        <member name="P:DDTek.Common.CommonStrings.UT_GSS_UNAVAILABLE">
+            <summary>
+              Looks up a localized string similar to The operation is unavailable..
+            </summary>
+        </member>
+        <member name="T:DDInt.Common.CommonTrace">
+            <summary>
+            The Connect for .NET Provider supports tracing through the CommonTrace class.
+            The provider can trace all of its method calls and the returns from those
+            method calls to a trace file specified by the user.
+            </summary>
+        </member>
+        <member name="M:DDInt.Common.CommonTrace.SetEnableTrace(System.Int32)">
+            <summary>
+            The EnableTrace() property enables tracing. The default is 0 (disabled).
+            </summary>
+        </member>
+        <member name="M:DDInt.Common.CommonTrace.DumpFootprints">
+            <summary>
+            The DumpFootprints() method displays the footprint of all source files
+            in a data provider.
+            </summary>
+        </member>
+        <member name="P:DDInt.Common.CommonTrace.TraceFile">
+            <summary>
+            The TraceFile property gets or sets the name of the trace output file.
+            </summary>
+        </member>
+        <member name="M:DDInt.Common.CommonUtility.BytesToString(System.Byte[],System.Int32)">
+             This method accepts a byte array and constructs a string which
+             represents the contents of the byte array. For instance, a byte
+             array containing 0x6162 (two bytes) is returned as the string
+             "6162" (four characters).
+            
+             @param bytes The array which contains the bytes representing
+             the UCS2 characters.
+            
+             @param len The number of "relevant" bytes in the array.
+        </member>
+        <member name="M:DDInt.Common.CommonUtility.ByteToHex(System.Byte)">
+             Used to convert a single byte into a string which contains
+             its hexadecimal representation.
+            
+             @param b The value of the byte whose hexadecimal representation is to
+             be constructed.
+        </member>
+        <member name="M:DDInt.Common.CommonUtility.GetEncryptString(System.String)">
+            <summary>
+            Method to Encrypt string to Hex data.
+            </summary>
+            <param name="stringToEncrypt">string data to be encrypted.</param>
+            <returns>Encrypted Srting ( Hex format )</returns>
+        </member>
+        <member name="M:DDInt.Common.CommonUtility.GetDecryptString(System.String)">
+            <summary>
+            Method to decrypt hex string to string data.
+            </summary>
+            <param name="stringtoDecrypt">string to be decrypted.</param>
+            <returns>Decrypted Srting</returns>
+        </member>
+        <member name="M:DDInt.Common.CommonUtility.CombinePaths(System.String[])">
+            <summary>
+            Method to combine passed path array to a single path.
+            </summary>
+            <param name="paths"> Array of paths to combine.</param>
+            <returns>Combined Path.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.Open">
+            <summary>
+            Opens the bulk file and associated config file for processing.
+            </summary>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.Close">
+            <summary>
+            Closes the CsvDataReader. 
+            Always call the Close method when you finish using the CsvDataReader.
+            </summary>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetSchemaTable">
+            <summary>
+            Returns a DataTable that describes the column metadata of the CsvDataReader.
+            </summary>
+            <returns>A DataTable that describes the column metadata.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.NextResult">
+            <summary>
+            The CsvDataReader expects only one result.
+            </summary>
+            <returns>Always returns false.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.Read">
+            <summary>
+            Advances the CsvDataReader to the next row.
+            </summary>
+            <returns>true if there are more rows; otherwise, false.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetBoolean(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a Boolean.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>A Boolean that is the value of the column.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetByte(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a byte.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a byte.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Reads a stream of bytes from the specified column offset into the buffer as an array.
+            It starts at the given buffer offset.
+            </summary>
+            <param name="i">The index within the field where the read operation is to begin.</param>
+            <param name="fieldOffset">The index within the field where the read operation is to begin.</param>
+            <param name="buffer">The buffer into which to read the stream of bytes.</param>
+            <param name="bufferOffset">The index where buffer is to begin the write operation.</param>
+            <param name="length">The number of bytes to read.</param>
+            <returns>The actual number of bytes read.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetChar(System.Int32)">
+            <summary>
+            Gets the value of a specified column as a character.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a character.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Reads a stream of characters into the buffer as an array, starting from the
+            specified buffer offset of the specified column offset.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <param name="fieldOffset">The index within the row where the read operation is to begin.</param>
+            <param name="buffer">The buffer into which to copy data.</param>
+            <param name="bufferOffset">The index where buffer is to begin the write operation.</param>
+            <param name="length">The number of characters to read.</param>
+            <returns>The actual number of characters read.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetDateTime(System.Int32)">
+            <summary>
+            Gets the value of a specified column as a DateTime object.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a DateTime object.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetDecimal(System.Int32)">
+            <summary>
+            Gets the value of a specified column as a Decimal object.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a decimal object.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetDouble(System.Int32)">
+            <summary>
+            Gets the value of a specified column as a double-precision floating-point number.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a double-precision floating-point number.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetFieldType(System.Int32)">
+            <summary>
+            Gets the Type information corresponding to the type of Object that would be returned from GetValue.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The Type information corresponding to the type of Object that would be returned from GetValue.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetFloat(System.Int32)">
+            <summary>
+            Gets the value of a specified column as a single-precision, floating-point number.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a single-precision floating-point number.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetGuid(System.Int32)">
+            <summary>
+            Gets the value of a specified column as a GUID (globally-unique identifier).
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a GUID.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetInt16(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a 16-bit signed integer.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a 16-bit signed integer.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetInt32(System.Int32)">
+            <summary>
+            Gets the value of the specified column as a 32-bit signed integer.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a 32-bit signed integer.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetInt64(System.Int32)">
+            <summary>
+            Gets the value of a specified column as a 64-bit signed integer.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a 64-bit signed integer.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetName(System.Int32)">
+            <summary>
+            Gets the column name of the specified column.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The name of the column.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetOrdinal(System.String)">
+            <summary>
+            Gets the column ordinal when given the name of the column.
+            </summary>
+            <param name="name">The name of the column.</param>
+            <returns>The zero-based column ordinal.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetString(System.Int32)">
+            <summary>
+            Gets the value of a specified column as a string.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the specified column as a string.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetValue(System.Int32)">
+            <summary>
+            Gets value of a column at a specified ordinal.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>The value of the column.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.GetValues(System.Object[])">
+            <summary>
+            Gets all of the attribute columns in the current row.
+            </summary>
+            <param name="values">An array of type Object into which to copy the attribute columns.</param>
+            <returns>The number of instances of Object in the array.</returns>
+        </member>
+        <member name="M:DDTek.Data.Common.CsvDataReader.IsDBNull(System.Int32)">
+            <summary>
+            Return whether the specified field is set to null.
+            </summary>
+            <param name="i">The zero-based column ordinal.</param>
+            <returns>true if the specified column value is equivalent to DBNull; otherwise, false.</returns>
+        </member>
+        <member name="P:DDTek.Data.Common.CsvDataReader.BulkFile">
+            <summary>
+            Specifies the bulk file that contians the CSV formatted bulk data.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.CsvDataReader.BulkConfigFile">
+            <summary>
+            Specifies the config file that describes the CSV bulk file.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.CsvDataReader.SequentialAccess">
+            <summary>
+            Indicates whether columns are accessed in order for improved performance.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.CsvDataReader.ReadBufferSize">
+            <summary>
+            Specifies the size in KB of the read buffer used to read CSV file.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.CsvDataReader.RowOffset">
+            <summary>
+            The 1-relative row from which to start the bulk load read.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.CsvDataReader.Depth">
+            <summary>
+            Gets a value that shows how deeply the current row is nested.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.CsvDataReader.IsClosed">
+            <summary>
+            Indicates whether the CsvDataReader is closed.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.CsvDataReader.RecordsAffected">
+            <summary>
+            This property is not applicable to the CsvDataReader.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.CsvDataReader.FieldCount">
+            <summary>
+            Gets the number of columns in the current row.
+            </summary>
+        </member>
+        <member name="T:DDTek.Data.Common.DataCommonStrings">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.BULK_CSV_CONFIG_FILE_ALREADY_EXISTS">
+            <summary>
+              Looks up a localized string similar to The CSV bulk config file &quot;{0}&quot; already exists..
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.BULK_CSV_CONFIG_FILE_DOES_NOT_EXIST">
+            <summary>
+              Looks up a localized string similar to The CSV bulk config file &quot;{0}&quot; does not exist..
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.BULK_CSV_FILE_ALREADY_EXISTS">
+            <summary>
+              Looks up a localized string similar to The CSV bulk file &quot;{0}&quot; already exists..
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.BULK_CSV_FILE_DOES_NOT_EXIST">
+            <summary>
+              Looks up a localized string similar to The CSV bulk file &quot;{0}&quot; does not exist..
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.BULK_CSV_SYNTAX_ERROR_AT_COLUMN_END">
+            <summary>
+              Looks up a localized string similar to CSV file syntax error at row {0} following column ordinal {1}.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.BULK_CSV_SYNTAX_ERROR_AT_COMMENT_END">
+            <summary>
+              Looks up a localized string similar to CSV file syntax error at the end of a comment near row {0}.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.BULK_CSV_SYNTAX_ERROR_AT_ROW_END">
+            <summary>
+              Looks up a localized string similar to CSV file syntax error at the end of row {0}.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.BULK_CSV_UNEXPECTED_COLUMN_COUNT">
+            <summary>
+              Looks up a localized string similar to Expected row {0} to contain {1} columns, but it contained {2} instead.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.BULK_CSV_UNEXPECTED_END_OF_FILE">
+            <summary>
+              Looks up a localized string similar to Encountered an unexpected end of file near row {0} column ordinal {1}.
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.BULK_NON_DDTEK_PROVIDERS_NOT_SUPPORTED">
+            <summary>
+              Looks up a localized string similar to Unsupported connection type..
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.METHOD_NOT_SUPPORTED">
+            <summary>
+              Looks up a localized string similar to {0} does not support the {1} method..
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.UNABLE_TO_LOCATE_BULKCOPY_CLASS">
+            <summary>
+              Looks up a localized string similar to Unable to locate BulkCopy class (tried &quot;{0}&quot;).
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.UNABLE_TO_LOCATE_BULKCOPYOPTIONS_ENUM">
+            <summary>
+              Looks up a localized string similar to Unable to locate BulkCopyOptions enum (tried &quot;{0}&quot;).
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.UNABLE_TO_LOCATE_EVENTARGS_CLASS">
+            <summary>
+              Looks up a localized string similar to Unable to locate EventArgs class (tried &quot;{0}&quot; and &quot;{1}&quot;).
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.UNABLE_TO_LOCATE_EVENTHANDLER_DELEGATE">
+            <summary>
+              Looks up a localized string similar to Unable to locate {0}EventHandler delegate (tried &quot;{1}&quot; and &quot;{2}&quot;).
+            </summary>
+        </member>
+        <member name="P:DDTek.Data.Common.DataCommonStrings.UNABLE_TO_LOCATE_TRANSACTION_CLASS">
+            <summary>
+              Looks up a localized string similar to Unable to locate Transaction class (tried &quot;{0}&quot;).
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilException">
+            <summary>
+            Summary description for UtilException.
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable">
+            <summary>
+            Summary description for UtilTransliterationTable.
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_ASCII">
+            <summary>
+            Transliteration Table Object for SBCS Codepage ASCII.
+            Ascii Codepage ANSI_X3.4-1968
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_HP_ROMAN8">
+            <summary>
+            Transliteration Table Object for SBCS Codepage HP-ROMAN8.
+            Ascii Codepage 
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01086">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01086.
+            Japanese Codepage : JAPAN PC#1 
+            see also: JIS X 0201
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01140">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01140.
+            EBCDIC Codepage for USA/Canada + EURO support
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01141">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01141.
+            EBCDIC Codepage for Germany/Austria + EURO SUPPORT
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01142">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01142.
+            EBCDIC Codepage for Denmark/Norway + EURO SUPPORT
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01143">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01143.
+            EBCDIC Codepage for Finland/Sweden + EURO SUPPORT
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01144">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01144.
+            EBCDIC Codepage for Italy + EURO SUPPORT
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01145">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01145.
+            EBCDIC Codepage for Spain/Latin America + EURO SUPPORT
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01146">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01146.
+            EBCDIC Codepage for United Kingdom + EURO SUPPORT
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01147">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01147.
+            EBCDIC Codepage for France + EURO SUPPORT
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01148">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01148.
+            EBCDIC Codepage for Belgium/International use + EURO support
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM01149">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM01149.
+            EBCDIC Codepage for Iceland + EURO SUPPORT
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM037">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM284.
+            EBCDIC Codepage for USA/Canada
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM273">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM273.
+            EBCDIC Codepage for Germany/Austria
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM277">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM277.
+            EBCDIC Codepage for Denmark/Norway
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM278">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM278.
+            EBCDIC Codepage for Finland/Sweden
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM280">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM280.
+            EBCDIC Codepage for Italy
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM284">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM284.
+            EBCDIC Codepage for Spain/Latin America
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM285">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM285.
+            EBCDIC Codepage for United Kingdom
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM290">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM290.
+            EBCDIC Codepage for Japanese (Katakana)
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM297">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM297.
+            EBCDIC Codepage for France
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM500">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM500.
+            EBCDIC Codepage for Belgium/International use
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM850">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM850.
+            Ascii Codepage PC Multilingual
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM871">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM871.
+            EBCDIC Codepage for Iceland
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM895">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM895.
+            Japanese Codepage : JAPAN 7 Bit 
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_IBM897">
+            <summary>
+            Transliteration Table Object for SBCS Codepage IBM897.
+            Japanese Codepage : JAPAN PC#1 
+            see also: JIS X 0201
+            </summary>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliterationTable_ISO_8859_1">
+            <summary>
+            Transliteration Table Object for SBCS Codepage ISO_8859-1.
+            Ascii Codepage Latin-1
+            </summary>
+        </member>
+        <member name="M:DDInt.Utility.UtilTransliterator.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)">
+            <summary>
+            Gets codepage by name.
+            </summary>
+        </member>
+        <member name="M:DDInt.Utility.UtilTransliterator.GetEncoding(System.Int32,System.Text.EncoderFallback,System.Text.DecoderFallback)">
+            <summary>
+            Gets codepage by windows codepage number.
+            </summary>
+        </member>
+        <member name="M:DDInt.Utility.UtilTransliterator.AliasToIANAName(System.String)">
+            <summary>
+            Maps a character set alias to an IANA character set name.
+            This mapping supports only the code pages implemented by DDTek.Util.
+            Based on http://www.iana.org/assignments/character-sets with some additions
+            </summary>
+            <returns>Name or null if not found</returns>
+        </member>
+        <member name="M:DDInt.Utility.UtilTransliterator.AliasToICUMapName(System.String)">
+            <summary>
+            Maps a character set alias to an ICU character map name.
+            This mapping supports only the code pages implemented by DDTek.Util.
+            Based on http://oss.software.ibm.com/cvs/icu/charset/data/ucm/ 
+            </summary>
+            <returns>Name or null if not found</returns>
+        </member>
+        <member name="M:DDInt.Utility.UtilTransliterator.CodepageToIANAName(System.Int32)">
+            <summary>
+            Maps a Windows codepage nr to an IANA character set name.
+            This mapping supports only the code pages implemented by DDTek.Util.
+            </summary>
+            <returns>Name or null if not found</returns>
+        </member>
+        <member name="M:DDInt.Utility.UtilTransliterator.CodepageToICUMapName(System.Int32)">
+            <summary>
+            Maps a codepage nr to an ICU character map name.
+            This mapping supports only the code pages implemented by DDTek.Util.
+            </summary>
+            <returns>Name or null if not found</returns>
+        </member>
+        <member name="M:DDInt.Utility.UtilTransliterator.IANANameToCodepage(System.String)">
+            <summary>
+            Maps an IANA character set name to a codepage nr.
+            This mapping supports only the code pages implemented by DDTek.Util.
+            </summary>
+            <returns>Codepage or 0 if not found</returns>
+        </member>
+        <member name="M:DDInt.Utility.UtilTransliterator.ICUMapNameToCodepage(System.String)">
+            <summary>
+            Maps an ICU character map name to a codepage nr.
+            This mapping supports only the code pages implemented by DDTek.Util.
+            </summary>
+            <returns>Codepage or 0 if not found</returns>
+        </member>
+        <member name="T:DDInt.Utility.UtilTransliteratorUsingICUTable">
+            <summary>
+            Class defining the transliteration process for fragments, using 
+            mapping tables dowloaded from http://oss.software.ibm.com/icu/charset/
+            </summary>
+        </member>
+        <member name="M:DDInt.Utility.UtilTransliteratorUsingICUTable.readByteSequence(System.String,System.Int32)">
+            <summary>
+            This helper-method reads a byte sequence from the charmap
+            that is formatted like this:  \x42\x5B....
+            upto a maximum of 4 bytes and converts it to an Int32
+            </summary>
+            <param name="line">string to read from</param>
+            <param name="offset">offset to start reading</param>
+            <returns>Int32</returns>
+        </member>
+        <member name="M:DDInt.Utility.UtilTransliteratorUsingICUTable.buildConversionTables(System.IO.StreamReader)">
+            <summary>
+            This method reads the entire contents of the ICU mappings file and
+            constructs the unicodeToCharsetMapping, primaryCharsetToUnicodeMapping 
+            and secondaryCharsetToUnicodeMapping arrays.
+            </summary>
+            <param name="sr">StreamReader that provides the ICU map</param>
+        </member>
+    </members>
+</doc>

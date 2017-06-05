@@ -1,0 +1,5 @@
+D:\csharp\MyDreamHouseSync\SynchronisationShared\bin\Debug\SynchronisationShared.dll
+D:\csharp\MyDreamHouseSync\SynchronisationShared\bin\Debug\SynchronisationShared.pdb
+D:\csharp\MyDreamHouseSync\SynchronisationShared\obj\Debug\SynchronisationShared.csprojResolveAssemblyReference.cache
+D:\csharp\MyDreamHouseSync\SynchronisationShared\obj\Debug\SynchronisationShared.dll
+D:\csharp\MyDreamHouseSync\SynchronisationShared\obj\Debug\SynchronisationShared.pdb

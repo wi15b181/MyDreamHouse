@@ -1,0 +1,16 @@
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationUnitTest.exe.config
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationUnitTest.exe
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationUnitTest.pdb
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationDataManager.dll
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationDataManager.pdb
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\obj\Debug\SynchronisationUnitTest.csprojResolveAssemblyReference.cache
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\obj\Debug\SynchronisationUnitTest.exe
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\obj\Debug\SynchronisationUnitTest.pdb
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\EntityFramework.dll
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\EntityFramework.SqlServer.dll
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\MySql.Data.dll
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\EntityFramework.xml
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\EntityFramework.SqlServer.xml
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationShared.dll
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationShared.pdb
