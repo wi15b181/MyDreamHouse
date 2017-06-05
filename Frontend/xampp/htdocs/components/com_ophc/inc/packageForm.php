@@ -77,21 +77,17 @@ foreach ($attributeTypes as $attr) {
 	<label class="ophc-form-label ">
 		Extras
 	</label>
-	<div class="checkbox">
-	  <label><input id="PAR_GARAGE" type="checkbox" value="no">Garage</label>
-	</div>
-	<div class="checkbox">
-	  <label><input id="PAR_CARPORT" type="checkbox" value="no">Carport</label>
-	</div>
-	<div class="checkbox">
-	  <label><input id="PAR_POOL" type="checkbox" value="no">Pool</label>
-	</div>
-	<div class="checkbox">
-	  <label><input id="PAR_LANDSCAPING" type="checkbox" value="no">Landscaping</label>
-	</div>
-	<div class="checkbox">
-	  <label><input id="PAR_CELLAR" type="checkbox" value="no">Cellar</label>
-	</div>
+	<?php
+		$extras = array('Garage','Carport','Pool', 'Landscaping', 'Cellar');
+		foreach($extras as $xtra)
+		{
+		?>
+			<div class="checkbox">
+				<label><input id="PAR_<?=strtoupper($xtra)?>" type="checkbox" value="no"><?=$xtra?></label>
+			</div>
+		<?php
+		}
+	?>
 </div>
 
 <input type="button" value="Zur&uuml;cksetzen" class="form-btn reset-btn" onclick="resetList();"/>
