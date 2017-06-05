@@ -169,7 +169,7 @@ function getConsultantForPackage($packageId) {
 	
 	$sql = "select berater_id,name,bild from berater b join benutzer be on b.benutzer_id = be.benutzer_id
 			join mdh_users users on be.joomla_user_id = users.id where berater_id = (select berater_id from hauspaket where hauspaket_id = " . $packageId . ");";
-	
+
 	$result = $conn->query ( $sql );
 	
 	if ($result->num_rows > 0) {
@@ -404,7 +404,7 @@ function saveAppointment($packageId, $day, $time) {
 function getAttributeTypes() {
 	$conn = getConnection ();
 	
-	$sql = "select * from hauspaket_attribut";
+	$sql = "select * from hauspaket_attribut where attribut_typ NOT LIKE 'EXTRA_%'";
 	$result = $conn->query ( $sql );
 	
 	$resultArray = array ();
@@ -427,6 +427,24 @@ function getAttributeValues($attr) {
 	$resultArray = array ();
 	
 	if ($result->num_rows > 0) {
+		while ( $row = $result->fetch_object () ) {
+			array_push ( $resultArray, $row );
+		}
+	}
+	
+	close ( $conn );
+	return $resultArray;
+}
+function getExtras() {
+	$conn = getConnection ();
+	
+	$sql = "select * from hauspaket_attribut where attribut_typ LIKE 'EXTRA_%'";
+	$result = $conn->query ( $sql );
+	
+	$resultArray = array ();
+	
+	if ($result->num_rows > 0) {
+		
 		while ( $row = $result->fetch_object () ) {
 			array_push ( $resultArray, $row );
 		}

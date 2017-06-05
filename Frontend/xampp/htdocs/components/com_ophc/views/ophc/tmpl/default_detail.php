@@ -56,6 +56,7 @@ if (isset ( $_GET ['showDetail'] ) && ! empty ( $_GET ['showDetail'] )) {
 				<tbody>
 				<?php 
 				$num = 1;
+
 				foreach($package->attributes as $attr){
 					?>
 					
@@ -70,6 +71,7 @@ if (isset ( $_GET ['showDetail'] ) && ! empty ( $_GET ['showDetail'] )) {
 						}else{
 							echo $attr->wert_text;
 						}
+
 						?></td>
 					</tr>
 					
@@ -88,12 +90,12 @@ if (isset ( $_GET ['showDetail'] ) && ! empty ( $_GET ['showDetail'] )) {
 		<div class="extras">
 			<h2>Gewählte Extras</h2>
 			<?php
-				$extras = array('Garage','Carport','Pool', 'Landscaping', 'Cellar');
+				$extras = getExtras();
 				foreach($extras as $xtra)
 				{
-					if($_GET['PAR_'.strtoupper($xtra)] == 'yes')
+					if($_GET['PAR_'.strtoupper($xtra->attribut_typ)] == 'yes')
 					{
-						echo "<h4>".$xtra."</h4>";
+						echo "<h4>".$xtra->attribut_typ_anzeige."</h4>";
 					}
 				}
 			?>
@@ -104,7 +106,7 @@ if (isset ( $_GET ['showDetail'] ) && ! empty ( $_GET ['showDetail'] )) {
 			$berater = getConsultantForPackage($package->id);
 			
 			$beraterRating = getRatingForBerater($berater->berater_id);
-			
+
 			?>			
 		<div class="detail-berater-star-div">
 			<div class="berater-star-container">

@@ -78,12 +78,12 @@ foreach ($attributeTypes as $attr) {
 		Extras
 	</label>
 	<?php
-		$extras = array('Garage','Carport','Pool', 'Landscaping', 'Cellar');
+		$extras = getExtras();
 		foreach($extras as $xtra)
 		{
 		?>
 			<div class="checkbox">
-				<label><input id="PAR_<?=strtoupper($xtra)?>" type="checkbox" value="no"><?=$xtra?></label>
+				<label><input id="PAR_<?=strtoupper($xtra->attribut_typ)?>" type="checkbox" value="no"><?=$xtra->attribut_typ_anzeige?></label>
 			</div>
 		<?php
 		}
