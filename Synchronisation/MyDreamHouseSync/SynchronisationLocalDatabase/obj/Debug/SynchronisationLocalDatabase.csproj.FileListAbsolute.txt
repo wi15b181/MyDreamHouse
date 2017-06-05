@@ -1,0 +1,7 @@
+D:\csharp\MyDreamHouseSync\SynchronisationLocalDatabase\bin\Debug\SynchronisationDatabase.mdf
+D:\csharp\MyDreamHouseSync\SynchronisationLocalDatabase\bin\Debug\SynchronisationDatabase_log.ldf
+D:\csharp\MyDreamHouseSync\SynchronisationLocalDatabase\bin\Debug\SynchronisationLocalDatabase.dll
+D:\csharp\MyDreamHouseSync\SynchronisationLocalDatabase\bin\Debug\SynchronisationLocalDatabase.pdb
+D:\csharp\MyDreamHouseSync\SynchronisationLocalDatabase\obj\Debug\SynchronisationLocalDatabase.csprojResolveAssemblyReference.cache
+D:\csharp\MyDreamHouseSync\SynchronisationLocalDatabase\obj\Debug\SynchronisationLocalDatabase.dll
+D:\csharp\MyDreamHouseSync\SynchronisationLocalDatabase\obj\Debug\SynchronisationLocalDatabase.pdb

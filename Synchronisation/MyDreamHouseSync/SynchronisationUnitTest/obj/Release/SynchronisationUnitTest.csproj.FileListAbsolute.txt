@@ -1,0 +1,8 @@
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Release\SynchronisationUnitTest.exe.config
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\obj\Release\SynchronisationUnitTest.csprojResolveAssemblyReference.cache
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Release\SynchronisationUnitTest.exe
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Release\SynchronisationUnitTest.pdb
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Release\SynchronisationDataManager.dll
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Release\SynchronisationDataManager.pdb
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\obj\Release\SynchronisationUnitTest.exe
+D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\obj\Release\SynchronisationUnitTest.pdb
