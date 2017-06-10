@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SynchronisationShared;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
@@ -13,6 +14,14 @@ namespace SynchronisationDataManager.Clients
         private const string CONNECT_STRING = "Host=wi-gate.technikum-wien.at;port=60831;User ID = mydreahmouse; Password = wi15b; Database = mdh";
         DbProviderFactory factory = DbProviderFactories.GetFactory("DDTek.DB2");
         DbConnection Conn;
+
+        public DB2Client()
+        {
+            Logger.Info("Connecting to DB2...");
+            Connect();
+            Logger.Info("Connection successful! [DB2]");
+        }
+
         public override void BeginTransaction()
         {
             throw new NotImplementedException();
@@ -30,21 +39,27 @@ namespace SynchronisationDataManager.Clients
             Conn.Open();
         }
 
-        public override DataTable ExecuteQuery(string query)
+        protected override DataTable ExecuteQuery(string query)
         {
+            Logger.Info(query);
             DataTable dataTable = new DataTable();
-            Connect();
-            using (DbCommand dbcmd = Conn.CreateCommand())
+            try
             {
-                dbcmd.CommandType = CommandType.Text;
-                dbcmd.CommandText = query;
-
-                using (DbDataReader reader = dbcmd.ExecuteReader())
+                using (DbCommand dbcmd = Conn.CreateCommand())
                 {
-                    dataTable.Load(reader);
+                    dbcmd.CommandType = CommandType.Text;
+                    dbcmd.CommandText = query;
+
+                    using (DbDataReader reader = dbcmd.ExecuteReader())
+                    {
+                        dataTable.Load(reader);
+                    }
                 }
             }
-            Close();
+            catch (Exception ex)
+            {
+                Logger.Error(ex.Message);
+            }
             return dataTable;
         }
 
@@ -55,6 +70,7 @@ namespace SynchronisationDataManager.Clients
 
         protected override void Close()
         {
+            Logger.Info("Disconnecting DB2...");
             Conn.Close();
         }
     }

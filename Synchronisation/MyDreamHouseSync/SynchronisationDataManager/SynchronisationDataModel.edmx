@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SynchronisationDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Sync_jn">
+          <Key>
+            <PropertyRef Name="jn_id" />
+          </Key>
+          <Property Name="jn_id" Type="int" Nullable="false" />
+          <Property Name="jn_table" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="jn_timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="jn_pk" Type="int" Nullable="false" />
+          <Property Name="jn_operation" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="jn_synced" Type="tinyint" Nullable="false" />
+          <Property Name="jn_changeset_json" Type="varchar(max)" />
+          <Property Name="jn_application" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SynchronisationDatabaseModelStoreContainer">
+          <EntitySet Name="Sync_jn" EntityType="Self.Sync_jn" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SynchronisationDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Sync_jn">
+          <Key>
+            <PropertyRef Name="jn_id" />
+          </Key>
+          <Property Name="jn_id" Type="Int32" Nullable="false" />
+          <Property Name="jn_table" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="jn_timestamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="jn_pk" Type="Int32" Nullable="false" />
+          <Property Name="jn_operation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="jn_synced" Type="Byte" Nullable="false" />
+          <Property Name="jn_changeset_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="jn_application" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SynchronisationDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Sync_jn" EntityType="Self.Sync_jn" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SynchronisationDatabaseModelStoreContainer" CdmEntityContainer="SynchronisationDatabaseEntities">
+          <EntitySetMapping Name="Sync_jn">
+            <EntityTypeMapping TypeName="SynchronisationDatabaseModel.Sync_jn">
+              <MappingFragment StoreEntitySet="Sync_jn">
+                <ScalarProperty Name="jn_id" ColumnName="jn_id" />
+                <ScalarProperty Name="jn_table" ColumnName="jn_table" />
+                <ScalarProperty Name="jn_timestamp" ColumnName="jn_timestamp" />
+                <ScalarProperty Name="jn_pk" ColumnName="jn_pk" />
+                <ScalarProperty Name="jn_operation" ColumnName="jn_operation" />
+                <ScalarProperty Name="jn_synced" ColumnName="jn_synced" />
+                <ScalarProperty Name="jn_changeset_json" ColumnName="jn_changeset_json" />
+                <ScalarProperty Name="jn_application" ColumnName="jn_application" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

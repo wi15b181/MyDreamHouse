@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using SynchronisationShared;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,7 +13,12 @@ namespace SynchronisationDataManager.Clients
     {
         private const string CONNECT_STRING = "server=wi-gate.technikum-wien.at; port=60431; userid=root; database=joomla";
         private MySqlConnection conn;
-
+        public MySQLClient()
+        {
+            Logger.Info("Connecting to MySQL...");
+            Connect();
+            Logger.Info("Connection successful! [MySQL]");
+        }
         public override void BeginTransaction()
         {
             throw new NotImplementedException();
@@ -36,13 +42,10 @@ namespace SynchronisationDataManager.Clients
                 Console.WriteLine(ex1.Message); // Implement real exception handling... or not... #herebedragons
             }
         }
-
-        public override DataTable ExecuteQuery(string query)
+        protected override DataTable ExecuteQuery(string query)
         {
             DataTable dataTable = new DataTable();
-
-            Connect();
-
+            
             using (MySqlCommand cmd = new MySqlCommand(query, conn))
             {
                 using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -50,9 +53,7 @@ namespace SynchronisationDataManager.Clients
                     dataTable.Load(reader);
                 }
             }
-
-            Close();
-
+            
             return dataTable;
         }
 
@@ -63,6 +64,7 @@ namespace SynchronisationDataManager.Clients
 
         protected override void Close()
         {
+           Logger.Info("Disconnecting MySQL...");
            conn.Close();
         }
     }

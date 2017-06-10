@@ -14,7 +14,16 @@ namespace SynchronisationDataManager.Clients
         public abstract void BeginTransaction();
         public abstract void RollbackTransaction();
         public abstract void CommitTransaction();
-        public abstract DataTable ExecuteQuery(string query);
+        protected abstract DataTable ExecuteQuery(string query);
+
+        public DataTable ExecuteQuery(string query, List<Object> insertParamValues)
+        {
+            if(null != insertParamValues)
+            {
+             // maybe neccesary
+            }
+            return ExecuteQuery(query);
+        }
 
     }
 }

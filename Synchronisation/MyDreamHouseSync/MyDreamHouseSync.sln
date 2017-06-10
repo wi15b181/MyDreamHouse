@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronisationLocalDatabas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronisationShared", "SynchronisationShared\SynchronisationShared.csproj", "{D708732C-1C2D-4C35-8FD8-B69188A8F2A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronisationBusinessLogic", "SynchronisationBusinessLogic\SynchronisationBusinessLogic.csproj", "{BC84F08B-B46C-4E34-AB3B-16E0EB8AE015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronisationLocalExecutor", "SynchronisationLocalExecutor\SynchronisationLocalExecutor.csproj", "{2BAE14D4-04CF-459B-AE5A-5E9145783471}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{D708732C-1C2D-4C35-8FD8-B69188A8F2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D708732C-1C2D-4C35-8FD8-B69188A8F2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D708732C-1C2D-4C35-8FD8-B69188A8F2A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC84F08B-B46C-4E34-AB3B-16E0EB8AE015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC84F08B-B46C-4E34-AB3B-16E0EB8AE015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC84F08B-B46C-4E34-AB3B-16E0EB8AE015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC84F08B-B46C-4E34-AB3B-16E0EB8AE015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BAE14D4-04CF-459B-AE5A-5E9145783471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BAE14D4-04CF-459B-AE5A-5E9145783471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BAE14D4-04CF-459B-AE5A-5E9145783471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BAE14D4-04CF-459B-AE5A-5E9145783471}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

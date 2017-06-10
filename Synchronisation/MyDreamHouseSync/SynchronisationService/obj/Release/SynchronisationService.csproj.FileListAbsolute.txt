@@ -3,3 +3,16 @@ D:\csharp\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationSer
 D:\csharp\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.pdb
 D:\csharp\MyDreamHouseSync\SynchronisationService\obj\Release\SynchronisationService.dll
 D:\csharp\MyDreamHouseSync\SynchronisationService\obj\Release\SynchronisationService.pdb
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.dll.config
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.pdb
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\EntityFramework.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\EntityFramework.SqlServer.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\IBM.Data.DB2.EntityFramework.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\MySql.Data.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\MySql.Data.Entity.EF6.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\EntityFramework.xml
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\EntityFramework.SqlServer.xml
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\obj\Release\SynchronisationService.csprojResolveAssemblyReference.cache
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\obj\Release\SynchronisationService.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\obj\Release\SynchronisationService.pdb
