@@ -6,3 +6,6 @@ D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Release\SynchronisationDa
 D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Release\SynchronisationDataManager.pdb
 D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\obj\Release\SynchronisationUnitTest.exe
 D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\obj\Release\SynchronisationUnitTest.pdb
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Release\SynchronisationUnitTest.exe.config
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\obj\Release\SynchronisationUnitTest.exe
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\obj\Release\SynchronisationUnitTest.pdb

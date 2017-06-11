@@ -9,16 +9,18 @@ namespace SynchronisationShared
     public class Logger
     {
         private const string PREFIX = "############";
-        private const string PREFIX_ERROR = " [ERROR]:";
-        private const string PREFIX_INFO = " [INFO]:";
-        public static void WriteError(string text)
+        private const string PREFIX_ERROR = " [ERROR]: ";
+        private const string PREFIX_INFO = " [INFO]: ";
+        private const string ERROR = PREFIX + PREFIX_ERROR;
+        private const string INFO = PREFIX + PREFIX_INFO;
+        public static void Error(string text)
         {
-            Console.WriteLine(PREFIX + PREFIX_ERROR + text);
+            Console.WriteLine(ERROR + text);
         }
 
-        public static void WriteInfo(string text)
+        public static void Info(string text)
         {
-            Console.WriteLine(PREFIX + PREFIX_INFO + text);
+            Console.WriteLine(INFO + text);
         }
     }
 }

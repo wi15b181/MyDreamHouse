@@ -8,28 +8,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static SynchronisationDataManager.Clients.DatabaseClientFactory;
+using static SynchronisationShared.SharedEnums;
 
 namespace SynchronisationUnitTest
 {
     class Program
     {
         private const string MYSQL_TEST_QUERY = "select * from benutzer";
+        private const string DB2_TEST_QUERY = "select * from hauspaket_attribut";
         static void Main(string[] args)
         {
-            Logger.WriteInfo("Starting Unit text");
+            Logger.Info("Starting Unit Test");
 
-            Logger.WriteInfo("Obtaining MYSQL Client");
-            DatabaseClient mysqlClient = DatabaseClientFactory.GetClient(ClientType.MYSQL);
+            TestMySQL();
+            TestDB2();
 
-            Logger.WriteInfo("Executing query MYSQL: "+MYSQL_TEST_QUERY);
-            DataTable dataTable = mysqlClient.ExecuteQuery(MYSQL_TEST_QUERY);
+            Logger.Info("Unit Test Successful");
 
-            Logger.WriteInfo("Printing ResultSet");
+            Console.ReadLine();
+        }
+
+        private static void TestMySQL()
+        {
+            Logger.Info("Start TestMySQL ");
+
+            Logger.Info("Obtaining MYSQL Client");
+            DatabaseClient mysqlClient = DatabaseClientFactory.GetClient(DatabaseType.MYSQL);
+
+            Logger.Info("Executing query MYSQL: " + MYSQL_TEST_QUERY);
+            DataTable dataTable = mysqlClient.ExecuteQuery(MYSQL_TEST_QUERY,null);
+
+            Logger.Info("Printing ResultSet");
             foreach (DataRow row in dataTable.Rows)
             {
                 Console.WriteLine(row);
             }
-            Console.ReadLine();
+        }
+        private static void TestDB2()
+        {
+            Logger.Info("Start TestDB2 ");
+
+            Logger.Info("Obtaining DB2 Client");
+            DatabaseClient mysqlClient = DatabaseClientFactory.GetClient(DatabaseType.DB2);
+
+            Logger.Info("Executing query DB2: " + DB2_TEST_QUERY);
+            DataTable dataTable = mysqlClient.ExecuteQuery(DB2_TEST_QUERY,null);
+
+            Logger.Info("Printing ResultSet");
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Console.WriteLine(row);
+            }
         }
     }
 }
