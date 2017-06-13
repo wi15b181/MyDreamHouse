@@ -96,23 +96,6 @@ foreach ($attributeTypes as $attr) {
 ?>
 </div>
 
- <div class="form-elem" id="degree_of_completion" style="height:auto; padding-bottom:10px;">
-	<label class="ophc-form-label ">
-		Ausbaustufe
-	</label>
-	<?php
-		$degreeoc = array('Rohbau','Fassadenfertig','Belagsfertig', 'Schlüsselfertig');
-		foreach($degreeoc as $degreeitem)
-		{
-		?>
-			<div class="checkbox">
-				<label><input id="PAR_<?=strtoupper($xtra)?>" type="checkbox" value="no"><?=$degreeitem?></label>
-			</div>
-		<?php
-		}
-	?>
-</div>
-
 <input type="button" value="Zur&uuml;cksetzen" class="form-btn reset-btn" onclick="resetList();"/>
 
 <div style="clear: both"></div>
