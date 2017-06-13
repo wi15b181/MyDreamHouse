@@ -19,10 +19,10 @@ foreach ($attributeTypes as $attr) {
 	<?php 
 			$selectedValue = null;
 			if(isset($_GET['PAR_'.$attr->attribut_typ]) && !empty($_GET['PAR_'.$attr->attribut_typ])){
-				echo '<select onchange="loadList();" id="PAR_'.$attr->attribut_typ.'" name="PAR_'.$attr->attribut_typ.'" value="'.$_GET['PAR_'.$attr->attribut_typ].'" >';
+				echo '<select onchange="loadList();" class="price_calc" id="PAR_'.$attr->attribut_typ.'" name="PAR_'.$attr->attribut_typ.'" value="'.$_GET['PAR_'.$attr->attribut_typ].'" >';
 				$selectedValue = $_GET['PAR_'.$attr->attribut_typ];
 			}else{
-				echo '<select onchange="loadList();" id="PAR_'.$attr->attribut_typ.'" name="PAR_'.$attr->attribut_typ.'">';
+				echo '<select onchange="loadList();" class="price_calc" id="PAR_'.$attr->attribut_typ.'" name="PAR_'.$attr->attribut_typ.'">';
 			}?>
 			<option value="">Bitte w&auml;hlen... </option>
 			<?php 
@@ -83,11 +83,17 @@ foreach ($attributeTypes as $attr) {
 		{
 		?>
 			<div class="checkbox">
-				<label><input id="PAR_<?=strtoupper($xtra->attribut_typ)?>" type="checkbox" value="no"><?=$xtra->attribut_typ_anzeige?></label>
+				<label><input id="PAR_<?=strtoupper($xtra->attribut_typ)?>" type="checkbox" value="no" class="price_calc"><?=$xtra->attribut_typ_anzeige?></label>
 			</div>
 		<?php
 		}
 	?>
+</div>
+<div id="ruleConfig" style="display:none;">
+<?php 
+	$regeln = getRules();
+	echo json_encode($regeln);
+?>
 </div>
 
  <div class="form-elem" id="degree_of_completion" style="height:auto; padding-bottom:10px;">
@@ -114,8 +120,8 @@ foreach ($attributeTypes as $attr) {
 
 </form>
 <script>
+var RULES = JSON.parse(jQuery('#ruleConfig').html());
 jQuery( document ).ready(function() {	
-	
 	jQuery.ajaxSetup({
 	    beforeSend:function(){
 	        // show gif here, eg:
@@ -128,7 +134,9 @@ jQuery( document ).ready(function() {
 	        //jQuery('#packageList').show();
 	    }
 	});
-
+	jQuery('.price_calc').change(function() {
+		checkRules();
+	});
 	jQuery( "#extra_group input[type=checkbox]").change(function() {
 		if(this.checked)
 			jQuery(this).val('yes');
@@ -218,6 +226,30 @@ jQuery( document ).ready(function() {
 
 function resetList(){
 	window.location.href='<?php echo $_SERVER['PHP_SELF'];?>';
+}
+
+function checkRules() {
+	jQuery('select option').removeAttr('disabled');
+	jQuery('select').each(function() {
+		var id = jQuery(this).val();
+		if(id != null)
+		{
+			jQuery.each(RULES, function( index, rule ) {
+				if(rule.regel_erlaubt == true)
+					return true; // equals continue
+				var block = 0;
+				if(rule.regel_attribut_left_id == id)
+						block = rule.regel_attribut_right_id;
+				else if(rule.regel_attribut_right_id == id)
+					block = rule.regel_attribut_left_id;
+				
+				if(block != 0)
+				{
+					jQuery('select option[value="'+block+'"]').attr('disabled','disabled');
+				}
+			});
+		}
+	});	
 }
 
 function augmentLink(elem){

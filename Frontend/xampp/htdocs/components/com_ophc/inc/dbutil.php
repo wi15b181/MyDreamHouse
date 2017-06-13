@@ -453,6 +453,24 @@ function getExtras() {
 	close ( $conn );
 	return $resultArray;
 }
+function getRules() {
+	$conn = getConnection ();
+	
+	$sql = "select * from hauspaket_attribut_regel";
+	$result = $conn->query ( $sql );
+	
+	$resultArray = array ();
+	
+	if ($result->num_rows > 0) {
+		
+		while ( $row = $result->fetch_object () ) {
+			array_push ( $resultArray, $row );
+		}
+	}
+	
+	close ( $conn );
+	return $resultArray;
+}
 function close($conn) {
 	$conn->close ();
 }
