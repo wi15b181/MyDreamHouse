@@ -438,7 +438,7 @@ function getAttributeValues($attr) {
 function getExtras() {
 	$conn = getConnection ();
 	
-	$sql = "select * from hauspaket_attribut where attribut_typ LIKE 'EXTRA_%'";
+	$sql = "select * from hauspaket_attribut JOIN hauspaket_attribut_wert USING (attribut_id) where attribut_typ LIKE 'EXTRA_%' AND wert_text = 'JA'";
 	$result = $conn->query ( $sql );
 	
 	$resultArray = array ();

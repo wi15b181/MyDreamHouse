@@ -122,9 +122,9 @@ jQuery( document ).ready(function() {
 	});
 	jQuery( "#extra_group input[type=checkbox]").change(function() {
 		if(this.checked)
-			jQuery(this).val('yes');
+			jQuery(this).val('JA');
 		else
-			jQuery(this).val('no');
+			jQuery(this).val('NEIN');
 	});
 	jQuery( "#price-slider" ).slider({
 	    range: true,

@@ -160,6 +160,28 @@ if(isset ($_POST['delete'])){
 		<input min="0" max="3" style="width: 30px;" type="number" id="PAR_STOCKWERKE" value="<?php echo $package->stockwerke;?>">
 		<?php 
 		}?>
+		<label class="ophc-form-label ">
+			Extras
+		</label>
+		<?php		
+			$extras = getExtras();
+			foreach($extras as $xtra)
+			{
+				$checked = '';
+				$val = 'NEIN';
+				foreach($package->attributes as $pAttr){
+					if($pAttr->attribut_typ == $xtra->attribut_typ && $pAttr->wert_text == 'JA'){
+						$checked = 'checked';
+						$val = 'JA';
+					}
+				}
+			?>
+				<div class="checkbox">
+					<label><input data-attrid="<?= $xtra->wert_id; ?>" id="PAR_<?=strtoupper($xtra->attribut_typ)?>" type="checkbox" value="<?= $val ?>" class="price_calc"<?= $checked ?>><?=$xtra->attribut_typ_anzeige?></label>
+				</div>
+			<?php
+			}
+		?>
 		</div>
 		<div class="ophc-detail-right">
 				<label class="ophc-form-label ">Anmerkungen (max. 1024 Zeichen)</label>				
@@ -170,14 +192,19 @@ if(isset ($_POST['delete'])){
 				
 				<label class="ophc-form-label" for="price">Gesamtpreis: </label>
 				<input <?php if(getReadOnly(false)){echo ' disabled="disabled" ';}?> placeholder="z.B. 400.000,- exkl. USt." value="<?php if(isset($sale)){echo $sale->kaufpreis;}?>" type="text" id="price" value="">
-		
+				<p data-baseprice="<?= $package->preis; ?>" id="priceSum"></p>
 				<hr/>
 				<label class="ophc-form-label" for="price">Kundenr&uuml;ckmeldung: </label>
 				<textarea <?php if(getReadOnly(true)){echo ' disabled="disabled" ';}?>placeholder="R&uuml;ckmeldung ausst&auml;ndig..." maxlength="1024" id="message" style="width: 550px; height: 110px; resize: none;"><?php if(isset($sale)){echo $sale->message;}?></textarea>
 				
 		</div>
 	</div>
-	
+	<div id="ruleConfig" style="display:none;">
+	<?php 
+		$regeln = getRules();
+		echo json_encode($regeln);
+	?>
+	</div>
 	<div class="ophc-detail-all">
 		<div id="attachements">
 			<h1>Anh&auml;nge</h1>
@@ -234,7 +261,95 @@ if(isset ($_POST['delete'])){
 </div>
 
 <script>
+var RULES = JSON.parse(jQuery('#ruleConfig').html());
+var MULT = 1;
+jQuery( document ).ready(function() {	
+	calcPrice();
+	jQuery( "input[type=checkbox]").change(function() {
+		if(this.checked)
+			jQuery(this).val('JA');
+		else
+			jQuery(this).val('NEIN');
+	});
+	jQuery('.price_calc').change(function() {
+		checkRules();
+		calcPrice();
+	});
+});
 
+
+function checkRules() {
+	jQuery('select option').removeAttr('disabled');
+	jQuery('select').each(function() {
+		var id = jQuery(this).val();
+		if(id != null)
+		{
+			jQuery.each(RULES, function( index, rule ) {
+				if(rule.regel_erlaubt == true)
+					return true; // equals continue
+				var block = 0;
+				if(rule.regel_attribut_left_id == id)
+						block = rule.regel_attribut_right_id;
+				else if(rule.regel_attribut_right_id == id)
+					block = rule.regel_attribut_left_id;
+				
+				if(block != 0)
+				{
+					jQuery('select option[value="'+block+'"]').attr('disabled','disabled');
+				}
+			});
+		}
+	});	
+}
+
+function calcPrice() {
+	MULT = 1;
+	jQuery('.price_calc').each(function() {
+		var id = jQuery(this).val();
+		if(id == 'JA')
+		{
+			id = jQuery(this).data('attrid');
+		}
+		if(id != null)
+		{
+			jQuery.each(RULES, function( index, rule ) {
+				if(rule.regel_erlaubt == false)
+					return true; // equals continue;
+				if(rule.regel_attribut_left_id == id)
+				{
+					if(rule.regel_attribut_right_id == '' || rule.regel_attribut_right_id == null)
+					{
+						MULT = MULT * rule.regel_preis_modifikator;
+					}
+					else
+					{
+						var found = false;
+						var checkId = rule.regel_attribut_right_id;
+						jQuery('.price_calc').each(function() {
+							var subId = jQuery(this).val();
+							if(subId == checkId)
+								found = true;
+						});
+						if(found == true)
+							MULT = MULT * rule.regel_preis_modifikator;
+					}
+				}
+			});
+		}
+	});	
+	var sum = jQuery('#priceSum').data('baseprice')*MULT;
+	jQuery('#priceSum').html('Kostenkalkulation: '+(sum).formatMoney(0, ',', '.')+' €');
+}
+Number.prototype.formatMoney = function(c, d, t){
+var n = this, 
+    c = isNaN(c = Math.abs(c)) ? 2 : c, 
+    d = d == undefined ? "." : d, 
+    t = t == undefined ? "," : t, 
+    s = n < 0 ? "-" : "", 
+    i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), 
+    j = (j = i.length) > 3 ? j % 3 : 0;
+   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+ };
 function save(){
 	jQuery(function(){
 	var params = '?task=saveCustomerPackage&format=raw';
