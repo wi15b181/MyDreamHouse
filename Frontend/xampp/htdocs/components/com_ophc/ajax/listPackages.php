@@ -25,7 +25,7 @@ function queryPackages(){
 	
 	if(isset($paramausbaustufe)){
 
-	// echo $_GET['PAR_AUSBAUSTUFE'];
+	echo $_GET['PAR_AUSBAUSTUFE'];
 	
 	$sqlQueryausbaustufe = "SELECT regel_preis_modifikator FROM joomla.hauspaket_attribut_regel WHERE regel_attribut_left_id = '$paramausbaustufe'";
 	$resultausbaustufe = $conn->query($sqlQueryausbaustufe);
@@ -38,8 +38,8 @@ function queryPackages(){
 		}
 		
 	}
-	//echo $multiplikationswert;
-	//echo "Test Ende";		
+	echo $multiplikationswert;
+	echo "Test Ende";		
 	}
 	
 	// END - - Add by Adnan Jusic related to FST 04; 19.06.2017 //
