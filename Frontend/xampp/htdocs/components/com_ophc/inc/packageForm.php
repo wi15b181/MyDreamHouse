@@ -119,12 +119,13 @@ jQuery( document ).ready(function() {
 	});
 	jQuery('.price_calc').change(function() {
 		checkRules();
+		// checkAusbaustufe();
 	});
 	jQuery( "#extra_group input[type=checkbox]").change(function() {
 		if(this.checked)
-			jQuery(this).val('JA');
+			jQuery(this).val('yes');
 		else
-			jQuery(this).val('NEIN');
+			jQuery(this).val('no');
 	});
 	jQuery( "#price-slider" ).slider({
 	    range: true,
@@ -235,6 +236,24 @@ function checkRules() {
 	});	
 }
 
+/*
+// START - - Add by Adnan Jusic related to FST 04; 19.06.2017 //
+
+function checkAusbaustufe() {
+	window.alert("test");
+	
+	var e = document.getElementById("PAR_AUSBAUSTUFE");
+	var id_att = e.options[e.selectedIndex].value;	
+	window.alert("Attribut ID: " + id_att);
+	jQuery.each(RULES, function( index, rule ) {
+		if(rule.regel_attribut_left_id == id_att)
+		window.alert("Preismodifikator: " + rule.regel_preis_modifikator);
+	});
+	
+}
+// END - - Add by Adnan Jusic related to FST 04; 19.06.2017 //
+*/
+
 function augmentLink(elem){
 	var href = jQuery(elem).attr('href');
 	href += getParamList();
@@ -264,11 +283,11 @@ function loadList(){
 
 	jQuery.ajax({
 		  url: url,
-		  context: document.body
+		 // context: document.body
 		}).done(function(content) {
 			jQuery( '#packageList' ).html(content);
 			jQuery('.star-container').rating(function(vote, event){
-			    // console.log(vote, event);
+			     // console.log(vote, event);
 			},true);
 		});
 }

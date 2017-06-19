@@ -9,8 +9,42 @@ queryPackages();
 
 function queryPackages(){
 	$conn = getConnection();		
-	$result = $conn->query(getSQL());	
+	$result = $conn->query(getSQL());
 	
+	
+	//echo $_GET['PAR_EXTRA_GARAGE'];
+	//echo $_GET['PAR_EXTRA_KELLER'];
+	//echo $_GET['PAR_EXTRA_POOL'];
+	//echo $_GET['PAR_EXTRA_GARTENGESTALTUNG'];
+	//echo $_GET['PAR_EXTRA_KELLER'];
+	
+	// START - - Add by Adnan Jusic related to FST 04; 19.06.2017 //
+	$multiplikationswert = 0.00;
+	$paramausbaustufe = $_GET['PAR_AUSBAUSTUFE'];
+	
+	
+	if(isset($paramausbaustufe)){
+
+	// echo $_GET['PAR_AUSBAUSTUFE'];
+	
+	$sqlQueryausbaustufe = "SELECT regel_preis_modifikator FROM joomla.hauspaket_attribut_regel WHERE regel_attribut_left_id = '$paramausbaustufe'";
+	$resultausbaustufe = $conn->query($sqlQueryausbaustufe);
+	// echo $sqlQueryausbaustufe;
+	if ($resultausbaustufe->num_rows > 0) {
+		
+		while($row = $resultausbaustufe->fetch_assoc()){
+			//echo $row["regel_preis_modifikator"];
+			$multiplikationswert = $row["regel_preis_modifikator"];
+		}
+		
+	}
+	//echo $multiplikationswert;
+	//echo "Test Ende";		
+	}
+	
+	// END - - Add by Adnan Jusic related to FST 04; 19.06.2017 //
+
+		
 	echo '<span class="span-result">Ihre Suche ergab '.$result->num_rows.' Treffer: </span>';
 	echo '<br/>';
 	echo '<br/>';
@@ -58,8 +92,14 @@ function queryPackages(){
 					</div>
 					<div class="tile-footer-section part-2">
 						<div>
-							<span><?php 
-							echo ' &euro; '.number_format($package->preis,0,',','.').' ';
+							<span><?php
+							if($multiplikationswert <= 0){
+								echo ' &euro; '.number_format($package->preis,0,',','.').' ';	
+							}else{
+								$preis_alt = $package->preis;
+								$preis_neu = $preis_alt - ($preis_alt * ($multiplikationswert / 100));
+								echo ' &euro; '.number_format($preis_neu,0,',','.').' ';
+							}
 							?></span>
 						</div>
 					</div>
@@ -108,7 +148,7 @@ function getSQL(){
 		$sqlQuery = appendCriteria($sqlQuery, $_GET['PAR_ARTDACHKONSTR'], $and);
 		$and = true;
 	}
-	
+
 	if(isset($_GET['PAR_PRICE']) && !empty($_GET['PAR_PRICE'])){
 		$sqlQuery = appendSpecialCriteria($sqlQuery, $_GET['PAR_PRICE'],'PAR_PRICE', $and);
 		$and = true;
@@ -140,6 +180,15 @@ function getSQL(){
 	}
 	
 	$sqlQuery = appendFixedCriteria($sqlQuery, 'benutzer_id is null', $and);
+	
+	return $sqlQuery;
+}
+
+function appendAusbaustufe($sqlQuery, $crit, $and){
+
+	$sqlQuery = appendAnd($sqlQuery,$and);
+	
+	$sqlQuery = $sqlQuery.' '.$crit.' ';
 	
 	return $sqlQuery;
 }
