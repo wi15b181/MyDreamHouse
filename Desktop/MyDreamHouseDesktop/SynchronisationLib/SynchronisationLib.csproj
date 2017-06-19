@@ -61,6 +61,15 @@
     <None Include="Service References\SynchronisationService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\SynchronisationService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SynchronisationService\item21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SynchronisationService\SynchronisationLib.SynchronisationService.SyncDataSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\SynchronisationService\SynchronisationWCF.wsdl" />
   </ItemGroup>
   <ItemGroup>

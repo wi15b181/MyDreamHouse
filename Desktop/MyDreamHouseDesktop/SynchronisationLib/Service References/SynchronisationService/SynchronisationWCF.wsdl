@@ -4,6 +4,8 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SynchronisationDataManager.Tables" />
+      <xsd:import schemaLocation="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SynchronisationShared" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ISynchronisationWCF_Ping_InputMessage">
@@ -12,16 +14,54 @@
   <wsdl:message name="ISynchronisationWCF_Ping_OutputMessage">
     <wsdl:part name="parameters" element="tns:PingResponse" />
   </wsdl:message>
+  <wsdl:message name="ISynchronisationWCF_SaveHauspaket_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHauspaket" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronisationWCF_SaveHauspaket_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveHauspaketResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronisationWCF_Synchronize_InputMessage">
+    <wsdl:part name="parameters" element="tns:Synchronize" />
+  </wsdl:message>
+  <wsdl:message name="ISynchronisationWCF_Synchronize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISynchronisationWCF">
     <wsdl:operation name="Ping">
       <wsdl:input wsaw:Action="http://tempuri.org/ISynchronisationWCF/Ping" message="tns:ISynchronisationWCF_Ping_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISynchronisationWCF/PingResponse" message="tns:ISynchronisationWCF_Ping_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveHauspaket">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronisationWCF/SaveHauspaket" message="tns:ISynchronisationWCF_SaveHauspaket_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronisationWCF/SaveHauspaketResponse" message="tns:ISynchronisationWCF_SaveHauspaket_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Synchronize">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISynchronisationWCF/Synchronize" message="tns:ISynchronisationWCF_Synchronize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISynchronisationWCF/SynchronizeResponse" message="tns:ISynchronisationWCF_Synchronize_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISynchronisationWCF" type="tns:ISynchronisationWCF">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="Ping">
       <soap:operation soapAction="http://tempuri.org/ISynchronisationWCF/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveHauspaket">
+      <soap:operation soapAction="http://tempuri.org/ISynchronisationWCF/SaveHauspaket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Synchronize">
+      <soap:operation soapAction="http://tempuri.org/ISynchronisationWCF/Synchronize" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

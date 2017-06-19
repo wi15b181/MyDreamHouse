@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SynchronisationDataManager.Tables" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SynchronisationDataManager.Tables" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SynchronisationShared" />
+  <xs:complexType name="HauspaketDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SynchronisationShared" base="q1:SyncData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Archived" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BenutzerId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BeraterId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Bezeichnung" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Grundflaeche" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="HauspaketAttachements" nillable="true" type="tns:ArrayOfAttachements" />
+          <xs:element minOccurs="0" name="HauspaketAttributZuordnungen" nillable="true" type="tns:ArrayOfHauspaketAttributZuord" />
+          <xs:element minOccurs="0" name="HauspaketId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HerstellerId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Preis" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Stockwerke" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Wohnflaeche" nillable="true" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HauspaketDTO" nillable="true" type="tns:HauspaketDTO" />
+  <xs:complexType name="ArrayOfAttachements">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Attachements" nillable="true" type="tns:Attachements" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttachements" nillable="true" type="tns:ArrayOfAttachements" />
+  <xs:complexType name="Attachements">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Table">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttachementId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Bezeichnung" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Filename" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HauspaketId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Mimetype" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Size" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Attachements" nillable="true" type="tns:Attachements" />
+  <xs:complexType name="Table">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SynchronisationShared" base="q2:SyncData">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Table" nillable="true" type="tns:Table" />
+  <xs:complexType name="ArrayOfHauspaketAttributZuord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HauspaketAttributZuord" nillable="true" type="tns:HauspaketAttributZuord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHauspaketAttributZuord" nillable="true" type="tns:ArrayOfHauspaketAttributZuord" />
+  <xs:complexType name="HauspaketAttributZuord">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Table">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HauspaketId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="WertId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HauspaketAttributZuord" nillable="true" type="tns:HauspaketAttributZuord" />
+  <xs:complexType name="ArrayOfBerater">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Berater" nillable="true" type="tns:Berater" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBerater" nillable="true" type="tns:ArrayOfBerater" />
+  <xs:complexType name="Berater">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Table">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BenutzerId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BeraterId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Bild" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HerstellerId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Berater" nillable="true" type="tns:Berater" />
+  <xs:complexType name="ArrayOfHauspaketAttributRegel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HauspaketAttributRegel" nillable="true" type="tns:HauspaketAttributRegel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHauspaketAttributRegel" nillable="true" type="tns:ArrayOfHauspaketAttributRegel" />
+  <xs:complexType name="HauspaketAttributRegel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Table">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RegelAttributLeftId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RegelAttributRightId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RegelErlaubt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegelId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RegelPreisModifikator" nillable="true" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HauspaketAttributRegel" nillable="true" type="tns:HauspaketAttributRegel" />
+  <xs:complexType name="ArrayOfHauspaketAttribut">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HauspaketAttribut" nillable="true" type="tns:HauspaketAttribut" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHauspaketAttribut" nillable="true" type="tns:ArrayOfHauspaketAttribut" />
+  <xs:complexType name="HauspaketAttribut">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Table">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="AttributTyp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AttributTypAnzeige" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HauspaketAttribut" nillable="true" type="tns:HauspaketAttribut" />
+  <xs:complexType name="ArrayOfHauspaketAttributWert">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HauspaketAttributWert" nillable="true" type="tns:HauspaketAttributWert" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHauspaketAttributWert" nillable="true" type="tns:ArrayOfHauspaketAttributWert" />
+  <xs:complexType name="HauspaketAttributWert">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Table">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Archived" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AttributId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="WertId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="WertOrdnung" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="WertText" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HauspaketAttributWert" nillable="true" type="tns:HauspaketAttributWert" />
+  <xs:complexType name="ArrayOfHauspaket">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hauspaket" nillable="true" type="tns:Hauspaket" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHauspaket" nillable="true" type="tns:ArrayOfHauspaket" />
+  <xs:complexType name="Hauspaket">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Table">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Archived" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BenutzerId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BeraterId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Bezeichnung" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Grundflaeche" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="HauspaketId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="HerstellerId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Preis" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="Stockwerke" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Wohnflaeche" nillable="true" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Hauspaket" nillable="true" type="tns:Hauspaket" />
+  <xs:complexType name="ArrayOfHersteller">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hersteller" nillable="true" type="tns:Hersteller" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHersteller" nillable="true" type="tns:ArrayOfHersteller" />
+  <xs:complexType name="Hersteller">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Table">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HerstellerId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Hersteller" nillable="true" type="tns:Hersteller" />
+</xs:schema>

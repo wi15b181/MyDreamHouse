@@ -25,8 +25,10 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="item.disco" MetadataType="Disco" ID="6499e892-907d-455b-b573-fb3e2864c1f1" SourceId="1" SourceUrl="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="e49abaa7-145f-4457-b8f3-8ca2e05afdf3" SourceId="1" SourceUrl="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd2" />
     <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="bb212799-3202-40bf-a7f1-70252a47ac99" SourceId="1" SourceUrl="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd1" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="bb71c8f1-677b-4e84-ae1c-77a841a79e43" SourceId="1" SourceUrl="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd0" />
+    <MetadataFile FileName="item21.xsd" MetadataType="Schema" ID="72bde26d-9533-4be0-863f-48c0276d7869" SourceId="1" SourceUrl="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd3" />
     <MetadataFile FileName="SynchronisationWCF.wsdl" MetadataType="Wsdl" ID="fdd39ae7-28cf-4d3b-8b6e-e737ce4b4d88" SourceId="1" SourceUrl="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?wsdl" />
   </Metadata>
   <Extensions>

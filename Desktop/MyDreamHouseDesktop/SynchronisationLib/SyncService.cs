@@ -12,7 +12,7 @@ namespace SynchronisationLib
 
         public SyncService()
         {
-
+                                    
         }
 
         public int Ping()

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SynchronisationDataManager.Tables" />
+  <xs:import schemaLocation="http://wi-gate.technikum-wien.at:60631/Design_Time_Addresses/SynchronisationService/SynchronisationWCF/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SynchronisationShared" />
   <xs:element name="Ping">
     <xs:complexType>
       <xs:sequence />
@@ -9,6 +11,35 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="PingResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveHauspaket">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SynchronisationDataManager.Tables" minOccurs="0" name="hauspaket" nillable="true" type="q1:HauspaketDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveHauspaketResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveHauspaketResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Synchronize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastSync" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SynchronisationShared" minOccurs="0" name="SynchronizeResult" nillable="true" type="q2:SyncDataSet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
