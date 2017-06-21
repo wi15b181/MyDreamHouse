@@ -2,3 +2,8 @@ D:\csharp\MyDreamHouseDesktop\SharedLibrary\bin\Debug\SharedLibrary.dll
 D:\csharp\MyDreamHouseDesktop\SharedLibrary\bin\Debug\SharedLibrary.pdb
 D:\csharp\MyDreamHouseDesktop\SharedLibrary\obj\Debug\SharedLibrary.dll
 D:\csharp\MyDreamHouseDesktop\SharedLibrary\obj\Debug\SharedLibrary.pdb
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SharedLibrary\bin\Debug\SharedLibrary.dll
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SharedLibrary\bin\Debug\SharedLibrary.pdb
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SharedLibrary\obj\Debug\SharedLibrary.csprojResolveAssemblyReference.cache
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SharedLibrary\obj\Debug\SharedLibrary.dll
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SharedLibrary\obj\Debug\SharedLibrary.pdb

@@ -1,0 +1,8 @@
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\bin\Debug\TestConsole.exe.config
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\bin\Debug\TestConsole.exe
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\bin\Debug\TestConsole.pdb
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\bin\Debug\SynchronisationLib.dll
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\bin\Debug\SynchronisationLib.pdb
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\obj\Debug\TestConsole.exe
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\obj\Debug\TestConsole.pdb

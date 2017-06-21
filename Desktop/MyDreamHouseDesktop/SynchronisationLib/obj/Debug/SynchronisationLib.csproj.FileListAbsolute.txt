@@ -3,3 +3,9 @@ D:\csharp\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.dl
 D:\csharp\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.pdb
 D:\csharp\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.dll
 D:\csharp\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.pdb
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.dll.config
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.dll
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.pdb
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.csprojResolveAssemblyReference.cache
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.dll
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.pdb
