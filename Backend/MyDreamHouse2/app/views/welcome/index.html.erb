@@ -7,11 +7,11 @@
 
 if conn
   puts "We're connected!"
-  #sql = "SELECT * FROM HERSTELLER"
-  sql = "INSERT INTO HERSTELLER (HERSTELLER_ID, NAME) VALUES(2, 'Obi')"
+  sql = "SELECT * FROM BENUTZER"
+  #sql = "INSERT INTO HERSTELLER (HERSTELLER_ID, NAME) VALUES(2, 'Obi')"
   begin
     if stmt = IBM_DB.exec(conn, sql)
-      #while row = IBM_DB.fetch_assoc(stmt)
+      while row = IBM_DB.fetch_assoc(stmt)
 
        #ebook = Ebook. new( row['BILD'], row['BENUTZER_ID'])
        #sample
@@ -25,13 +25,13 @@ if conn
        #%><%= JSON.pretty_generate(a) %><%
        #puts JSON.parse(a)
 
-       #doge = Dog.new
-       #doge.setDog(row['BENUTZER_ID'], 'white')
-       #puts doge.legs
+       doge = Dog.new
+       doge.setDog(row['BENUTZER_ID'], 'white')
+       puts doge.legs
 
        #format.json render :text => @ebook
        #@ebook.bild.to_json
-      #end
+      end
       IBM_DB.free_result(stmt)
     else
       puts "Statement execution failed: #{IBM_DB.getErrormsg}"
