@@ -23,13 +23,38 @@
 #production:
  # <<: *default
   #database: db/production.sqlite3
+
+
+#development:
+#  adapter: ibm_db
+#    #adapter: jdbc
+#  driver: com.ibm.db2.jcc.DB2Driver
+#  url: jdbc:db2://localhost:50000/devp
+#  host: localhost
+#  port: 50000
+#  database: SAMPLE
+#  username: admin
+#  password: admin
+
 development:
   adapter: ibm_db
-  #adapter: jdbc
+    #adapter: jdbc
   driver: com.ibm.db2.jcc.DB2Driver
-  url: jdbc:db2://localhost:50000/devp
-  host: localhost
-  port: 50000
-  database: SAMPLE
-  username: admin
-  password: admin
+  #url: jdbc:db2://localhost:50000/devp
+  host: wi-gate.technikum-wien.at
+  port: 60831
+  database: mdh
+  username: mydreahmouse
+  password: wi15b
+
+#development:
+#  adapter: mysql2
+#    #adapter: jdbc
+#  #driver: com.ibm.db2.jcc.DB2Driver
+#  url: jdbc:mysql://127.0.0.1:3306/ruby
+#  host: localhost
+#  port: 3306
+#  database: ruby
+#  username: root
+#  password:
+
