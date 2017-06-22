@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
+  resources :ebooks
+
   root 'welcome#index'
 
    #get 'test/index' => 'test#index'

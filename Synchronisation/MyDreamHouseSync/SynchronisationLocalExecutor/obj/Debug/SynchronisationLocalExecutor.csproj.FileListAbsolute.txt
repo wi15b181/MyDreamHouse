@@ -13,3 +13,6 @@ C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalExecutor\bi
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalExecutor\obj\Debug\SynchronisationLocalExecutor.csprojResolveAssemblyReference.cache
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalExecutor\obj\Debug\SynchronisationLocalExecutor.exe
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalExecutor\obj\Debug\SynchronisationLocalExecutor.pdb
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalExecutor\bin\Debug\SynchronisationLocalExecutor.exe.config
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalExecutor\obj\Debug\SynchronisationLocalExecutor.exe
+C:\Users\afuernsi\Source\Repos\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalExecutor\obj\Debug\SynchronisationLocalExecutor.pdb

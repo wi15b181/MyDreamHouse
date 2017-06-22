@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAOConnector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\SynchronisationService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -49,6 +50,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="SyncService.cs" />
+    <Compile Include="WebServiceConnector.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
