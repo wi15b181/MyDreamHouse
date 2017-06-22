@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
@@ -60,56 +58,3 @@ Global
 		{6826C7C8-CA84-495B-9ADD-F22335558B2B} = {A260A982-430A-43D5-BD88-ADD5DB7770BA}
 	EndGlobalSection
 EndGlobal
-=======
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronisationLib", "SynchronisationLib\SynchronisationLib.csproj", "{720BB1F4-B74D-4088-B9E2-5B8D9735CF5C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Communication", "Communication", "{A2CCD452-AE80-4018-BDA6-148B212F9199}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gui", "Gui", "{E30E02A2-801E-45B3-861C-216197F167D7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsultantApplication", "ConsultantApplication\ConsultantApplication.csproj", "{809D7A2C-DE17-4205-899B-15FFC802514D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{111B8579-87A8-4613-BB74-7498EA480100}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{66F9A620-A694-4285-9CB2-49E5DFE0D75E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{E7971AB8-172B-46E7-9E4D-85F0AAB66DF9}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{720BB1F4-B74D-4088-B9E2-5B8D9735CF5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{720BB1F4-B74D-4088-B9E2-5B8D9735CF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{720BB1F4-B74D-4088-B9E2-5B8D9735CF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{720BB1F4-B74D-4088-B9E2-5B8D9735CF5C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{809D7A2C-DE17-4205-899B-15FFC802514D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{809D7A2C-DE17-4205-899B-15FFC802514D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{809D7A2C-DE17-4205-899B-15FFC802514D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{809D7A2C-DE17-4205-899B-15FFC802514D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66F9A620-A694-4285-9CB2-49E5DFE0D75E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66F9A620-A694-4285-9CB2-49E5DFE0D75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66F9A620-A694-4285-9CB2-49E5DFE0D75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66F9A620-A694-4285-9CB2-49E5DFE0D75E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7971AB8-172B-46E7-9E4D-85F0AAB66DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7971AB8-172B-46E7-9E4D-85F0AAB66DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7971AB8-172B-46E7-9E4D-85F0AAB66DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7971AB8-172B-46E7-9E4D-85F0AAB66DF9}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{720BB1F4-B74D-4088-B9E2-5B8D9735CF5C} = {A2CCD452-AE80-4018-BDA6-148B212F9199}
-		{809D7A2C-DE17-4205-899B-15FFC802514D} = {E30E02A2-801E-45B3-861C-216197F167D7}
-		{66F9A620-A694-4285-9CB2-49E5DFE0D75E} = {111B8579-87A8-4613-BB74-7498EA480100}
-	EndGlobalSection
-EndGlobal
->>>>>>> bb7b70cf822944adbc84c6cffc94ba03a09daa12
