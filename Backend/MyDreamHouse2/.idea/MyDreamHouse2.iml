@@ -110,82 +110,82 @@
     <orderEntry type="jdk" jdkName="ruby-2.2.6-p396" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="actioncable (vbundled(5.0.3)) [path][gem]">
+      <library name="actioncable (vbundled(5.0.4)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actioncable-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actioncable-5.0.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actioncable-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actioncable-5.0.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="actionmailer (vbundled(5.0.3)) [path][gem]">
+      <library name="actionmailer (vbundled(5.0.4)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionmailer-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionmailer-5.0.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionmailer-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionmailer-5.0.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="actionpack (vbundled(5.0.3)) [path][gem]">
+      <library name="actionpack (vbundled(5.0.4)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionpack-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionpack-5.0.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionpack-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionpack-5.0.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="actionview (vbundled(5.0.3)) [path][gem]">
+      <library name="actionview (vbundled(5.0.4)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionview-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionview-5.0.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionview-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/actionview-5.0.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="activejob (vbundled(5.0.3)) [path][gem]">
+      <library name="activejob (vbundled(5.0.4)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activejob-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activejob-5.0.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activejob-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activejob-5.0.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="activemodel (vbundled(5.0.3)) [path][gem]">
+      <library name="activemodel (vbundled(5.0.4)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activemodel-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activemodel-5.0.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activemodel-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activemodel-5.0.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="activerecord (vbundled(5.0.3)) [path][gem]">
+      <library name="activerecord (vbundled(5.0.4)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activerecord-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activerecord-5.0.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activerecord-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activerecord-5.0.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="activesupport (vbundled(5.0.3)) [path][gem]">
+      <library name="activesupport (vbundled(5.0.4)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activesupport-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activesupport-5.0.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activesupport-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/activesupport-5.0.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -206,18 +206,6 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/arel-7.1.4/lib" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="bindex (vbundled(0.5.0)) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/bindex-0.5.0/ext" />
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/bindex-0.5.0/lib" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/bindex-0.5.0/ext" />
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/bindex-0.5.0/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -536,12 +524,12 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="rails (vbundled(5.0.3)) [path][gem]">
+      <library name="rails (vbundled(5.0.4)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/rails-5.0.3" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/rails-5.0.4" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/rails-5.0.3" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/rails-5.0.4" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -566,14 +554,14 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="railties (vbundled(5.0.3)) [path][gem]">
+      <library name="railties (vbundled(5.0.4)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/railties-5.0.3/exe" />
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/railties-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/railties-5.0.4/exe" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/railties-5.0.4/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/railties-5.0.3/exe" />
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/railties-5.0.3/lib" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/railties-5.0.4/exe" />
+          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/railties-5.0.4/lib" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -638,22 +626,6 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/sprockets-rails-3.2.0/lib" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="sqlite3 (vbundled(1.3.13)) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/sqlite3-1.3.13-x86-mingw32/ext" />
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/sqlite3-1.3.13-x86-mingw32/faq" />
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/sqlite3-1.3.13-x86-mingw32/lib" />
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/sqlite3-1.3.13-x86-mingw32/tasks" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/sqlite3-1.3.13-x86-mingw32/ext" />
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/sqlite3-1.3.13-x86-mingw32/faq" />
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/sqlite3-1.3.13-x86-mingw32/lib" />
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/sqlite3-1.3.13-x86-mingw32/tasks" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -746,16 +718,6 @@
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/uglifier-3.2.0/lib" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="web-console (vbundled(3.5.1)) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/web-console-3.5.1/lib" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/cache/ruby/2.2.0/gems/web-console-3.5.1/lib" />
         </SOURCES>
       </library>
     </orderEntry>
