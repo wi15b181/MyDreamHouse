@@ -129,9 +129,9 @@ if(isset ($_POST['delete'])){
 				</label>
 				<?php
 				if(getReadOnly(false)){
-					echo '<select disabled="disabled" class="ophc-detail-form-elem" id="PAR_' . $attr->attribut_typ . '" name="PAR_' . $attr->attribut_typ . '" value="'.$selectedValue.'">';
+					echo '<select disabled="disabled" class="ophc-detail-form-elem price_calc" id="PAR_' . $attr->attribut_typ . '" name="PAR_' . $attr->attribut_typ . '" value="'.$selectedValue.'">';
 				}else{
-					echo '<select class="ophc-detail-form-elem" id="PAR_' . $attr->attribut_typ . '" name="PAR_' . $attr->attribut_typ . '" value="'.$selectedValue.'">';
+					echo '<select class="ophc-detail-form-elem price_calc" id="PAR_' . $attr->attribut_typ . '" name="PAR_' . $attr->attribut_typ . '" value="'.$selectedValue.'">';
 				}
 				?>
 						<?php
@@ -153,11 +153,11 @@ if(isset ($_POST['delete'])){
 		<?php 
 		if(getReadOnly(false)){		
 		?>
-		<input disabled="disabled" min="0" max="3" style="width: 30px;" type="number" id="PAR_STOCKWERKE" value="<?php echo $package->stockwerke;?>">
+		<input class="levels" disabled="disabled" min="1" max="3" style="width: 30px;" type="number" id="PAR_STOCKWERKE" value="<?php echo $package->stockwerke;?>">
 		<?php 
 		}else{
 		?>		
-		<input min="0" max="3" style="width: 30px;" type="number" id="PAR_STOCKWERKE" value="<?php echo $package->stockwerke;?>">
+		<input class="levels" min="1" max="3" style="width: 30px;" type="number" id="PAR_STOCKWERKE" value="<?php echo $package->stockwerke;?>">
 		<?php 
 		}?>
 		<label class="ophc-form-label ">
@@ -177,7 +177,7 @@ if(isset ($_POST['delete'])){
 				}
 			?>
 				<div class="checkbox">
-					<label><input data-attrid="<?= $xtra->wert_id; ?>" id="PAR_<?=strtoupper($xtra->attribut_typ)?>" type="checkbox" value="<?= $val ?>" class="price_calc"<?= $checked ?>><?=$xtra->attribut_typ_anzeige?></label>
+					<label><input data-attrid="<?= $xtra->wert_id; ?>" id="PAR_<?=strtoupper($xtra->attribut_typ)?>" type="checkbox" value="<?= $val ?>" class="price_calc" <?= $checked ?>><?=$xtra->attribut_typ_anzeige?></label>
 				</div>
 			<?php
 			}
@@ -275,6 +275,9 @@ jQuery( document ).ready(function() {
 		checkRules();
 		calcPrice();
 	});
+	jQuery('.levels').change(function() {
+		calcPrice();
+	});
 });
 
 
@@ -337,6 +340,16 @@ function calcPrice() {
 			});
 		}
 	});	
+	var lvls = jQuery('.levels').val();
+	switch(lvls)
+	{
+		case "1": MULT = MULT * 0.75;
+		break;
+		case "2": MULT = MULT * 1;
+		break; 
+		case "3": MULT = MULT * 1.25;
+		break;
+	}
 	var sum = jQuery('#priceSum').data('baseprice')*MULT;
 	jQuery('#priceSum').html('Kostenkalkulation: '+(sum).formatMoney(0, ',', '.')+' €');
 }

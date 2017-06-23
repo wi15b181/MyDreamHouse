@@ -1,6 +1,9 @@
 class Dog
 
-  attr_accessor :legs, :color
+  #THIS IS JUST A TESTING MODEL
+
+  #attr_accessor :legs, :color
+  attr_reader :legs, :color
 
   def setDog(l, c)
     @legs = l
@@ -8,7 +11,7 @@ class Dog
     puts "dog created"
     puts @legs
   end
-  def attrs
-    instance_variables.map{|ivar| instance_variable_get ivar}
-  end
+  #def attrs
+  #  instance_variables.map{|ivar| instance_variable_get ivar}
+  #end
 end
