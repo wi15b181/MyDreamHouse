@@ -64,3 +64,11 @@ C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\Consulta
 C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\ConsultantApplication.csproj.GenerateResource.Cache
 C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\ConsultantApplication.exe
 C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\ConsultantApplication.pdb
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\ConsultantApplication.csprojResolveAssemblyReference.cache
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\MainWindow.g.cs
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\App.g.cs
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\ConsultantApplication_MarkupCompile.cache
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\ConsultantApplication_MarkupCompile.lref
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\ConsultantApplication.exe
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\ConsultantApplication\obj\Debug\ConsultantApplication.pdb

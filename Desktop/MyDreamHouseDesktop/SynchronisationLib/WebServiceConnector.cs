@@ -15,6 +15,12 @@ namespace SynchronisationLib
         {
 
         }
+
+        public void SendChanges(HauspaketDTO hauspaket)
+        {
+            client.SaveHauspaket(hauspaket);
+        }
+
         public SyncDataSet FullSync()
         {
             return client.Synchronize("", "");
