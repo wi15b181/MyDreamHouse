@@ -20,6 +20,31 @@ namespace SynchronisationLib
         }
 
 
+        internal List<SyncJnEntity> GetPendingSyncs()
+        {
+            return dataHandler.GetPendingSyncs();
+        }
+
+        internal void UpdateSyncJournal(SyncJnEntity ent)
+        {
+            dataHandler.UpdateSyncJournal(ent);
+        }
+
+        internal HauspaketEntity GetHauspaket(int id)
+        {
+            return dataHandler.GetHauspaket(id);
+        }
+
+        internal List<AttachmentsEntity> GetAttachments(int hid)
+        {
+            return dataHandler.GetAttachments(hid);
+        }
+
+        internal List<HauspaketAttributZuordEntity> GetHauspaketAttributZuordnungen(int hid)
+        {
+            return dataHandler.GetHauspaketAttributZuordnungen(hid);
+        }
+
         internal void SyncHauspaketAttribut(HauspaketAttribut item)
         {
             HauspaketAttributEntity ent = new HauspaketAttributEntity()
