@@ -1,95 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dc08a91-3423-4902-946f-edf770464825" name="Default" comment="Merge branch 'master' of https://github.com/wi15b181/MyDreamHouse&#10;&#10;# Conflicts:&#10;#&#9;Backend/MyDreamHouse2/app/views/welcome/index.html.erb">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/LocalDb/bin/Debug/LocalDb.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/LocalDb/bin/Debug/LocalDb.mdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/LocalDb/bin/Debug/LocalDb.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/LocalDb/bin/Debug/LocalDb_log.ldf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/LocalDb/obj/Debug/LocalDb.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/LocalDb/obj/Debug/LocalDb.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/EntityFramework.SqlServer.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/EntityFramework.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/LocalDb.mdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/LocalDb_log.ldf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/MyDataModel.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/MyDataModel.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/SharedLibrary.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/SharedLibrary.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/MyDataModel.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/MyDataModel.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/EntityFramework.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/LocalDb.mdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/LocalDb_log.ldf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/MyDataModel.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/MyDataModel.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/SharedLibrary.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/SharedLibrary.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/artribut_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/artribut/show.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/welcome/_navigation.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication_MarkupCompile.i.lref" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/LocalDb/obj/Debug/LocalDb.csproj.FileListAbsolute.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/EntityFramework.SqlServer.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/EntityFramework.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/bin/Debug/MyDataModel.dll.config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/MyDataModel.csproj.FileListAbsolute.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/edmxResourcesToEmbed/MyDataModel.csdl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/edmxResourcesToEmbed/MyDataModel.msl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/edmxResourcesToEmbed/MyDataModel.ssdl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/Entities/BeraterEntity.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/Entities/HerstellerEntity.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/EntityFramework.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/App.baml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/MainWindow.baml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/obj/Debug/SharedLibrary.csprojResolveAssemblyReference.cache" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/.vs/MyDreamHouseDesktop/v14/.suo" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/.vs/MyDreamHouseDesktop/v14/.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/LocalDb/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/LocalDb/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/MyDataModel.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/MyDataModel.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/TempPE/MyDataModel.Designer.cs.dll" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/obj/Debug/TempPE/MyDataModel.Designer.cs.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/bin/Debug/SharedLibrary.dll" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/bin/Debug/SharedLibrary.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/bin/Debug/SharedLibrary.pdb" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/bin/Debug/SharedLibrary.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/obj/Debug/SharedLibrary.dll" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/obj/Debug/SharedLibrary.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/obj/Debug/SharedLibrary.pdb" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/obj/Debug/SharedLibrary.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/SynchronisationLib.dll" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/SynchronisationLib.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/SynchronisationLib.pdb" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/bin/Debug/SynchronisationLib.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/SynchronisationLib.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/SynchronisationLib.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/SynchronisationLib.dll" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/SynchronisationLib.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/SynchronisationLib.pdb" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/SynchronisationLib.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/TempPE/Service References.SynchronisationService.Reference.cs.dll" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/TempPE/Service References.SynchronisationService.Reference.cs.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/index.html.erb" afterPath="$PROJECT_DIR$/app/views/welcome/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/App.g.i.cs" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/App.g.i.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication.csproj.FileListAbsolute.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication_MarkupCompile.cache" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication_MarkupCompile.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication_MarkupCompile.i.cache" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication_MarkupCompile.i.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication_MarkupCompile.lref" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/ConsultantApplication_MarkupCompile.lref" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/GeneratedInternalTypeHelper.g.cs" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/GeneratedInternalTypeHelper.g.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/MainWindow.g.i.cs" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/ConsultantApplication/obj/Debug/MainWindow.g.i.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/App.Config" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/App.Config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/DataHandler.cs" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/DataHandler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/MyDataModel.Designer.cs" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/MyDataModel.Designer.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/MyDataModel.csproj" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/MyDataModel.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/packages.config" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/MyDataModel/packages.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/SharedLibrary.csproj" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/SharedLibrary.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/obj/Debug/SharedLibrary.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SharedLibrary/obj/Debug/SharedLibrary.csproj.FileListAbsolute.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/DAOConnector.cs" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/DAOConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/Service References/SynchronisationService/SynchronisationLib.SynchronisationService.SyncDataSet.datasource" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/Service References/SynchronisationService/SynchronisationLib.SynchronisationService.SyncDataSet.datasource" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/SyncService.cs" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/SyncService.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/SynchronisationLib.csproj" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/SynchronisationLib.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/WebServiceConnector.cs" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/WebServiceConnector.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/SynchronisationLib.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/../../Desktop/MyDreamHouseDesktop/SynchronisationLib/obj/Debug/SynchronisationLib.csproj.FileListAbsolute.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Frontend/xampp/htdocs/components/com_ophc/ajax/listPackages.php" afterPath="$PROJECT_DIR$/../../Frontend/xampp/htdocs/components/com_ophc/ajax/listPackages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Frontend/xampp/htdocs/components/com_ophc/inc/packageEditor.php" afterPath="$PROJECT_DIR$/../../Frontend/xampp/htdocs/components/com_ophc/inc/packageEditor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../Frontend/xampp/htdocs/components/com_ophc/inc/packageForm.php" afterPath="$PROJECT_DIR$/../../Frontend/xampp/htdocs/components/com_ophc/inc/packageForm.php" />
+    <list default="true" id="0dc08a91-3423-4902-946f-edf770464825" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -885,7 +798,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97222000" />
+    <option name="totallyTimeSpent" value="97308000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -901,23 +814,35 @@
     <layout>
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34951457" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16756175" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.50416666" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.49570355" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29881337" sideWeight="0.5064447" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23415682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29881337" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29881337" sideWeight="0.4935553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32879582" sideWeight="0.50416666" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29881337" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34951457" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16756175" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23415682" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
