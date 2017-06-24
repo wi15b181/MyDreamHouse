@@ -4,3 +4,4 @@ C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb.dll
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb.pdb
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.dll
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.pdb
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.csprojResolveAssemblyReference.cache
