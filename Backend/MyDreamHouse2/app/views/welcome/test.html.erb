@@ -1,12 +1,12 @@
-<h1>New Ebook</h1>
+<h1>New Ebook Test</h1>
 
 <%= $test
-  #if($ebook.present?)
+    #if($ebook.present?)
 
-  #end
+    #end
 %><br>
 
-<%= form_for :ebook, url: ebooks_path do |f| %>
+<%= form_for :ebook, url: "insert", :html => { :method => 'GET' } do |f| %>
     <p>
       <%= f.label :ebook_id %><br>
       <%= f.text_field :ebook_id %>
