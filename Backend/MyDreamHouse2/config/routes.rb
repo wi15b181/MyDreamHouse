@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'artribut/show'
+  get 'reporting/reportstart'
  # post 'artribut/show'
 
    #get 'test/index' => 'test#index'
