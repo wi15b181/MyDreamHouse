@@ -1,0 +1,178 @@
+<%
+  if (params[:do].eql? "add") then
+    puts 'add'
+    sql1 = "INSERT INTO EBOOK (EBOOK_ID, TITEL, AUTOR, ERSCHEINUNGSDATUM, AUFLAGE, BILD, CONTENT, MIMETYPE, FILESIZE, ACTIVE) VALUES((select max(EBOOK_ID)+1 from EBOOK),'#{params[:titel]}',
+    '#{params[:autor]}','#{params[:erscheinungsdatum]}','#{params[:auflage]}','#{params[:bild]}','#{params[:content]}',
+    '#{params[:mimetype]}',#{params[:filesize]},'#{params[:active]}')"
+
+    begin
+      stmt1 = IBM_DB.exec($conn, sql1)
+      stmt2 = IBM_DB.exec($conn, 'COMMIT')
+
+      puts "Add: #{stmt1}"
+      puts "Comit: #{stmt2}"
+      #IBM_DB.free_result(stmt1)
+      #IBM_DB.free_result(stmt2)
+    end
+  end
+%>
+
+<%
+  if (params[:do].eql? "del") then
+
+    sql2 = "DELETE FROM EBOOK WHERE EBOOK_ID = #{params[:id]}"
+
+    begin
+      stmt1 = IBM_DB.exec($conn, sql2)
+      stmt2 = IBM_DB.exec($conn, 'COMMIT')
+
+      puts "Del: #{stmt1}"
+      puts "Comit: #{stmt2}"
+      #IBM_DB.free_result(stmt1)
+      #IBM_DB.free_result(stmt2)
+    end
+  end
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<form>
+  <%= render 'welcome/navigation' %>
+</form>
+<div class="container" style="margin-left: 10px">
+  <h2>Hauspakete</h2>
+
+  <div class="container">
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Action</th>
+        <th>Haus_ID</th>
+        <th>Hersteller</th>
+        <th>Berater</th>
+        <th>Bezeichnung</th>
+        <th>Preis</th>
+        <th>Grundfl.</th>
+        <th>Wohnfl.</th>
+        <th>Stockwerke</th>
+        <th>Benutzer_ID</th>
+        <th>Archived</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <form class="form-inline">
+        <div class="form-group">
+          <input type="hidden" name="do" value="add">
+          <tr>
+            <td><input type="submit" value="+" class="btn btn-default btn-md" style="margin-left: 10px;"></td>
+            <td></td>
+            <td>
+              <%
+                if $conn
+
+                  sqlH2 = "SELECT NAME FROM HERSTELLER"
+
+                  begin
+                    if stmt = IBM_DB.exec($conn, sqlH2)
+                    @listbox = '<select class="form-control" name="hersteller_id">'
+                      while rowoben = IBM_DB.fetch_assoc(stmt)
+                        @listbox += "<option>#{rowoben['NAME']}</option>"
+                       end
+                       @listbox += "</select>"
+                       end
+                  end
+                  IBM_DB.free_result(stmt)
+                end
+
+              %>
+              <%= @listbox.html_safe %>
+            </td>
+            <td><input type="text" name="autor"></td>
+            <td><input type="text" name="erscheinungsdatum"></td>
+            <td><input type="text" name="auflage"></td>
+            <td><input type="text" name="bild"></td>
+            <td><input type="text" name="content"></td>
+            <td><input type="text" name="mimetype"></td>
+            <td><input type="text" name="filesize"></td>
+            <td><input type="text" name="active"></td>
+          </tr>
+        </div>
+      </form>
+
+
+      <%
+
+        if $conn
+          puts "We're connected!"
+          sql = "SELECT * FROM HAUSPAKET"
+
+          begin
+            if stmt = IBM_DB.exec($conn, sql)
+              while row = IBM_DB.fetch_assoc(stmt)
+                #get Hersteller
+                sqlH = "SELECT NAME FROM HERSTELLER WHERE HERSTELLER_ID ='#{row['HERSTELLER_ID']}'"
+                #stmtH = IBM_DB.exec($conn, sqlH)
+                #hersteller = IBM_DB.fetch_assoc(stmtH)
+                hersteller = "DummyFirma"
+
+                #get Benutzer
+                sqlB1 = "SELECT BENUTZER_ID FROM BERATER WHERE BERATER_ID ='#{row['BERATER_ID']}'"
+                stmtB1 = IBM_DB.exec($conn, sqlB1)
+                benutzer = IBM_DB.fetch_assoc(stmtB1)
+
+                sqlB2 = "SELECT JOOMLA_USER_ID FROM BENUTZER WHERE BENUTZER_ID =#{benutzer['BENUTZER_ID']}"
+                stmtB2 = IBM_DB.exec($conn, sqlB2)
+                joomla = IBM_DB.fetch_assoc(stmtB2)
+
+                sqlB3 = "SELECT NAME FROM MDH_USERS WHERE ID =#{joomla['JOOMLA_USER_ID']}"
+                stmtB3 = IBM_DB.exec($conn, sqlB3)
+                berater = IBM_DB.fetch_assoc(stmtB3)
+
+                @hauspaket = Hauspaket. new( row['HAUSPAKET_ID'], hersteller, berater['NAME'], row['BEZEICHNUNG'], row['PREIS'], row['GRUNDFLAECHE'], row['WOHNFLAECHE'], row['STOCKWERKE'], row['BENUTZER_ID'], row['ARCHIVED'])
+%>
+              <tr>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <td><input type="submit" value="-" class="btn btn-default btn-md" style="margin-left: 10px;">
+                      <input type="hidden" name="do" value="del">
+                      <input type="hidden" name="id" value="<%= @hauspaket.hauspaket_id %>">
+                    </td>
+                  </div>
+                </form>
+
+                <td><%= @hauspaket.hauspaket_id %></td>
+                <td><%= @hauspaket.hersteller_id %></td>
+                <td><%= @hauspaket.berater_id %></td>
+                <td><%= @hauspaket.bezeichnung %></td>
+                <td><%= @hauspaket.preis %></td>
+                <td><%= @hauspaket.grundflaeche %></td>
+                <td><%= @hauspaket.wohnflaeche %></td>
+                <td><%= @hauspaket.stockwerke %></td>
+                <td><%= @hauspaket.benutzer_id %></td>
+                <td><%= @hauspaket.archived %></td>
+              </tr>
+          <%
+            end
+            end
+            IBM_DB.free_result(stmt)
+            end
+            end
+            IBM_DB.close($conn)
+
+          %>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

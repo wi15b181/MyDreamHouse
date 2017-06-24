@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/insert'
   get 'ebooks/show'
   #resources :ebooks
+  get 'hauspakete/show'
 
   root 'welcome#index'
   get 'artribut/show'
