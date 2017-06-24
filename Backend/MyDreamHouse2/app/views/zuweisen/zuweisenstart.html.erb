@@ -1,0 +1,80 @@
+<%
+  #Lokal DB2
+  #conn = IBM_DB.connect("sample", "admin", "admin")
+  conn = IBM_DB.connect("DRIVER={IBM DB2 ODBC DRIVER};DATABASE=mdh;\
+                       HOSTNAME=wi-gate.technikum-wien.at;PORT=60831;PROTOCOL=TCPIP;\
+                       UID=mydreahmouse;PWD=wi15b;", "", "")
+
+  sql = "SELECT * FROM HERSTELLER"
+
+  begin
+    @hersteller = ""
+
+    if stmt = IBM_DB.exec(conn, sql)
+      while herstellerrow = IBM_DB.fetch_assoc(stmt)
+        @hersteller += '<form action="paket">'
+        @hersteller += "<tr>"
+        @hersteller += "<td>#{herstellerrow['NAME']}</td>"
+        @hersteller += '<input type ="hidden" name="herstellerid" value="'
+        @hersteller += "#{herstellerrow['HERSTELLER_ID']}"
+        @hersteller += '"/>'
+
+        akthauspakete = "SELECT * FROM HAUSPAKET WHERE HERSTELLER_ID = #{herstellerrow['HERSTELLER_ID']}"
+        if hauspaket = IBM_DB.exec(conn, akthauspakete)
+          @hersteller += "<td>"
+          @hersteller += "<ul>"
+          i = 0
+          while hauspaketrow = IBM_DB.fetch_assoc(hauspaket)
+            @hersteller += '<li '
+            @hersteller += (i % 2 == 0) ? 'style="float: left; margin-right: 20px; width: 150px">' : '>'
+            @hersteller += hauspaketrow['BEZEICHNUNG']
+            @hersteller += "</li>"
+            i= i + 1
+          end
+          @hersteller += "</ul>"
+          @hersteller += "</td>"
+        end
+
+        @hersteller += '<td><button type="submit" class="btn btn-default">Hauspakete zuweisen</button></td>'
+        @hersteller += "</tr></form>"
+      end
+    end
+    IBM_DB.free_result(stmt)
+    IBM_DB.free_result(hauspaket)
+    IBM_DB.close(conn)
+  end
+%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form>
+  <%= render 'welcome/navigation' %>
+</form>
+
+
+<div class="container">
+  <h2>Hauspakete zuweisen</h2>
+
+  <table class="table" style="margin-left: -8px;">
+    <thead>
+    <tr>
+      <th>Hersteller</th>
+      <th>Zugewiesene Hauspakete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= @hersteller.html_safe %>
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>

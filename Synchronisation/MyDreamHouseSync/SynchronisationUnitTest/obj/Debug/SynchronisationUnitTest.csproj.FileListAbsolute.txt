@@ -14,11 +14,9 @@ D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\EntityFramework.xml
 D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\EntityFramework.SqlServer.xml
 D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationShared.dll
 D:\csharp\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationShared.pdb
-C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationUnitTest.exe.config
-C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\obj\Debug\SynchronisationUnitTest.exe
-C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\obj\Debug\SynchronisationUnitTest.pdb
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationDatabase.mdf
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationDatabase_log.ldf
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationUnitTest.exe.config
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationUnitTest.exe
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\SynchronisationUnitTest.pdb
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\EntityFramework.dll
@@ -32,3 +30,5 @@ C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Deb
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\EntityFramework.xml
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\bin\Debug\EntityFramework.SqlServer.xml
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\obj\Debug\SynchronisationUnitTest.csprojResolveAssemblyReference.cache
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\obj\Debug\SynchronisationUnitTest.exe
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationUnitTest\obj\Debug\SynchronisationUnitTest.pdb

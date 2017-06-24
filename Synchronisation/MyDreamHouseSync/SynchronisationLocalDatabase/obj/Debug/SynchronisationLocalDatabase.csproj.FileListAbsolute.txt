@@ -11,4 +11,3 @@ C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\bi
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\bin\Debug\SynchronisationLocalDatabase.pdb
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\obj\Debug\SynchronisationLocalDatabase.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\obj\Debug\SynchronisationLocalDatabase.pdb
-C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\obj\Debug\SynchronisationLocalDatabase.csprojResolveAssemblyReference.cache

@@ -1,0 +1,6 @@
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\bin\Release\SynchronisationDatabase.mdf
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\bin\Release\SynchronisationDatabase_log.ldf
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\bin\Release\SynchronisationLocalDatabase.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\bin\Release\SynchronisationLocalDatabase.pdb
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\obj\Release\SynchronisationLocalDatabase.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationLocalDatabase\obj\Release\SynchronisationLocalDatabase.pdb

@@ -1,0 +1,50 @@
+<%
+  #Lokal DB2
+  #conn = IBM_DB.connect("sample", "admin", "admin")
+  conn = IBM_DB.connect("DRIVER={IBM DB2 ODBC DRIVER};DATABASE=mdh;\
+                       HOSTNAME=wi-gate.technikum-wien.at;PORT=60831;PROTOCOL=TCPIP;\
+                       UID=mydreahmouse;PWD=wi15b;", "", "")
+
+  sql = "SELECT BOOK.TITEL, COUNT(STAT.EBOOK_ID) ANZAHL FROM EBOOK_STATISTIC STAT JOIN EBOOK BOOK ON STAT.EBOOK_ID = BOOK.EBOOK_ID GROUP BY BOOK.TITEL"
+  sqlsum = "SELECT COUNT(*) SUM FROM EBOOK_STATISTIC"
+  begin
+    @stats = ""
+    @summe = 0;
+    if stmt = IBM_DB.exec(conn, sql)
+      while statistic = IBM_DB.fetch_assoc(stmt)
+        @stats += "<tr>"
+        @stats += "<td>#{statistic['TITEL']}</td>"
+        @stats += "<td>#{statistic['ANZAHL']}</td>"
+        @stats += "</tr>"
+      end
+
+      if sumstmt = IBM_DB.exec(conn, sqlsum)
+        sumrecord = IBM_DB.fetch_assoc(sumstmt)
+        @summe = sumrecord['SUM']
+      end
+
+    end
+  end
+  IBM_DB.free_result(stmt)
+  IBM_DB.free_result(sumstmt)
+  IBM_DB.close(conn)
+%>
+
+
+<div class="container">
+  <h2>Downloadstatistik Ebooks</h2>
+  <p>Diese Statistik zeigt Downloads der Ebooks im Zeitraum von <strong><%= params[:beginndatum] %></strong> bis <strong><%= params[:enddatum] %></strong>.</p>
+  <table class="table" style="margin-left: -8px;">
+    <thead>
+    <tr>
+      <th>Titel</th>
+      <th>Anzahl der Downloads</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= @stats.html_safe %>
+    </tbody>
+  </table>
+
+  <label>Es wurden insgesamt <%= @summe %> Ebooks heruntergeladen.</label>
+</div>

@@ -16,11 +16,12 @@ namespace SynchronisationDataManager
     {
         public int jn_id { get; set; }
         public string jn_table { get; set; }
-        public byte[] jn_timestamp { get; set; }
+        public System.DateTime jn_timestamp { get; set; }
         public int jn_pk { get; set; }
         public string jn_operation { get; set; }
         public byte jn_synced { get; set; }
         public string jn_changeset_json { get; set; }
         public string jn_application { get; set; }
+        public System.Guid jn_sync_id { get; set; }
     }
 }

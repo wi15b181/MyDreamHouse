@@ -1,0 +1,139 @@
+<%
+  if (params[:do].eql? "add") then
+    puts 'add'
+    sql1 = "INSERT INTO EBOOK (EBOOK_ID, TITEL, AUTOR, ERSCHEINUNGSDATUM, AUFLAGE, BILD, CONTENT, MIMETYPE, FILESIZE, ACTIVE) VALUES((select max(EBOOK_ID)+1 from EBOOK),'#{params[:titel]}',
+    '#{params[:autor]}','#{params[:erscheinungsdatum]}','#{params[:auflage]}','#{params[:bild]}','#{params[:content]}',
+    '#{params[:mimetype]}',#{params[:filesize]},'#{params[:active]}')"
+
+    begin
+      stmt1 = IBM_DB.exec($conn, sql1)
+      stmt2 = IBM_DB.exec($conn, 'COMMIT')
+
+      puts "Add: #{stmt1}"
+      puts "Comit: #{stmt2}"
+      #IBM_DB.free_result(stmt1)
+      #IBM_DB.free_result(stmt2)
+    end
+  end
+%>
+
+<%
+  if (params[:do].eql? "del") then
+
+    sql2 = "DELETE FROM EBOOK WHERE EBOOK_ID = #{params[:id]}"
+
+    begin
+      stmt1 = IBM_DB.exec($conn, sql2)
+      stmt2 = IBM_DB.exec($conn, 'COMMIT')
+
+      puts "Del: #{stmt1}"
+      puts "Comit: #{stmt2}"
+      #IBM_DB.free_result(stmt1)
+      #IBM_DB.free_result(stmt2)
+    end
+  end
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<form>
+  <%= render 'welcome/navigation' %>
+</form>
+<div class="container" style="margin-left: 10px">
+  <h2>Ebooks</h2>
+
+  <div class="container">
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Action</th>
+        <th>ID</th>
+        <th>Titel</th>
+        <th>Autor</th>
+        <th>Erscheinungsdatum</th>
+        <th>Auflage</th>
+        <th>Bild</th>
+        <th>Content</th>
+        <th>Mimetype</th>
+        <th>Filesize</th>
+        <th>Active</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <form class="form-inline">
+        <div class="form-group">
+          <input type="hidden" name="do" value="add">
+          <tr>
+            <td><input type="submit" value="+" class="btn btn-default btn-md" style="margin-left: 10px;"></td>
+            <td></td>
+            <td><input type="text" name="titel"></td>
+            <td><input type="text" name="autor"></td>
+            <td><input type="text" name="erscheinungsdatum"></td>
+            <td><input type="text" name="auflage"></td>
+            <td><input type="text" name="bild"></td>
+            <td><input type="text" name="content"></td>
+            <td><input type="text" name="mimetype"></td>
+            <td><input type="text" name="filesize"></td>
+            <td><input type="text" name="active"></td>
+          </tr>
+        </div>
+      </form>
+
+
+  <%
+
+    if $conn
+      puts "We're connected!"
+      sql = "SELECT * FROM EBOOK"
+
+      begin
+        if stmt = IBM_DB.exec($conn, sql)
+          while row = IBM_DB.fetch_assoc(stmt)
+            @ebook = Ebook. new( row['EBOOK_ID'], row['TITEL'], row['AUTOR'], row['ERSCHEINUNGSDATUM'], row['AUFLAGE'], row['BILD'], row['CONTENT'], row['MIMETYPE'], row['FILESIZE'], row['ACTIVE'])
+          %>
+              <tr>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <td><input type="submit" value="-" class="btn btn-default btn-md" style="margin-left: 10px;">
+                        <input type="hidden" name="do" value="del">
+                        <input type="hidden" name="id" value="<%= @ebook.ebook_id %>">
+                    </td>
+                  </div>
+                </form>
+
+                <td><%= @ebook.ebook_id %></td>
+                <td><%= @ebook.titel %></td>
+                <td><%= @ebook.autor %></td>
+                <td><%= @ebook.erscheinungsdatum %></td>
+                <td><%= @ebook.auflage %></td>
+                <td><%= @ebook.bild %></td>
+                <td><%= @ebook.content %></td>
+                <td><%= @ebook.mimetype %></td>
+                <td><%= @ebook.filesize %></td>
+                <td><%= @ebook.active %></td>
+              </tr>
+          <%
+          end
+        end
+        IBM_DB.free_result(stmt)
+      end
+    end
+    IBM_DB.close($conn)
+
+  %>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

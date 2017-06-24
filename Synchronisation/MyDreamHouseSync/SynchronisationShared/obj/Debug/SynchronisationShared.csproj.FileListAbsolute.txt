@@ -7,3 +7,4 @@ C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationShared\bin\Debug
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationShared\bin\Debug\SynchronisationShared.pdb
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationShared\obj\Debug\SynchronisationShared.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationShared\obj\Debug\SynchronisationShared.pdb
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationShared\obj\Debug\SynchronisationShared.csprojResolveAssemblyReference.cache

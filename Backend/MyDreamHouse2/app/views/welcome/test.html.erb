@@ -1,0 +1,53 @@
+<h1>New Ebook Test</h1>
+
+<%= $test
+    #if($ebook.present?)
+
+    #end
+%><br>
+
+<%= form_for :ebook, url: "insert", :html => { :method => 'GET' } do |f| %>
+    <p>
+      <%= f.label :ebook_id %><br>
+      <%= f.text_field :ebook_id %>
+    </p>
+    <p>
+      <%= f.label :titel %><br>
+      <%= f.text_field :titel %>
+    </p>
+    <p>
+      <%= f.label :autor %><br>
+      <%= f.text_field :autor %>
+    </p>
+    <p>
+      <%= f.label :erscheindungsdatum %><br>
+      <%= f.date_select :erscheinungsdatum %>
+    </p>
+    <p>
+      <%= f.label :auflage %><br>
+      <%= f.text_field :auflage %>
+    </p>
+    <p>
+      <%= f.label :bild %><br>
+      <%= f.text_field :bild %>
+    </p>
+    <p>
+      <%= f.label :content %><br>
+      <%= f.text_field :content %>
+    </p>
+    <p>
+      <%= f.label :mimetype %><br>
+      <%= f.text_field :mimetype %>
+    </p>
+    <p>
+      <%= f.label :filesize %><br>
+      <%= f.text_field :filesize %>
+    </p>
+    <p>
+      <%= f.label :active %><br>
+      <%= f.text_field :active %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

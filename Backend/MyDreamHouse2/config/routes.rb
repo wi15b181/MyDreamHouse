@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-
-  resources :ebooks
+  get 'welcome/test'
+  get 'welcome/insert'
+  get 'ebooks/show'
+  #resources :ebooks
+  get 'hauspakete/show'
 
   root 'welcome#index'
   get 'artribut/show'
+  get 'reporting/reportstart'
+  get 'zuweisen/zuweisenstart'
+  get 'zuweisen/paket'
  # post 'artribut/show'
 
    #get 'test/index' => 'test#index'

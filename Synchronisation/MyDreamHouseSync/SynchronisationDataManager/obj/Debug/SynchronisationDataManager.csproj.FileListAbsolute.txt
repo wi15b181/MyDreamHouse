@@ -40,14 +40,12 @@ C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\IBM.Data.DB2.EntityFramework.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\MySql.Data.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\MySql.Data.Entity.EF6.dll
-C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\SynchronisationLocalDatabase.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\SynchronisationShared.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\EnvDTE80.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\EnvDTE.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\stdole.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\Microsoft.MSXML.dll
-C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\SynchronisationLocalDatabase.pdb
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\SynchronisationShared.pdb
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\DDTek.Data.Common.xml
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationDataManager\bin\Debug\DDTek.DB2.xml

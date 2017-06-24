@@ -1,9 +1,13 @@
-﻿using System;
+﻿using SynchronisationDataManager.Tables;
+using SynchronisationShared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using static SynchronisationService.SynchronisationWCF;
+using static SynchronisationShared.SharedEnums;
 
 namespace SynchronisationService
 {
@@ -13,5 +17,11 @@ namespace SynchronisationService
     {
         [OperationContract]
         int Ping();
+
+        [OperationContract]
+        int SaveHauspaket(HauspaketDTO hauspaket);
+
+        [OperationContract]
+        SyncDataSet Synchronize(string type, string lastSync);
     }
 }

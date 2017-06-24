@@ -1,9 +1,19 @@
 <h1>New Ebook</h1>
 
+<%= $test
+  #if($ebook.present?)
+
+  #end
+%><br>
+
 <%= form_for :ebook, url: ebooks_path do |f| %>
     <p>
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
+      <%= f.label :ebook_id %><br>
+      <%= f.text_field :ebook_id %>
+    </p>
+    <p>
+      <%= f.label :titel %><br>
+      <%= f.text_field :titel %>
     </p>
     <p>
       <%= f.label :autor %><br>

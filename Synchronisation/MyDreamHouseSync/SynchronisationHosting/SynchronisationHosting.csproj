@@ -75,9 +75,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SynchronisationDataManager\SynchronisationDataManager.csproj">
+      <Project>{F19C35DA-F248-4B79-B499-86FB65557B93}</Project>
+      <Name>SynchronisationDataManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SynchronisationService\SynchronisationService.csproj">
       <Project>{A8374B0B-EB7D-49FB-BC60-1B06CE01C533}</Project>
       <Name>SynchronisationService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SynchronisationShared\SynchronisationShared.csproj">
+      <Project>{D708732C-1C2D-4C35-8FD8-B69188A8F2A1}</Project>
+      <Name>SynchronisationShared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

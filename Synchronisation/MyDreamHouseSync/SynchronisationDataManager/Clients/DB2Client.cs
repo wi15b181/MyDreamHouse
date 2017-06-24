@@ -11,7 +11,8 @@ namespace SynchronisationDataManager.Clients
 {
     class DB2Client : DatabaseClient
     {
-        private const string CONNECT_STRING = "Host=wi-gate.technikum-wien.at;port=60831;User ID = mydreahmouse; Password = wi15b; Database = mdh";
+        private const string CONNECT_STRING = "Host=localhost;port=50000;User ID = mydreahmouse; Password = wi15b; Database = mdh";
+        //private const string CONNECT_STRING = "Host=wi-gate.technikum-wien.at;port=60831;User ID = mydreahmouse; Password = wi15b; Database = mdh";
         DbProviderFactory factory = DbProviderFactories.GetFactory("DDTek.DB2");
         DbConnection Conn;
 

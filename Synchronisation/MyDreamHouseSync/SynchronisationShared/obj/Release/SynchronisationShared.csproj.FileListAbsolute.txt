@@ -1,0 +1,4 @@
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationShared\bin\Release\SynchronisationShared.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationShared\bin\Release\SynchronisationShared.pdb
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationShared\obj\Release\SynchronisationShared.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationShared\obj\Release\SynchronisationShared.pdb

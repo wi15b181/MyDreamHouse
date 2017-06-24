@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <style>
+    /* *{
+       margin: 10px;
+     }*/
+    input[type="text"], input[type="date"]{
+      width: 400px;
+    }
+
+    /*div{
+      width: 400px;
+    }*/
+  </style>
+</head>
+<body>
+<form>
+  <%= render 'navigation' %>
+</form>
+
+<%
+  if params[:kateg].present? && params[:kateg] == '1' then
+    %><%= render 'reporthauskauf' %><%
+  elsif params[:kateg].present? && params[:kateg] == '2' then
+    %><%= render 'reportebooks' %><%
+  elsif params[:kateg].present? && params[:kateg] == '3' then
+    %><%= render 'TODO' %><%
+  else
+  %><%= render 'reportmain' %><%
+  end
+%>
+
+
+</body>
+</html>
