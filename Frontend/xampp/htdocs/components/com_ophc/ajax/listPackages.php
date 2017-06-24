@@ -11,17 +11,223 @@ function queryPackages(){
 	$conn = getConnection();		
 	$result = $conn->query(getSQL());
 	
-	
-	//echo $_GET['PAR_EXTRA_GARAGE'];
-	//echo $_GET['PAR_EXTRA_KELLER'];
-	//echo $_GET['PAR_EXTRA_POOL'];
-	//echo $_GET['PAR_EXTRA_GARTENGESTALTUNG'];
-	//echo $_GET['PAR_EXTRA_KELLER'];
-	
 	// START - - Add by Adnan Jusic related to FST 04; 19.06.2017 //
+	
+	// echo $_GET['PAR_EXTRA_GARAGE'];
+	// echo $_GET['PAR_EXTRA_AUTOUNTERSTAND'];
+	// echo $_GET['PAR_EXTRA_POOL'];
+	// echo $_GET['PAR_EXTRA_GARTENGESTALTUNG'];
+	// echo $_GET['PAR_EXTRA_KELLER'];
+	
 	$multiplikationswert = 0.00;
 	$paramausbaustufe = $_GET['PAR_AUSBAUSTUFE'];
 	
+	$e1wwert = 0.00;
+	$e2wwert = 0.00;
+	$e3wwert = 0.00;
+	$e4wwert = 0.00;
+	$e5wwert = 0.00;
+	
+	$e1 = $_GET['PAR_EXTRA_GARAGE'];
+	$e2 = $_GET['PAR_EXTRA_AUTOUNTERSTAND'];
+	$e3 = $_GET['PAR_EXTRA_POOL'];
+	$e4 = $_GET['PAR_EXTRA_GARTENGESTALTUNG'];
+	$e5 = $_GET['PAR_EXTRA_KELLER'];
+	
+	if($e1 == "yes"){
+	
+	$e1i = "SELECT attribut_id FROM joomla.hauspaket_attribut WHERE attribut_typ = 'EXTRA_GARAGE'";
+	$resulte1i = $conn->query($e1i);
+	if ($resulte1i->num_rows > 0) {
+		
+		while($row = $resulte1i->fetch_assoc()){
+			//echo $row["attribut_id"];
+			$e1iwert = $row["attribut_id"];
+		}
+		
+	}
+	// echo $e1iwert;
+	
+	$e1q = "SELECT wert_id FROM joomla.hauspaket_attribut_wert WHERE attribut_id = '$e1iwert' AND wert_text = 'JA'";
+	$resulte1q = $conn->query($e1q);
+	if ($resulte1q->num_rows > 0) {
+		
+		while($row = $resulte1q->fetch_assoc()){
+			//echo $row["wert_id"];
+			$e1qwert = $row["wert_id"];
+		}
+		
+	}
+	// echo $e1qwert;
+	
+	$e1w = "SELECT regel_preis_modifikator FROM joomla.hauspaket_attribut_regel WHERE regel_attribut_left_id = '$e1qwert'";
+	$resulte1w = $conn->query($e1w);
+	if ($resulte1w->num_rows > 0) {
+		
+		while($row = $resulte1w->fetch_assoc()){
+			//echo $row["regel_preis_modifikator"];
+			$e1wwert = $row["regel_preis_modifikator"];
+		}
+		
+	}
+	// echo $e1wwert;
+	}
+	
+	if($e2 == "yes"){
+	
+	$e2i = "SELECT attribut_id FROM joomla.hauspaket_attribut WHERE attribut_typ = 'EXTRA_AUTOUNTERSTAND'";
+	$resulte2i = $conn->query($e2i);
+	if ($resulte2i->num_rows > 0) {
+		
+		while($row = $resulte2i->fetch_assoc()){
+			//echo $row["attribut_id"];
+			$e2iwert = $row["attribut_id"];
+		}
+		
+	}
+	// echo $e2iwert;
+	
+	$e2q = "SELECT wert_id FROM joomla.hauspaket_attribut_wert WHERE attribut_id = '$e2iwert' AND wert_text = 'JA'";
+	$resulte2q = $conn->query($e2q);
+	if ($resulte2q->num_rows > 0) {
+		
+		while($row = $resulte2q->fetch_assoc()){
+			//echo $row["wert_id"];
+			$e2qwert = $row["wert_id"];
+		}
+		
+	}
+	// echo $e2qwert;
+	
+	$e2w = "SELECT regel_preis_modifikator FROM joomla.hauspaket_attribut_regel WHERE regel_attribut_left_id = '$e2qwert'";
+	$resulte2w = $conn->query($e2w);
+	if ($resulte2w->num_rows > 0) {
+		
+		while($row = $resulte2w->fetch_assoc()){
+			//echo $row["regel_preis_modifikator"];
+			$e2wwert = $row["regel_preis_modifikator"];
+		}
+		
+	}
+	// echo $e2wwert;
+	}
+	
+	if($e3 == "yes"){
+	
+	$e3i = "SELECT attribut_id FROM joomla.hauspaket_attribut WHERE attribut_typ = 'EXTRA_POOL'";
+	$resulte3i = $conn->query($e3i);
+	if ($resulte3i->num_rows > 0) {
+		
+		while($row = $resulte3i->fetch_assoc()){
+			//echo $row["attribut_id"];
+			$e3iwert = $row["attribut_id"];
+		}
+		
+	}
+	// echo $e3iwert;
+	
+	$e3q = "SELECT wert_id FROM joomla.hauspaket_attribut_wert WHERE attribut_id = '$e3iwert' AND wert_text = 'JA'";
+	$resulte3q = $conn->query($e3q);
+	if ($resulte3q->num_rows > 0) {
+		
+		while($row = $resulte3q->fetch_assoc()){
+			//echo $row["wert_id"];
+			$e3qwert = $row["wert_id"];
+		}
+		
+	}
+	// echo $e3qwert;
+	
+	$e3w = "SELECT regel_preis_modifikator FROM joomla.hauspaket_attribut_regel WHERE regel_attribut_left_id = '$e3qwert'";
+	$resulte3w = $conn->query($e3w);
+	if ($resulte3w->num_rows > 0) {
+		
+		while($row = $resulte3w->fetch_assoc()){
+			//echo $row["regel_preis_modifikator"];
+			$e3wwert = $row["regel_preis_modifikator"];
+		}
+		
+	}
+	// echo $e3wwert;
+	}
+	
+	if($e4 == "yes"){
+	
+	$e4i = "SELECT attribut_id FROM joomla.hauspaket_attribut WHERE attribut_typ = 'EXTRA_GARTENGESTALTUNG'";
+	$resulte4i = $conn->query($e4i);
+	if ($resulte4i->num_rows > 0) {
+		
+		while($row = $resulte4i->fetch_assoc()){
+			//echo $row["attribut_id"];
+			$e4iwert = $row["attribut_id"];
+		}
+		
+	}
+	// echo $e4iwert;
+	
+	$e4q = "SELECT wert_id FROM joomla.hauspaket_attribut_wert WHERE attribut_id = '$e4iwert' AND wert_text = 'JA'";
+	$resulte4q = $conn->query($e4q);
+	if ($resulte4q->num_rows > 0) {
+		
+		while($row = $resulte4q->fetch_assoc()){
+			//echo $row["wert_id"];
+			$e4qwert = $row["wert_id"];
+		}
+		
+	}
+	// echo $e4qwert;
+	
+	$e4w = "SELECT regel_preis_modifikator FROM joomla.hauspaket_attribut_regel WHERE regel_attribut_left_id = '$e4qwert'";
+	$resulte4w = $conn->query($e4w);
+	if ($resulte4w->num_rows > 0) {
+		
+		while($row = $resulte4w->fetch_assoc()){
+			//echo $row["regel_preis_modifikator"];
+			$e4wwert = $row["regel_preis_modifikator"];
+		}
+		
+	}
+	// echo $e4wwert;
+	}
+	
+	if($e5 == "yes"){
+	
+	$e5i = "SELECT attribut_id FROM joomla.hauspaket_attribut WHERE attribut_typ = 'EXTRA_KELLER'";
+	$resulte5i = $conn->query($e5i);
+	if ($resulte5i->num_rows > 0) {
+		
+		while($row = $resulte5i->fetch_assoc()){
+			//echo $row["attribut_id"];
+			$e5iwert = $row["attribut_id"];
+		}
+		
+	}
+	// echo $e5iwert;
+	
+	$e5q = "SELECT wert_id FROM joomla.hauspaket_attribut_wert WHERE attribut_id = '$e5iwert' AND wert_text = 'JA'";
+	$resulte5q = $conn->query($e5q);
+	if ($resulte5q->num_rows > 0) {
+		
+		while($row = $resulte5q->fetch_assoc()){
+			//echo $row["wert_id"];
+			$e5qwert = $row["wert_id"];
+		}
+		
+	}
+	// echo $e5qwert;
+	
+	$e5w = "SELECT regel_preis_modifikator FROM joomla.hauspaket_attribut_regel WHERE regel_attribut_left_id = '$e5qwert'";
+	$resulte5w = $conn->query($e5w);
+	if ($resulte5w->num_rows > 0) {
+		
+		while($row = $resulte5w->fetch_assoc()){
+			//echo $row["regel_preis_modifikator"];
+			$e5wwert = $row["regel_preis_modifikator"];
+		}
+		
+	}
+	// echo $e5wwert;
+	}
 	
 	if(isset($paramausbaustufe)){
 
@@ -94,10 +300,22 @@ function queryPackages(){
 						<div>
 							<span><?php
 							if($multiplikationswert <= 0){
-								echo ' &euro; '.number_format($package->preis,0,',','.').' ';	
+								$preis_alt = $package->preis;
+								$preis_e1 = ($preis_alt / 100) * $e1wwert;
+								$preis_e2 = ($preis_alt / 100) * $e2wwert;
+								$preis_e3 = ($preis_alt / 100) * $e3wwert;
+								$preis_e4 = ($preis_alt / 100) * $e4wwert;
+								$preis_e5 = ($preis_alt / 100) * $e5wwert;
+								$preis_neu = $preis_alt + $preis_e1 + $preis_e2 + $preis_e3 + $preis_e4 + $preis_e5;
+								echo ' &euro; '.number_format($preis_neu,0,',','.').' ';	
 							}else{
 								$preis_alt = $package->preis;
-								$preis_neu = $preis_alt - ($preis_alt * ($multiplikationswert / 100));
+								$preis_e1 = ($preis_alt / 100) * $e1wwert;
+								$preis_e2 = ($preis_alt / 100) * $e2wwert;
+								$preis_e3 = ($preis_alt / 100) * $e3wwert;
+								$preis_e4 = ($preis_alt / 100) * $e4wwert;
+								$preis_e5 = ($preis_alt / 100) * $e5wwert;
+								$preis_neu = ($preis_alt - ($preis_alt * ($multiplikationswert / 100)) + $preis_e1 + $preis_e2 + $preis_e3 + $preis_e4 + $preis_e5);
 								echo ' &euro; '.number_format($preis_neu,0,',','.').' ';
 							}
 							?></span>
