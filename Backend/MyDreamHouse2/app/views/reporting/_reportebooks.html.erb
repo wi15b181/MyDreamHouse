@@ -25,6 +25,9 @@
 
     end
   end
+  IBM_DB.free_result(stmt)
+  IBM_DB.free_result(sumstmt)
+  IBM_DB.close(conn)
 %>
 
 

@@ -1,0 +1,108 @@
+<%
+  #Lokal DB2
+  #conn = IBM_DB.connect("sample", "admin", "admin")
+  conn = IBM_DB.connect("DRIVER={IBM DB2 ODBC DRIVER};DATABASE=mdh;\
+                       HOSTNAME=wi-gate.technikum-wien.at;PORT=60831;PROTOCOL=TCPIP;\
+                       UID=mydreahmouse;PWD=wi15b;", "", "")
+
+
+  if params[:change].present? then
+    if params[:attrregel].present? then
+      hauspaket_zuweisen = "UPDATE HAUSPAKET SET HERSTELLER_ID = #{params[:herstellerid]} WHERE HAUSPAKET_ID = #{params[:hauspaketid]}"
+      if stmtinsert = IBM_DB.exec(conn, hauspaket_zuweisen)
+        if stmt = IBM_DB.exec(conn, 'COMMIT')
+        end
+      end
+    else
+      hauspaket_zuweisen = "UPDATE HAUSPAKET SET HERSTELLER_ID = NULL WHERE HAUSPAKET_ID = #{params[:hauspaketid]}"
+      if stmtinsert = IBM_DB.exec(conn, hauspaket_zuweisen)
+        if stmt = IBM_DB.exec(conn, 'COMMIT')
+        end
+      end
+    end
+  end
+
+  hauspaket = "SELECT * FROM HAUSPAKET WHERE HERSTELLER_ID <> #{params[:herstellerid]} OR HERSTELLER_ID IS NULL"
+  hauspaket_check = "SELECT * FROM HAUSPAKET WHERE HERSTELLER_ID = #{params[:herstellerid]}"
+  puts params[:herstellerid]
+  begin
+    @hauspakete = ""
+    if stmt = IBM_DB.exec(conn, hauspaket_check)
+      while hausrow = IBM_DB.fetch_assoc(stmt)
+        @hauspakete += '<form>'
+        @hauspakete += "<tr>"
+        @hauspakete += "<td>#{hausrow['BEZEICHNUNG']}</td>"
+        @hauspakete +='<input type ="hidden" name="hauspaketid" value="'
+        @hauspakete += "#{hausrow['HAUSPAKET_ID']}"
+        @hauspakete += '"/>'
+        @hauspakete +='<input type ="hidden" name="herstellerid" value="'
+        @hauspakete += "#{params[:herstellerid]}"
+        @hauspakete += '"/>'
+        @hauspakete += '<td><input type="checkbox" name="attrregel" checked/></td>'
+        @hauspakete += '<td><button name="change" value="change" type="submit" class="btn btn-default">Hauspaket zuweisen</button></td>'
+        #@hauspakete += " checked"
+        #@hauspakete += "></td></tr>"
+        @hauspakete += "</tr>"
+        @hauspakete += "</form>"
+      end
+    end
+
+    if stmt = IBM_DB.exec(conn, hauspaket)
+      while hausrow = IBM_DB.fetch_assoc(stmt)
+        @hauspakete += '<form>'
+        @hauspakete += "<tr>"
+        @hauspakete += "<td>#{hausrow['BEZEICHNUNG']}</td>"
+        @hauspakete +='<input type ="hidden" name="hauspaketid" value="'
+        @hauspakete += "#{hausrow['HAUSPAKET_ID']}"
+        @hauspakete += '"/>'
+        @hauspakete +='<input type ="hidden" name="herstellerid" value="'
+        @hauspakete += "#{params[:herstellerid]}"
+        @hauspakete += '"/>'
+        @hauspakete += '<td><input type="checkbox" name="attrregel" /></td>'
+        @hauspakete += '<td><button name="change" value="change" type="submit" class="btn btn-default">Hauspaket zuweisen</button></td>'
+        #@hauspakete += " checked"
+        #@hauspakete += "></td></tr>"
+        @hauspakete += "</tr>"
+        @hauspakete += "</form>"
+      end
+    end
+
+
+
+      #IBM_DB.free_result(stmt)
+      #IBM_DB.close(conn)
+  end
+%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form>
+  <%= render 'welcome/navigation' %>
+</form>
+
+<div class="container">
+  <h2>Hauspakete zuweisen</h2>
+
+  <table class="table" style="margin-left: -8px;">
+    <thead>
+    <tr>
+      <th>Hauspaketbezeichnung</th>
+      <th>Zugewiesen</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= @hauspakete.html_safe %>
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>

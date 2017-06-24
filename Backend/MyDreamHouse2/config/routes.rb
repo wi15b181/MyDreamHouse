@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'artribut/show'
   get 'reporting/reportstart'
   get 'zuweisen/zuweisenstart'
+  get 'zuweisen/paket'
  # post 'artribut/show'
 
    #get 'test/index' => 'test#index'
