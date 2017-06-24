@@ -1,3 +1,44 @@
+<%
+  #Lokal DB2
+  #conn = IBM_DB.connect("sample", "admin", "admin")
+  conn = IBM_DB.connect("DRIVER={IBM DB2 ODBC DRIVER};DATABASE=mdh;\
+                       HOSTNAME=wi-gate.technikum-wien.at;PORT=60831;PROTOCOL=TCPIP;\
+                       UID=mydreahmouse;PWD=wi15b;", "", "")
+
+
+  if params[:wert1].present? && params[:wert2].present? then
+
+    sql1 = "SELECT * FROM HAUSPAKET_ATTRIBUT_WERT WHERE WERT_TEXT = '#{params[:wert1]}'"
+    sql2 = "SELECT * FROM HAUSPAKET_ATTRIBUT_WERT WHERE WERT_TEXT = '#{params[:wert2]}'"
+    #sql = "INSERT INTO HAUSPAKET_ATTRIBUT_REGEL VALUES (1,#{params[:wert1]},#{params[:wert2]},0," + (params[:new_erlaubt].present? ? '1' : '0') + ",0)"
+
+
+    puts "Add new Rule"
+    begin
+      if stmt1 = IBM_DB.exec(conn, sql1)
+        irgend = IBM_DB.fetch_assoc(stmt1)
+        puts irgend['WERT_ID']
+          if stmt2 = IBM_DB.exec(conn, sql2)
+          wertt2 = IBM_DB.fetch_assoc(stmt2)
+          puts wertt2['WERT_ID']
+            addsql = "INSERT INTO HAUSPAKET_ATTRIBUT_REGEL (REGEL_ID, REGEL_ATTRIBUT_LEFT_ID, REGEL_ATTRIUBT_RIGHT_ID, REGEL_PREIS_MODIFIKATIOR, REGEL_ERLAUBT, ARCHIVED) VALUES ((select max(REGEL_ID)+1 from hauspaket_attribut_regel),#{ irgend['WERT_ID']},#{ wertt2['WERT_ID']},0.0," + (params[:new_erlaubt].present? ? '1' : '0') + ",'0')"
+            if stmt = IBM_DB.exec(conn, addsql)
+
+              puts "first statement"
+              if stmt = IBM_DB.exec(conn, 'COMMIT')
+
+                puts "Add new Rule for sure"
+              end
+          end
+        end
+      end
+      IBM_DB.free_result(stmt)
+      IBM_DB.free_result(stmt1)
+      IBM_DB.free_result(stmt2)
+    end
+  end
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,26 +49,41 @@
 
 </head>
 <body>
+<form>
+  <%= render 'navigation' %>
+</form>
 <div class="container" style="margin-left: 10px">
   <h2>Attributkonfigurator</h2>
 
   <form class="form-inline">
     <div class="form-group">
-      <label for="sel1" style="margin-left: 10px">Atribut </label>
-      <select class="form-control" id="sel1">
-        <option>Ziegel</option>
-        <option>Flachdach</option>
-        <option>Paralleldach</option>
-        <option>4</option>
-      </select>
 
+      <%
+        if conn
+          puts "We're connected!"
+          sql = "SELECT * FROM HAUSPAKET_ATTRIBUT_WERT"
+
+          begin
+            if stmt = IBM_DB.exec(conn, sql)
+            @listbox = '<select class="form-control" id="wert1" name="wert1">'
+            @listbox2 = '<select class="form-control" id="wert2"name="wert2">'
+              while rowoben = IBM_DB.fetch_assoc(stmt)
+                @listbox += "<option>#{rowoben['WERT_TEXT']}</option>"
+                @listbox2 += "<option>#{rowoben['WERT_TEXT']}</option>"
+
+               end
+               @listbox += "</select>"
+               @listbox2 += "</select>"
+               end
+          end
+          IBM_DB.free_result(stmt)
+        end
+
+      %>
+      <label for="sel1" style="margin-left: 10px">Atribut </label>
+      <%= @listbox.html_safe %>
       <label for="sel1">in Kombination mit </label>
-      <select class="form-control" id="sel1">
-        <option>Ziegel</option>
-        <option>Flachdach</option>
-        <option>Paralleldach</option>
-        <option>4</option>
-      </select>
+      <%= @listbox2.html_safe %>
 
       <label for="sel1">erlaubt? </label>
       <input type="checkbox" name="new_erlaubt">
@@ -36,7 +92,56 @@
     </div>
   </form>
 
-  <br />
+  <br/>
+
+  <%
+
+    if conn
+      puts "We're connected!"
+      sql = "SELECT * FROM HAUSPAKET_ATTRIBUT_REGEL"
+
+      begin
+        if stmt = IBM_DB.exec(conn, sql)
+          @record = ""
+          while row = IBM_DB.fetch_assoc(stmt)
+          puts row['REGEL_ERLAUBT']
+          sql2 = "SELECT * FROM HAUSPAKET_ATTRIBUT_WERT WHERE WERT_ID = #{row['REGEL_ATTRIBUT_LEFT_ID']}"
+          sql3 = "SELECT * FROM HAUSPAKET_ATTRIBUT_WERT WHERE WERT_ID = #{row['REGEL_ATTRIUBT_RIGHT_ID']}"
+              stmt2 = IBM_DB.exec(conn, sql2)
+              row2 = IBM_DB.fetch_assoc(stmt2)
+
+              stmt3 = IBM_DB.exec(conn, sql3)
+                row3 = IBM_DB.fetch_assoc(stmt3)
+
+                @record += "<tr>"
+                @record += "<td>#{row2['WERT_TEXT']}</td>"
+                @record += "<td>#{row3['WERT_TEXT']}</td>"
+                @record += '<td><input type="checkbox" name="attrregel"'
+                @record += (row['REGEL_ERLAUBT'] == '1' ? "checked" : "")
+                @record += "></td></tr>"
+          end
+        end
+        IBM_DB.free_result(stmt)
+        IBM_DB.free_result(stmt2)
+        IBM_DB.free_result(stmt3)
+      end
+    end
+    #format.json render :text => @ebook
+    #@ebook.bild.to_json
+    #end
+
+    #IBM_DB.free_result(stmt)
+    #IBM_DB.free_result(stmt2)
+    #IBM_DB.free_result(stmt3)
+    # else
+    #puts "Statement execution failed: #{IBM_DB.getErrormsg}"
+    #end
+    IBM_DB.close(conn)
+    #else
+    #  puts "There was an error in the connection: #{IBM_DB.conn_errormsg}"
+
+  %>
+
   <table class="table">
     <thead>
     <tr>
@@ -46,55 +151,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>Flachdach</td>
-      <td>Paralleldach</td>
-      <td><input type="checkbox" name="attrregel" value="TODO"></td>
-    </tr>
-    <tr>
-      <td>Flachdach</td>
-      <td>Blech</td>
-      <td><input type="checkbox" name="attrregel" value="TODO" checked="true"></td>
-    </tr>
-
-
-
-<%
-  #Lokal DB2
-  #conn = IBM_DB.connect("sample", "admin", "admin")
-  conn = IBM_DB.connect("DRIVER={IBM DB2 ODBC DRIVER};DATABASE=mdh;\
-                       HOSTNAME=wi-gate.technikum-wien.at;PORT=60831;PROTOCOL=TCPIP;\
-                       UID=mydreahmouse;PWD=wi15b;", "", "")
-
-  if conn
-    puts "We're connected!"
-    sql = "SELECT * FROM HAUSPAKET_ATTRIBUT_REGEL"
-    begin
-      if stmt = IBM_DB.exec(conn, sql)
-        while row = IBM_DB.fetch_assoc(stmt)
-%><tr>
-      <td><%= row['REGEL_ATTRIBUT_LEFT_ID'] %></td>
-      <td>Blech</td>
-      <td><input type="checkbox" name="attrregel" value="TODO" checked="true"></td>
-    </tr><%
-
-
-  #format.json render :text => @ebook
-  #@ebook.bild.to_json
-  end
-  IBM_DB.free_result(stmt)
-  else
-  puts "Statement execution failed: #{IBM_DB.getErrormsg}"
-  end
-  ensure
-  IBM_DB.close(conn)
-  end
-  else
-    puts "There was an error in the connection: #{IBM_DB.conn_errormsg}"
-  end%>
-
-
-
+    <%= @record.html_safe %>
     </tbody>
   </table>
 
