@@ -9,3 +9,17 @@ C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\Synchron
 C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.csprojResolveAssemblyReference.cache
 C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.dll
 C:\Users\afuernsi\Source\Repos\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.pdb
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.csprojResolveAssemblyReference.cache
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.dll
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.pdb
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\LocalDb.mdf
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\LocalDb_log.ldf
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.dll.config
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.dll
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.pdb
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\MyDataModel.dll
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SharedLibrary.dll
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\EntityFramework.dll
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\MyDataModel.pdb
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SharedLibrary.pdb
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\EntityFramework.xml
