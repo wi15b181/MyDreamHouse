@@ -83,7 +83,7 @@ foreach ($attributeTypes as $attr) {
 		{
 		?>
 			<div class="checkbox">
-				<label><input id="PAR_<?=strtoupper($xtra->attribut_typ)?>" type="checkbox" value="no" class="price_calc"><?=$xtra->attribut_typ_anzeige?></label>
+				<label><input id="PAR_<?=strtoupper($xtra->attribut_typ)?>" onchange="calcExtra();" type="checkbox" value="no" class="price_calc"><?=$xtra->attribut_typ_anzeige?></label>
 			</div>
 		<?php
 		}
@@ -119,7 +119,8 @@ jQuery( document ).ready(function() {
 	});
 	jQuery('.price_calc').change(function() {
 		checkRules();
-		// checkAusbaustufe();
+		getExtras();
+		calcExtra(); // Add by Adnan Jusic related to FST 04; 19.06.2017 //
 	});
 	jQuery( "#extra_group input[type=checkbox]").change(function() {
 		if(this.checked)
@@ -236,25 +237,42 @@ function checkRules() {
 	});	
 }
 
-/*
 // START - - Add by Adnan Jusic related to FST 04; 19.06.2017 //
 
-function checkAusbaustufe() {
-	window.alert("test");
+function calcExtra(){
 	
-	var e = document.getElementById("PAR_AUSBAUSTUFE");
-	var id_att = e.options[e.selectedIndex].value;	
-	window.alert("Attribut ID: " + id_att);
-	jQuery.each(RULES, function( index, rule ) {
-		if(rule.regel_attribut_left_id == id_att)
-		window.alert("Preismodifikator: " + rule.regel_preis_modifikator);
-	});
+	// window.alert("Test Start!");
+	var e1 = document.getElementById("PAR_EXTRA_GARAGE");
+	var e2 = document.getElementById("PAR_EXTRA_AUTOUNTERSTAND");
+	var e3 = document.getElementById("PAR_EXTRA_POOL");
+	var e4 = document.getElementById("PAR_EXTRA_GARTENGESTALTUNG");
+	var e5 = document.getElementById("PAR_EXTRA_KELLER");
+	//var id_att = e.checked;
+	if(e1.checked == true){
+		e1.value = "yes";
+	}
+	if(e2.checked == true){
+		e2.value = "yes";
+	}
+	if(e3.checked == true){
+		e3.value = "yes";
+	}
+	if(e4.checked == true){
+		e4.value = "yes";
+	}
+	if(e5.checked == true){
+		e5.value = "yes";
+	}
+	loadList();
 	
+	// window.alert("Attribut ID: " + id_att);
+	// window.alert("Test Ende!");
 }
+
 // END - - Add by Adnan Jusic related to FST 04; 19.06.2017 //
-*/
 
 function augmentLink(elem){
+
 	var href = jQuery(elem).attr('href');
 	href += getParamList();
 	jQuery(elem).attr('href',href);
@@ -273,6 +291,7 @@ function getParamList(){
 }
 
 function loadList(){
+	
 	var params = '?task=listPackagesAjax&format=raw';
 
 	params += getParamList();
@@ -289,7 +308,7 @@ function loadList(){
 			jQuery('.star-container').rating(function(vote, event){
 			     // console.log(vote, event);
 			},true);
-		});
+		});	
 }
 
 function updateValSpan(elem){	

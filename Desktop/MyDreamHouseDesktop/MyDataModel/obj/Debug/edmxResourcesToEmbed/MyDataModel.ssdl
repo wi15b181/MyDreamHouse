@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LocalDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="attachements">
+    <Key>
+      <PropertyRef Name="attachement_id" />
+    </Key>
+    <Property Name="attachement_id" Type="int" Nullable="false" />
+    <Property Name="filename" Type="varchar" MaxLength="300" />
+    <Property Name="bezeichnung" Type="varchar" MaxLength="300" />
+    <Property Name="size" Type="int" />
+    <Property Name="mimetype" Type="varchar" MaxLength="45" />
+    <Property Name="hauspaket_id" Type="int" />
+  </EntityType>
+  <EntityType Name="berater">
+    <Key>
+      <PropertyRef Name="berater_id" />
+    </Key>
+    <Property Name="berater_id" Type="int" Nullable="false" />
+    <Property Name="hersteller_id" Type="int" />
+    <Property Name="benutzer_id" Type="int" />
+    <Property Name="bild" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="hauspaket">
+    <Key>
+      <PropertyRef Name="hauspaket_id" />
+    </Key>
+    <Property Name="hauspaket_id" Type="int" Nullable="false" />
+    <Property Name="hersteller_id" Type="int" />
+    <Property Name="berater_id" Type="int" />
+    <Property Name="bezeichnung" Type="varchar" MaxLength="250" />
+    <Property Name="preis" Type="decimal" Precision="38" Scale="2" />
+    <Property Name="grundflaeche" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="wohnflaeche" Type="decimal" Precision="5" Scale="2" />
+    <Property Name="stockwerke" Type="int" />
+    <Property Name="benutzer_id" Type="int" />
+    <Property Name="archived" Type="bit" />
+  </EntityType>
+  <EntityType Name="hauspaket_attribut">
+    <Key>
+      <PropertyRef Name="attribut_id" />
+    </Key>
+    <Property Name="attribut_id" Type="int" Nullable="false" />
+    <Property Name="attribut_typ" Type="varchar" MaxLength="150" />
+    <Property Name="attribut_typ_anzeige" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="hauspaket_attribut_regel">
+    <Key>
+      <PropertyRef Name="regel_id" />
+    </Key>
+    <Property Name="regel_id" Type="int" Nullable="false" />
+    <Property Name="regel_attribut_left_id" Type="int" />
+    <Property Name="regel_attribut_right_id" Type="int" />
+    <Property Name="regel_preis_modifikator" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="regel_erlaubt" Type="bit" />
+  </EntityType>
+  <EntityType Name="hauspaket_attribut_wert">
+    <Key>
+      <PropertyRef Name="wert_id" />
+    </Key>
+    <Property Name="wert_id" Type="int" Nullable="false" />
+    <Property Name="attribut_id" Type="int" />
+    <Property Name="wert_text" Type="varchar" MaxLength="500" />
+    <Property Name="wert_ordnung" Type="int" />
+    <Property Name="archived" Type="bit" />
+  </EntityType>
+  <EntityType Name="hauspaket_attribut_zuord">
+    <Key>
+      <PropertyRef Name="hauspaket_id" />
+      <PropertyRef Name="wert_id" />
+    </Key>
+    <Property Name="hauspaket_id" Type="int" Nullable="false" />
+    <Property Name="wert_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hersteller">
+    <Key>
+      <PropertyRef Name="hersteller_id" />
+    </Key>
+    <Property Name="hersteller_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sync_jn">
+    <Key>
+      <PropertyRef Name="jn_id" />
+    </Key>
+    <Property Name="jn_id" Type="int" Nullable="false" />
+    <Property Name="jn_table" Type="varchar" MaxLength="100" />
+    <Property Name="jn_timestampe" Type="datetime" />
+    <Property Name="jn_pk" Type="int" />
+    <Property Name="jn_operation" Type="varchar" MaxLength="45" />
+    <Property Name="jn_synced" Type="bit" />
+    <Property Name="jn_changeset_json" Type="text" />
+  </EntityType>
+  <EntityContainer Name="LocalDbModelStoreContainer">
+    <EntitySet Name="attachements" EntityType="Self.attachements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="berater" EntityType="Self.berater" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hauspaket" EntityType="Self.hauspaket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hauspaket_attribut" EntityType="Self.hauspaket_attribut" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hauspaket_attribut_regel" EntityType="Self.hauspaket_attribut_regel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hauspaket_attribut_wert" EntityType="Self.hauspaket_attribut_wert" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hauspaket_attribut_zuord" EntityType="Self.hauspaket_attribut_zuord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hersteller" EntityType="Self.hersteller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sync_jn" EntityType="Self.sync_jn" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LocalDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="attachements">
+    <Key>
+      <PropertyRef Name="attachement_id" />
+    </Key>
+    <Property Name="attachement_id" Type="Int32" Nullable="false" />
+    <Property Name="filename" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="bezeichnung" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="size" Type="Int32" />
+    <Property Name="mimetype" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="hauspaket_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="berater">
+    <Key>
+      <PropertyRef Name="berater_id" />
+    </Key>
+    <Property Name="berater_id" Type="Int32" Nullable="false" />
+    <Property Name="hersteller_id" Type="Int32" />
+    <Property Name="benutzer_id" Type="Int32" />
+    <Property Name="bild" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="hauspaket">
+    <Key>
+      <PropertyRef Name="hauspaket_id" />
+    </Key>
+    <Property Name="hauspaket_id" Type="Int32" Nullable="false" />
+    <Property Name="hersteller_id" Type="Int32" />
+    <Property Name="berater_id" Type="Int32" />
+    <Property Name="bezeichnung" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="preis" Type="Decimal" Precision="38" Scale="2" />
+    <Property Name="grundflaeche" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="wohnflaeche" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="stockwerke" Type="Int32" />
+    <Property Name="benutzer_id" Type="Int32" />
+    <Property Name="archived" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="hauspaket_attribut">
+    <Key>
+      <PropertyRef Name="attribut_id" />
+    </Key>
+    <Property Name="attribut_id" Type="Int32" Nullable="false" />
+    <Property Name="attribut_typ" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="attribut_typ_anzeige" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="hauspaket_attribut_regel">
+    <Key>
+      <PropertyRef Name="regel_id" />
+    </Key>
+    <Property Name="regel_id" Type="Int32" Nullable="false" />
+    <Property Name="regel_attribut_left_id" Type="Int32" />
+    <Property Name="regel_attribut_right_id" Type="Int32" />
+    <Property Name="regel_preis_modifikator" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="regel_erlaubt" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="hauspaket_attribut_wert">
+    <Key>
+      <PropertyRef Name="wert_id" />
+    </Key>
+    <Property Name="wert_id" Type="Int32" Nullable="false" />
+    <Property Name="attribut_id" Type="Int32" />
+    <Property Name="wert_text" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="wert_ordnung" Type="Int32" />
+    <Property Name="archived" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="hauspaket_attribut_zuord">
+    <Key>
+      <PropertyRef Name="hauspaket_id" />
+      <PropertyRef Name="wert_id" />
+    </Key>
+    <Property Name="hauspaket_id" Type="Int32" Nullable="false" />
+    <Property Name="wert_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hersteller">
+    <Key>
+      <PropertyRef Name="hersteller_id" />
+    </Key>
+    <Property Name="hersteller_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sync_jn">
+    <Key>
+      <PropertyRef Name="jn_id" />
+    </Key>
+    <Property Name="jn_id" Type="Int32" Nullable="false" />
+    <Property Name="jn_table" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="jn_timestampe" Type="DateTime" Precision="3" />
+    <Property Name="jn_pk" Type="Int32" />
+    <Property Name="jn_operation" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="jn_synced" Type="Boolean" />
+    <Property Name="jn_changeset_json" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="LocalDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="attachements" EntityType="Self.attachements" />
+    <EntitySet Name="berater" EntityType="Self.berater" />
+    <EntitySet Name="hauspaket" EntityType="Self.hauspaket" />
+    <EntitySet Name="hauspaket_attribut" EntityType="Self.hauspaket_attribut" />
+    <EntitySet Name="hauspaket_attribut_regel" EntityType="Self.hauspaket_attribut_regel" />
+    <EntitySet Name="hauspaket_attribut_wert" EntityType="Self.hauspaket_attribut_wert" />
+    <EntitySet Name="hauspaket_attribut_zuord" EntityType="Self.hauspaket_attribut_zuord" />
+    <EntitySet Name="hersteller" EntityType="Self.hersteller" />
+    <EntitySet Name="sync_jn" EntityType="Self.sync_jn" />
+  </EntityContainer>
+</Schema>

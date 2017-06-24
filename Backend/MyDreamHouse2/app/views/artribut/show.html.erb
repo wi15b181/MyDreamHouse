@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container" style="margin-left: 10px">
+  <h2>Attributkonfigurator</h2>
+
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="sel1" style="margin-left: 10px">Atribut </label>
+      <select class="form-control" id="sel1">
+        <option>Ziegel</option>
+        <option>Flachdach</option>
+        <option>Paralleldach</option>
+        <option>4</option>
+      </select>
+
+      <label for="sel1">in Kombination mit </label>
+      <select class="form-control" id="sel1">
+        <option>Ziegel</option>
+        <option>Flachdach</option>
+        <option>Paralleldach</option>
+        <option>4</option>
+      </select>
+
+      <label for="sel1">erlaubt? </label>
+      <input type="checkbox" name="new_erlaubt">
+
+      <input type="submit" value="Hinzufügen" class="btn btn-default" style="margin-left: 10px;">
+    </div>
+  </form>
+
+  <br />
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Atribut</th>
+      <th>In Kombination mit</th>
+      <th>Erlaubt</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Flachdach</td>
+      <td>Paralleldach</td>
+      <td><input type="checkbox" name="attrregel" value="TODO"></td>
+    </tr>
+    <tr>
+      <td>Flachdach</td>
+      <td>Blech</td>
+      <td><input type="checkbox" name="attrregel" value="TODO" checked="true"></td>
+    </tr>
+
+
+
+<%
+  #Lokal DB2
+  #conn = IBM_DB.connect("sample", "admin", "admin")
+  conn = IBM_DB.connect("DRIVER={IBM DB2 ODBC DRIVER};DATABASE=mdh;\
+                       HOSTNAME=wi-gate.technikum-wien.at;PORT=60831;PROTOCOL=TCPIP;\
+                       UID=mydreahmouse;PWD=wi15b;", "", "")
+
+  if conn
+    puts "We're connected!"
+    sql = "SELECT * FROM HAUSPAKET_ATTRIBUT_REGEL"
+    begin
+      if stmt = IBM_DB.exec(conn, sql)
+        while row = IBM_DB.fetch_assoc(stmt)
+%><tr>
+      <td><%= row['REGEL_ATTRIBUT_LEFT_ID'] %></td>
+      <td>Blech</td>
+      <td><input type="checkbox" name="attrregel" value="TODO" checked="true"></td>
+    </tr><%
+
+
+  #format.json render :text => @ebook
+  #@ebook.bild.to_json
+  end
+  IBM_DB.free_result(stmt)
+  else
+  puts "Statement execution failed: #{IBM_DB.getErrormsg}"
+  end
+  ensure
+  IBM_DB.close(conn)
+  end
+  else
+    puts "There was an error in the connection: #{IBM_DB.conn_errormsg}"
+  end%>
+
+
+
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>
