@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'welcome/test'
   get 'welcome/insert'
+  get 'ebooks/show'
   #resources :ebooks
 
   root 'welcome#index'
