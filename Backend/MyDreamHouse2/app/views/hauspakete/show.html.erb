@@ -1,9 +1,25 @@
 <%
   if (params[:do].eql? "add") then
     puts 'add'
-    sql1 = "INSERT INTO EBOOK (EBOOK_ID, TITEL, AUTOR, ERSCHEINUNGSDATUM, AUFLAGE, BILD, CONTENT, MIMETYPE, FILESIZE, ACTIVE) VALUES((select max(EBOOK_ID)+1 from EBOOK),'#{params[:titel]}',
-    '#{params[:autor]}','#{params[:erscheinungsdatum]}','#{params[:auflage]}','#{params[:bild]}','#{params[:content]}',
-    '#{params[:mimetype]}',#{params[:filesize]},'#{params[:active]}')"
+
+    #get Benutzer
+    sqlB3 = "SELECT ID FROM MDH_USERS WHERE ID =#{params[:berater_id]}"
+    stmtB3 = IBM_DB.exec($conn, sqlB3)
+    berater = IBM_DB.fetch_assoc(stmtB3)
+
+    sqlB2 = "SELECT BENUTZER_ID FROM BENUTZER WHERE BENUTZER_ID =#{berater['ID']}"
+    stmtB2 = IBM_DB.exec($conn, sqlB2)
+    joomla = IBM_DB.fetch_assoc(stmtB2)
+
+    sqlB1 = "SELECT BERATER_ID FROM BERATER WHERE BERATER_ID ='#{joomla['BENUTZER_ID']}'"
+    stmtB1 = IBM_DB.exec($conn, sqlB1)
+    benutzer = IBM_DB.fetch_assoc(stmtB1)
+
+
+    sql1 = "INSERT INTO HAUSPAKET (HAUSPAKET_ID, HERSTELLER_ID, BERATER_ID, BEZEICHNUNG, PREIS, GRUNDFLAECHE, WOHNFLAECHE, STOCKWERKE, BENUTZER_ID, ARCHIVED)
+    VALUES((select max(HAUSPAKET_ID)+1 from HAUSPAKET),#{params[:hersteller_id]}, #{benutzer['ID']},
+    '#{params[:bezeichnung]}',#{params[:preis]},#{params[:grundflaeche]},#{params[:wohnflaeche]},
+    #{params[:stockwerke]},#{params[:benutzer_id]},'#{params[:archived]}')"
 
     begin
       stmt1 = IBM_DB.exec($conn, sql1)
@@ -20,7 +36,7 @@
 <%
   if (params[:do].eql? "del") then
 
-    sql2 = "DELETE FROM EBOOK WHERE EBOOK_ID = #{params[:id]}"
+    sql2 = "DELETE FROM HAUSPAKET WHERE HAUSPAKET_ID = #{params[:id]}"
 
     begin
       stmt1 = IBM_DB.exec($conn, sql2)
@@ -80,13 +96,13 @@
               <%
                 if $conn
 
-                  sqlH2 = "SELECT NAME FROM HERSTELLER"
+                  sqlH2 = "SELECT * FROM HERSTELLER"
 
                   begin
                     if stmt = IBM_DB.exec($conn, sqlH2)
                     @listbox = '<select class="form-control" name="hersteller_id">'
                       while rowoben = IBM_DB.fetch_assoc(stmt)
-                        @listbox += "<option>#{rowoben['NAME']}</option>"
+                        @listbox += "<option value='#{rowoben['HERSTELLER_ID']}'>#{rowoben['NAME']}</option>"
                        end
                        @listbox += "</select>"
                        end
@@ -97,14 +113,34 @@
               %>
               <%= @listbox.html_safe %>
             </td>
-            <td><input type="text" name="autor"></td>
-            <td><input type="text" name="erscheinungsdatum"></td>
-            <td><input type="text" name="auflage"></td>
-            <td><input type="text" name="bild"></td>
-            <td><input type="text" name="content"></td>
-            <td><input type="text" name="mimetype"></td>
-            <td><input type="text" name="filesize"></td>
-            <td><input type="text" name="active"></td>
+            <td>
+              <%
+                if $conn
+
+                  sqlU = "SELECT * FROM MDH_USERS"
+
+                  begin
+                    if stmt = IBM_DB.exec($conn, sqlU)
+                    @listbox2 = '<select class="form-control" name="berater_id">'
+                      while rowoben = IBM_DB.fetch_assoc(stmt)
+                        @listbox2 += "<option value='#{rowoben['BERATER_ID']}'>#{rowoben['NAME']}</option>"
+                       end
+                       @listbox2 += "</select>"
+                       end
+                  end
+                  IBM_DB.free_result(stmt)
+                end
+              %>
+              <%= @listbox2.html_safe %>
+
+            </td>
+            <td><input type="text" name="bezeichnung"></td>
+            <td><input type="number" name="preis"></td>
+            <td><input type="number" name="grundflaeche"></td>
+            <td><input type="number" name="wohnflaeche"></td>
+            <td><input type="number" name="stockwerke"></td>
+            <td><input type="number" name="benutzer_id"></td>
+            <td><input type="text" name="archived"></td>
           </tr>
         </div>
       </form>
