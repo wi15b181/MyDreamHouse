@@ -62,7 +62,7 @@ namespace MyDataModel
             db.hauspaket.Remove(result);
             db.SaveChanges();
         }
-        
+
         public void InsertHauspaketAttribut(HauspaketAttributEntity hauspaketAttributEntity)
         {
             hauspaket_attribut h = new hauspaket_attribut()
@@ -75,12 +75,12 @@ namespace MyDataModel
             db.hauspaket_attribut.Add(h);
             db.SaveChanges();
         }
-        
+
         public void UpdateHauspaketAttribut(HauspaketAttributEntity hauspaketAttributEntity)
         {
             hauspaket_attribut result = (from x in db.hauspaket_attribut
                                          where x.attribut_id == hauspaketAttributEntity.AttributId
-                                select x).SingleOrDefault();
+                                         select x).SingleOrDefault();
 
             result.attribut_id = hauspaketAttributEntity.AttributId;
             result.attribut_typ = hauspaketAttributEntity.AttributTyp;
@@ -156,11 +156,11 @@ namespace MyDataModel
             db.SaveChanges();
         }
 
-        public void UpdateHauspaketAttributRegel(HauspaketAttributWertEntity hauspaketAttributWertEntity)
+        public void UpdateHauspaketAttributWert(HauspaketAttributWertEntity hauspaketAttributWertEntity)
         {
             hauspaket_attribut_wert result = (from x in db.hauspaket_attribut_wert
-                                               where x.wert_id == hauspaketAttributWertEntity.WertId
-                                               select x).SingleOrDefault();
+                                              where x.wert_id == hauspaketAttributWertEntity.WertId
+                                              select x).SingleOrDefault();
 
             result.wert_id = hauspaketAttributWertEntity.WertId;
             result.attribut_id = hauspaketAttributWertEntity.AttributId;
@@ -172,7 +172,7 @@ namespace MyDataModel
 
         }
 
-        public void DeleteHauspaketAttributRegel(HauspaketAttributWertEntity hauspaketAttributWertEntity)
+        public void DeleteHauspaketAttributWert(HauspaketAttributWertEntity hauspaketAttributWertEntity)
         {
             hauspaket_attribut_wert result = (from x in db.hauspaket_attribut_wert
                                               where x.wert_id == hauspaketAttributWertEntity.WertId
@@ -199,7 +199,7 @@ namespace MyDataModel
         {
             hauspaket_attribut_zuord result = (from x in db.hauspaket_attribut_zuord
                                                where x.wert_id == hauspaketAttributZuordEntity.WertId && x.hauspaket_id == hauspaketAttributZuordEntity.HauspaketId
-                                              select x).SingleOrDefault();
+                                               select x).SingleOrDefault();
 
             result.hauspaket_id = hauspaketAttributZuordEntity.HauspaketId;
             result.wert_id = hauspaketAttributZuordEntity.WertId;
@@ -235,7 +235,7 @@ namespace MyDataModel
             db.SaveChanges();
         }
 
-        
+
         public void UpdateAttachements(AttachmentsEntity attachementsEntity)
         {
             attachements result = (from x in db.attachements
@@ -253,7 +253,7 @@ namespace MyDataModel
 
         }
 
-        
+
         public void DeleteAttachements(AttachmentsEntity attachementsEntity)
         {
             attachements result = (from x in db.attachements
@@ -264,6 +264,79 @@ namespace MyDataModel
             db.SaveChanges();
         }
 
+
+        public void InsertBerater(BeraterEntity beraterEntity)
+        {
+            berater b = new berater()
+            {
+                benutzer_id = beraterEntity.BenutzerId,
+                berater_id = beraterEntity.BeraterId,
+                bild = beraterEntity.Bild,
+                hersteller_id = beraterEntity.HerstellerId
+            };
+
+            db.berater.Add(b);
+            db.SaveChanges();
+        }
+
+
+        public void UpdateBerater(BeraterEntity beraterEntity)
+        {
+            berater result = (from x in db.berater
+                              where x.berater_id == beraterEntity.BeraterId
+                              select x).SingleOrDefault();
+
+            result.benutzer_id = beraterEntity.BenutzerId;
+            result.berater_id = beraterEntity.BeraterId;
+            result.bild = beraterEntity.Bild;
+            result.hersteller_id = beraterEntity.HerstellerId;
+            db.SaveChanges();
+
+        }
+
+        public void DeleteBerater(BeraterEntity beraterEntity)
+        {
+            berater result = (from x in db.berater
+                              where x.berater_id == beraterEntity.BeraterId
+                              select x).SingleOrDefault();
+
+            db.berater.Remove(result);
+            db.SaveChanges();
+        }
+
+        public void InsertHersteller(HerstellerEntity herstellerEntity)
+        {
+            hersteller h = new hersteller()
+            {
+                hersteller_id = Convert.ToInt32(herstellerEntity.HerstellerId),
+                name = herstellerEntity.Name
+            };
+
+            db.hersteller.Add(h);
+            db.SaveChanges();
+        }
+
+        public void UpdateHersteller(HerstellerEntity herstellerEntity)
+        {
+            hersteller result = (from x in db.hersteller
+                                 where x.hersteller_id == herstellerEntity.HerstellerId
+                                 select x).SingleOrDefault();
+
+            result.hersteller_id = Convert.ToInt32(herstellerEntity.HerstellerId);
+            result.name = herstellerEntity.Name;
+            db.SaveChanges();
+
+        }
+
+        public void DeleteHersteller(HerstellerEntity herstellerEntity)
+        {
+            hersteller result = (from x in db.hersteller
+                                 where x.hersteller_id == herstellerEntity.HerstellerId
+                                 select x).SingleOrDefault();
+
+            db.hersteller.Remove(result);
+            db.SaveChanges();
+        }
 
         public void InsertSyncJn(SyncJnEntity syncJnEntity)
         {
@@ -282,5 +355,69 @@ namespace MyDataModel
             db.SaveChanges();
         }
 
+        public void ClearHauspaketAttributZuord()
+        {
+            var result = (from x in db.hauspaket_attribut_zuord
+                          select x).ToList();
+
+            db.hauspaket_attribut_zuord.RemoveRange(result);
+            db.SaveChanges();
+        }
+        public void ClearAttachements()
+        {
+            var result = (from x in db.attachements
+                          select x).ToList();
+
+            db.attachements.RemoveRange(result);
+            db.SaveChanges();
+        }
+        public void ClearHauspaket()
+        {
+            var result = (from x in db.hauspaket
+                          select x).ToList();
+
+            db.hauspaket.RemoveRange(result);
+            db.SaveChanges();
+        }
+        public void ClearBerater()
+        {
+            var result = (from x in db.berater
+                          select x).ToList();
+
+            db.berater.RemoveRange(result);
+            db.SaveChanges();
+        }
+        public void ClearHersteller()
+        {
+            var result = (from x in db.hersteller
+                          select x).ToList();
+
+            db.hersteller.RemoveRange(result);
+            db.SaveChanges();
+        }
+        public void ClearHauspaketAttributRegel()
+        {
+            var result = (from x in db.hauspaket_attribut_regel
+                          select x).ToList();
+
+            db.hauspaket_attribut_regel.RemoveRange(result);
+            db.SaveChanges();
+        }
+        public void ClearHauspaketAttributWert()
+        {
+            var result = (from x in db.hauspaket_attribut_wert
+                          select x).ToList();
+
+            db.hauspaket_attribut_wert.RemoveRange(result);
+            db.SaveChanges();
+        }
+        public void ClearHauspaketAttribut()
+        {
+            var result = (from x in db.hauspaket_attribut
+                          select x).ToList();
+
+            db.hauspaket_attribut.RemoveRange(result);
+            db.SaveChanges();
+        }
     }
 }

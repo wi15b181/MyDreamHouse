@@ -1,0 +1,6 @@
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb.mdf
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb_log.ldf
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb.dll
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb.pdb
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.dll
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.pdb

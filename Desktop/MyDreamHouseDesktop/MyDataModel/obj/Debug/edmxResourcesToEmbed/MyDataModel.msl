@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LocalDbModelStoreContainer" CdmEntityContainer="LocalDbEntities">
+    <EntitySetMapping Name="attachements">
+      <EntityTypeMapping TypeName="LocalDbModel.attachements">
+        <MappingFragment StoreEntitySet="attachements">
+          <ScalarProperty Name="attachement_id" ColumnName="attachement_id" />
+          <ScalarProperty Name="filename" ColumnName="filename" />
+          <ScalarProperty Name="bezeichnung" ColumnName="bezeichnung" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="mimetype" ColumnName="mimetype" />
+          <ScalarProperty Name="hauspaket_id" ColumnName="hauspaket_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="berater">
+      <EntityTypeMapping TypeName="LocalDbModel.berater">
+        <MappingFragment StoreEntitySet="berater">
+          <ScalarProperty Name="berater_id" ColumnName="berater_id" />
+          <ScalarProperty Name="hersteller_id" ColumnName="hersteller_id" />
+          <ScalarProperty Name="benutzer_id" ColumnName="benutzer_id" />
+          <ScalarProperty Name="bild" ColumnName="bild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hauspaket">
+      <EntityTypeMapping TypeName="LocalDbModel.hauspaket">
+        <MappingFragment StoreEntitySet="hauspaket">
+          <ScalarProperty Name="hauspaket_id" ColumnName="hauspaket_id" />
+          <ScalarProperty Name="hersteller_id" ColumnName="hersteller_id" />
+          <ScalarProperty Name="berater_id" ColumnName="berater_id" />
+          <ScalarProperty Name="bezeichnung" ColumnName="bezeichnung" />
+          <ScalarProperty Name="preis" ColumnName="preis" />
+          <ScalarProperty Name="grundflaeche" ColumnName="grundflaeche" />
+          <ScalarProperty Name="wohnflaeche" ColumnName="wohnflaeche" />
+          <ScalarProperty Name="stockwerke" ColumnName="stockwerke" />
+          <ScalarProperty Name="benutzer_id" ColumnName="benutzer_id" />
+          <ScalarProperty Name="archived" ColumnName="archived" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hauspaket_attribut">
+      <EntityTypeMapping TypeName="LocalDbModel.hauspaket_attribut">
+        <MappingFragment StoreEntitySet="hauspaket_attribut">
+          <ScalarProperty Name="attribut_id" ColumnName="attribut_id" />
+          <ScalarProperty Name="attribut_typ" ColumnName="attribut_typ" />
+          <ScalarProperty Name="attribut_typ_anzeige" ColumnName="attribut_typ_anzeige" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hauspaket_attribut_regel">
+      <EntityTypeMapping TypeName="LocalDbModel.hauspaket_attribut_regel">
+        <MappingFragment StoreEntitySet="hauspaket_attribut_regel">
+          <ScalarProperty Name="regel_id" ColumnName="regel_id" />
+          <ScalarProperty Name="regel_attribut_left_id" ColumnName="regel_attribut_left_id" />
+          <ScalarProperty Name="regel_attribut_right_id" ColumnName="regel_attribut_right_id" />
+          <ScalarProperty Name="regel_preis_modifikator" ColumnName="regel_preis_modifikator" />
+          <ScalarProperty Name="regel_erlaubt" ColumnName="regel_erlaubt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hauspaket_attribut_wert">
+      <EntityTypeMapping TypeName="LocalDbModel.hauspaket_attribut_wert">
+        <MappingFragment StoreEntitySet="hauspaket_attribut_wert">
+          <ScalarProperty Name="wert_id" ColumnName="wert_id" />
+          <ScalarProperty Name="attribut_id" ColumnName="attribut_id" />
+          <ScalarProperty Name="wert_text" ColumnName="wert_text" />
+          <ScalarProperty Name="wert_ordnung" ColumnName="wert_ordnung" />
+          <ScalarProperty Name="archived" ColumnName="archived" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hauspaket_attribut_zuord">
+      <EntityTypeMapping TypeName="LocalDbModel.hauspaket_attribut_zuord">
+        <MappingFragment StoreEntitySet="hauspaket_attribut_zuord">
+          <ScalarProperty Name="hauspaket_id" ColumnName="hauspaket_id" />
+          <ScalarProperty Name="wert_id" ColumnName="wert_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hersteller">
+      <EntityTypeMapping TypeName="LocalDbModel.hersteller">
+        <MappingFragment StoreEntitySet="hersteller">
+          <ScalarProperty Name="hersteller_id" ColumnName="hersteller_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sync_jn">
+      <EntityTypeMapping TypeName="LocalDbModel.sync_jn">
+        <MappingFragment StoreEntitySet="sync_jn">
+          <ScalarProperty Name="jn_id" ColumnName="jn_id" />
+          <ScalarProperty Name="jn_table" ColumnName="jn_table" />
+          <ScalarProperty Name="jn_timestampe" ColumnName="jn_timestampe" />
+          <ScalarProperty Name="jn_pk" ColumnName="jn_pk" />
+          <ScalarProperty Name="jn_operation" ColumnName="jn_operation" />
+          <ScalarProperty Name="jn_synced" ColumnName="jn_synced" />
+          <ScalarProperty Name="jn_changeset_json" ColumnName="jn_changeset_json" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

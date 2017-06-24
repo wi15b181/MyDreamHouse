@@ -41,11 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\AttachmentsEntity.cs" />
+    <Compile Include="Entities\BeraterEntity.cs" />
     <Compile Include="Entities\HauspaketAttributEntity.cs" />
     <Compile Include="Entities\HauspaketAttributRegelEntity.cs" />
     <Compile Include="Entities\HauspaketAttributWertEntity.cs" />
     <Compile Include="Entities\HauspaketAttributZuordEntity.cs" />
     <Compile Include="Entities\HauspaketEntity.cs" />
+    <Compile Include="Entities\HerstellerEntity.cs" />
     <Compile Include="Entities\SyncJnEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
