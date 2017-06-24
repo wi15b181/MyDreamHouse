@@ -11,7 +11,8 @@ namespace SynchronisationDataManager.Clients
 {
     class MySQLClient : DatabaseClient
     {
-        private const string CONNECT_STRING = "server=wi-gate.technikum-wien.at; port=60431; userid=root; database=joomla";
+        private const string CONNECT_STRING = "server=localhost; port=443; userid=root; database=joomla";
+       // private const string CONNECT_STRING = "server=wi-gate.technikum-wien.at; port=60431; userid=root; database=joomla; convert zero datetime=True";
         private MySqlConnection conn;
         public MySQLClient()
         {
@@ -45,7 +46,7 @@ namespace SynchronisationDataManager.Clients
         protected override DataTable ExecuteQuery(string query)
         {
             DataTable dataTable = new DataTable();
-            
+
             using (MySqlCommand cmd = new MySqlCommand(query, conn))
             {
                 using (MySqlDataReader reader = cmd.ExecuteReader())

@@ -72,6 +72,16 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SynchronisationDataManager\SynchronisationDataManager.csproj">
+      <Project>{F19C35DA-F248-4B79-B499-86FB65557B93}</Project>
+      <Name>SynchronisationDataManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SynchronisationShared\SynchronisationShared.csproj">
+      <Project>{D708732C-1C2D-4C35-8FD8-B69188A8F2A1}</Project>
+      <Name>SynchronisationShared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

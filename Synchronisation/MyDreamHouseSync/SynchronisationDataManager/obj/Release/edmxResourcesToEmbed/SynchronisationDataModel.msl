@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SynchronisationDatabaseModelStoreContainer" CdmEntityContainer="SynchronisationDatabaseEntities">
+    <EntitySetMapping Name="Sync_jn">
+      <EntityTypeMapping TypeName="SynchronisationDatabaseModel.Sync_jn">
+        <MappingFragment StoreEntitySet="Sync_jn">
+          <ScalarProperty Name="jn_id" ColumnName="jn_id" />
+          <ScalarProperty Name="jn_table" ColumnName="jn_table" />
+          <ScalarProperty Name="jn_timestamp" ColumnName="jn_timestamp" />
+          <ScalarProperty Name="jn_pk" ColumnName="jn_pk" />
+          <ScalarProperty Name="jn_operation" ColumnName="jn_operation" />
+          <ScalarProperty Name="jn_synced" ColumnName="jn_synced" />
+          <ScalarProperty Name="jn_changeset_json" ColumnName="jn_changeset_json" />
+          <ScalarProperty Name="jn_application" ColumnName="jn_application" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

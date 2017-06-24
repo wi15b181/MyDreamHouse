@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronisationDataManager"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronisationUnitTest", "SynchronisationUnitTest\SynchronisationUnitTest.csproj", "{4EA69C07-5B6B-445A-B6C8-73CF84B08B36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronisationLocalDatabase", "SynchronisationLocalDatabase\SynchronisationLocalDatabase.csproj", "{8381DA09-C165-4FBA-B83C-C0D63B461D1F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronisationShared", "SynchronisationShared\SynchronisationShared.csproj", "{D708732C-1C2D-4C35-8FD8-B69188A8F2A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronisationBusinessLogic", "SynchronisationBusinessLogic\SynchronisationBusinessLogic.csproj", "{BC84F08B-B46C-4E34-AB3B-16E0EB8AE015}"
@@ -41,10 +39,6 @@ Global
 		{4EA69C07-5B6B-445A-B6C8-73CF84B08B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EA69C07-5B6B-445A-B6C8-73CF84B08B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EA69C07-5B6B-445A-B6C8-73CF84B08B36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8381DA09-C165-4FBA-B83C-C0D63B461D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8381DA09-C165-4FBA-B83C-C0D63B461D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8381DA09-C165-4FBA-B83C-C0D63B461D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8381DA09-C165-4FBA-B83C-C0D63B461D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D708732C-1C2D-4C35-8FD8-B69188A8F2A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D708732C-1C2D-4C35-8FD8-B69188A8F2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D708732C-1C2D-4C35-8FD8-B69188A8F2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU

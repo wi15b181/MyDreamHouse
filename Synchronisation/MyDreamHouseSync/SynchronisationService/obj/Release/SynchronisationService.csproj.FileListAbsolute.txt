@@ -3,6 +3,8 @@ D:\csharp\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationSer
 D:\csharp\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.pdb
 D:\csharp\MyDreamHouseSync\SynchronisationService\obj\Release\SynchronisationService.dll
 D:\csharp\MyDreamHouseSync\SynchronisationService\obj\Release\SynchronisationService.pdb
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationDatabase.mdf
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationDatabase_log.ldf
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.dll.config
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationService.pdb
@@ -11,6 +13,10 @@ C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Rele
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\IBM.Data.DB2.EntityFramework.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\MySql.Data.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\MySql.Data.Entity.EF6.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationDataManager.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationShared.dll
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationDataManager.pdb
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\SynchronisationShared.pdb
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\EntityFramework.xml
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\bin\Release\EntityFramework.SqlServer.xml
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationService\obj\Release\SynchronisationService.csprojResolveAssemblyReference.cache

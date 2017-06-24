@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,6 +45,26 @@
     <Compile Include="SharedEnums.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SyncJn.cs" />
+    <Compile Include="SyncData.cs" />
+    <Compile Include="SyncDataSet.cs" />
+    <Compile Include="Tables\Attachements.cs" />
+    <Compile Include="Tables\Benutzer.cs" />
+    <Compile Include="Tables\Berater.cs" />
+    <Compile Include="Tables\ColumnProperty.cs" />
+    <Compile Include="Tables\Ebook.cs" />
+    <Compile Include="Tables\EbookStatistic.cs" />
+    <Compile Include="Tables\HauspaetAttributZuord.cs" />
+    <Compile Include="Tables\Hauskauf.cs" />
+    <Compile Include="Tables\Termin.cs" />
+    <Compile Include="Tables\HauspaketDTO.cs" />
+    <Compile Include="Tables\Hauspaket.cs" />
+    <Compile Include="Tables\HauspaketAttribut.cs" />
+    <Compile Include="Tables\HauspaketAttributRegel.cs" />
+    <Compile Include="Tables\HauspaketAttributWert.cs" />
+    <Compile Include="Tables\Hersteller.cs" />
+    <Compile Include="Tables\MdhUsers.cs" />
+    <Compile Include="Tables\Table.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

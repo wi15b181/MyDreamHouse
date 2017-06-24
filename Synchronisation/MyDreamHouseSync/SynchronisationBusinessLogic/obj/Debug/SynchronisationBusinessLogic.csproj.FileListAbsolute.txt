@@ -1,4 +1,3 @@
-C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\obj\Debug\SynchronisationBusinessLogic.csprojResolveAssemblyReference.cache
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\bin\Debug\SynchronisationDatabase.mdf
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\bin\Debug\SynchronisationDatabase_log.ldf
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\bin\Debug\SynchronisationBusinessLogic.dll
@@ -10,5 +9,6 @@ C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\bi
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\bin\Debug\SynchronisationDataManager.pdb
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\bin\Debug\SynchronisationShared.pdb
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\bin\Debug\EntityFramework.xml
+C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\obj\Debug\SynchronisationBusinessLogic.csprojResolveAssemblyReference.cache
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\obj\Debug\SynchronisationBusinessLogic.dll
 C:\MyDreamHouse\Synchronisation\MyDreamHouseSync\SynchronisationBusinessLogic\obj\Debug\SynchronisationBusinessLogic.pdb
