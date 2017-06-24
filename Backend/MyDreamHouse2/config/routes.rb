@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'ebooks/show'
   #resources :ebooks
   get 'hauspakete/show'
+  get 'benutzerrollen/show'
 
   root 'welcome#index'
   get 'artribut/show'
