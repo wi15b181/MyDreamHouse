@@ -1,0 +1,2 @@
+class ZuweisenController < ApplicationController
+end
