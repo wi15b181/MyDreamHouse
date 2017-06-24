@@ -1,3 +1,21 @@
+<%
+  if params[:titel].present? then
+
+    sql1 = "INSERT INTO EBOOK (EBOOK_ID, TITEL, AUTOR, ERSCHEINUNGSDATUM, AUFLAGE, BILD, CONTENT, MIMETYPE, FILESIZE, ACTIVE) VALUES((select max(EBOOK_ID)+1 from EBOOK),'#{params[:titel]}',
+    '#{params[:autor]}','#{params[:erscheinungsdatum]}','#{params[:auflage]}','#{params[:bild]}','#{params[:content]}',
+    '#{params[:mimetype]}','#{params[:filesize]}','#{params[:active]}')"
+
+    begin
+      if stmt1 = IBM_DB.exec($conn, sql1)
+         stmt2 = IBM_DB.exec($conn, 'COMMIT')
+        end
+      end
+      IBM_DB.free_result(stmt1)
+      IBM_DB.free_result(stmt2)
+  end
+%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +50,25 @@
       </tr>
       </thead>
       <tbody>
+
+      <form class="form-inline">
+        <div class="form-group">
+          <tr>
+            <td><input type="submit" value="+" class="btn btn-default" style="margin-left: 10px;"></td>
+            <td><input type="text" name="titel"></td>
+            <td><input type="text" name="autor"></td>
+            <td><input type="text" name="erscheinungsdatum"></td>
+            <td><input type="text" name="auflage"></td>
+            <td><input type="text" name="bild"></td>
+            <td><input type="text" name="content"></td>
+            <td><input type="text" name="mimetype"></td>
+            <td><input type="text" name="filesize"></td>
+            <td><input type="text" name="active"></td>
+          </tr>
+        </div>
+      </form>
+
+
   <%
 
     if $conn
