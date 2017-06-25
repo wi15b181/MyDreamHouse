@@ -6,7 +6,7 @@
                        UID=mydreahmouse;PWD=wi15b;", "", "")
 
 
-  if params[:wert1].present? && params[:wert2].present? then
+  if params[:add].present? then
 
     sql1 = "SELECT * FROM HAUSPAKET_ATTRIBUT_WERT WHERE WERT_TEXT = '#{params[:wert1]}'"
     sql2 = "SELECT * FROM HAUSPAKET_ATTRIBUT_WERT WHERE WERT_TEXT = '#{params[:wert2]}'"
@@ -36,6 +36,21 @@
       #IBM_DB.free_result(stmt1)
       #IBM_DB.free_result(stmt2)
     end
+
+  elsif params[:change].present? then
+    sqlchange = "UPDATE HAUSPAKET_ATTRIBUT_REGEL SET REGEL_ERLAUBT = #{params[:attrregel].present? ? '1' : '0'} WHERE REGEL_ATTRIBUT_LEFT_ID = #{params[:wert1]} AND REGEL_ATTRIBUT_RIGHT_ID = #{params[:wert2]}"
+
+    if stmtupdate = IBM_DB.exec(conn, sqlchange)
+      if stmtu = IBM_DB.exec(conn, 'COMMIT')
+      end
+    end
+  elsif params[:del].present? then
+    sqldel = "DELETE FROM HAUSPAKET_ATTRIBUT_REGEL WHERE REGEL_ATTRIBUT_LEFT_ID = #{params[:wert1]} AND REGEL_ATTRIBUT_RIGHT_ID = #{params[:wert2]} AND REGEL_ERLAUBT = #{params[:attrregel].present? ? '1' : '0'} "
+
+    if stmtdel = IBM_DB.exec(conn, sqldel)
+      if stmtd = IBM_DB.exec(conn, 'COMMIT')
+      end
+    end
   end
 %>
 
@@ -53,8 +68,8 @@
   <%= render 'welcome/navigation' %>
 </form>
 <div class="container" style="margin-left: 10px">
-  <h2>Attributkonfigurator</h2>
-
+  <h2 style="margin-left: 10px">Attributkonfigurator</h2>
+  
   <form class="form-inline">
     <div class="form-group">
 
@@ -80,15 +95,15 @@
         end
 
       %>
-      <label style="margin-left: 10px">Atribut </label>
+      <label style="margin-left: 10px; margin-right: 5px">Atribut </label>
       <%= @listbox.html_safe %>
-      <label >in Kombination mit </label>
+      <label style="margin-left: 5px; margin-right: 5px">in Kombination mit </label>
       <%= @listbox2.html_safe %>
 
-      <label >erlaubt? </label>
+      <label style="margin-left: 5px; margin-right: 5px">erlaubt? </label>
       <input type="checkbox" name="new_erlaubt">
 
-      <input type="submit" value="Hinzufügen" class="btn btn-default" style="margin-left: 10px;">
+      <button name="add" value="add" type="submit" class="btn btn-default" style="margin-left: 10px;">Hinzufügen</button>
     </div>
   </form>
 
@@ -111,13 +126,23 @@
 
                 if stmt3 = IBM_DB.exec(conn, sql3)
                   row3 = IBM_DB.fetch_assoc(stmt3)
-
+                  @record += '<form>'
                   @record += "<tr>"
                   @record += "<td>#{row2['WERT_TEXT']}</td>"
                   @record += "<td>#{row3['WERT_TEXT']}</td>"
                   @record += '<td><input type="checkbox" name="attrregel"'
                   @record += (row['REGEL_ERLAUBT'] == '1' ? "checked" : "")
-                  @record += "></td></tr>"
+                  @record += "></td>"
+                  @record += '<td><button name="change" value="change" type="submit" class="btn btn-default">Speichern</button></td>'
+                  @record += '<td><button name="del" value="del" type="submit" class="btn btn-default">Löschen</button></td>'
+                  @record += "</tr>"
+                  @record += '<input type ="hidden" name="wert1" value="'
+                  @record += "#{row['REGEL_ATTRIBUT_LEFT_ID']}"
+                  @record += '"/>'
+                  @record += '<input type ="hidden" name="wert2" value="'
+                  @record += "#{row['REGEL_ATTRIBUT_RIGHT_ID']}"
+                  @record += '"/>'
+                  @record += '</form>'
                 end
               end
           end
