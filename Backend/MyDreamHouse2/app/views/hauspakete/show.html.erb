@@ -36,8 +36,9 @@
 <%
   if (params[:do].eql? "del") then
 
-    sql2 = "DELETE FROM HAUSPAKET WHERE HAUSPAKET_ID = #{params[:id]}"
-
+    sql2= "delete from HAUSPAKET_ATTRIBUT_ZUORD WHERE HAUSPAKET_ID = #{params[:id]};commit;"
+    sql2 += "DELETE FROM HAUSPAKET WHERE HAUSPAKET_ID = #{params[:id]}"
+    puts sql2
     begin
       stmt1 = IBM_DB.exec($conn, sql2)
       stmt2 = IBM_DB.exec($conn, 'COMMIT')

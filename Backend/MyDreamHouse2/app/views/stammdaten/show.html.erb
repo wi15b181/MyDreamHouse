@@ -1,7 +1,7 @@
 <%
   if (params[:do].eql? "add") then
     puts 'add'
-    sql1 = "INSERT INTO MDH_USERS (ID, NAME, USERNAME, EMAIL, PASSWORD, ARCHIVED) VALUES((select max(EBOOK_ID)+1 from MDH_USERS),'#{params[:id]}',
+    sql1 = "INSERT INTO MDH_USERS (ID, NAME, USERNAME, EMAIL, PASSWORD, ARCHIVED) VALUES((select max(ID)+1 from MDH_USERS),
     '#{params[:name]}','#{params[:username]}','#{params[:email]}','#{params[:password]}','#{params[:archived]}')"
 
     begin
@@ -19,7 +19,7 @@
 <%
   if (params[:do].eql? "del") then
 
-    sql2 = "DELETE FROM MDH_USERS WHERE EBOOK_ID = #{params[:id]}"
+    sql2 = "DELETE FROM MDH_USERS WHERE ID = #{params[:id]}"
 
     begin
       stmt1 = IBM_DB.exec($conn, sql2)
@@ -95,9 +95,9 @@
               <tr>
                 <form class="form-inline">
                   <div class="form-group">
-                    <td><input type="submit" value="-" class="btn btn-default btn-md" style="margin-left: 10px;">
-                        <input type="hidden" name="do" value="del">
-                        <input type="hidden" name="id" value="<%= @mdh_users.id %>">
+                    <td><input type="submit" value="-" class="btn btn-default btn-md" style="margin-left: 10px;"/>
+                        <input type="hidden" name="do" value="del"/>
+                        <input type="hidden" name="id" value="<%= @mdh_users.id %>"/>
                     </td>
                   </div>
                 </form>
