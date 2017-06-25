@@ -1,6 +1,5 @@
 <%
   if (params[:do].eql? "add") then
-    puts 'add'
     sql1 = "INSERT INTO EBOOK (EBOOK_ID, TITEL, AUTOR, ERSCHEINUNGSDATUM, AUFLAGE, BILD, CONTENT, MIMETYPE, FILESIZE, ACTIVE) VALUES((select max(EBOOK_ID)+1 from EBOOK),'#{params[:titel]}',
     '#{params[:autor]}','#{params[:erscheinungsdatum]}','#{params[:auflage]}','#{params[:bild]}','#{params[:content]}',
     '#{params[:mimetype]}',#{params[:filesize]},'#{params[:active]}')"
@@ -31,6 +30,23 @@
       #IBM_DB.free_result(stmt1)
       #IBM_DB.free_result(stmt2)
     end
+  elsif params[:saveebook].present? then
+    updateEbook = "UPDATE EBOOK
+      SET TITEL = '#{params[:titel]}',
+      AUTOR = '#{params[:autor]}',
+      ERSCHEINUNGSDATUM = '#{params[:erschei]}',
+      AUFLAGE = '#{params[:auflage]}',
+      BILD = '#{params[:bild]}',
+      CONTENT = '#{params[:content]}',
+      MIMETYPE = '#{params[:mimetype]}',
+      ACTIVE = '#{params[:active]}'
+      WHERE EBOOK_ID = #{params[:ebookid]}"
+
+    puts updateEbook
+      begin
+        stmtupdate = IBM_DB.exec($conn, updateEbook)
+        stmt2 = IBM_DB.exec($conn, 'COMMIT')
+      end
   end
 %>
 
@@ -110,8 +126,26 @@
                     </td>
                   </div>
                 </form>
-
+                <%
+                  if (params[:changeebook].present? && (params[:ebookid].eql? "#{@ebook.ebook_id}")) then %>
+                    <form>
+                      <td><%= @ebook.ebook_id %></td>
+                      <input type="hidden" name="ebookid"    value="<%= @ebook.ebook_id %>"/>
+                      <td><input type="text" name="titel"    value="<%= @ebook.titel %>"/> </td>
+                      <td><input type="text" name="autor"    value="<%= @ebook.autor %>"/> </td>
+                      <td><input type="date" name="erschei"  value="<%= @ebook.erscheinungsdatum %>"/> </td>
+                      <td><input type="text" name="auflage"  value="<%= @ebook.auflage %>"/> </td>
+                      <td><input type="text" name="bild"     value="<%= @ebook.bild %>"/> </td>
+                      <td><input type="text" name="content"  value="<%= @ebook.content %>"/> </td>
+                      <td><input type="text" name="mimetype" value="<%= @ebook.mimetype %>"/> </td>
+                      <td><input type="text" name="filesize" value="<%= @ebook.filesize %>" readonly/> </td>
+                      <td><input type="text" name="active"   value="<%= @ebook.active %>"/> </td>
+                      <td><button type="submit" name="saveebook" value="saveebook">Speichern</button></td>
+                    </form>
+                <%else%>
+                <form>
                 <td><%= @ebook.ebook_id %></td>
+                <input type="hidden" name="ebookid" value="<%= @ebook.ebook_id %>"/>
                 <td><%= @ebook.titel %></td>
                 <td><%= @ebook.autor %></td>
                 <td><%= @ebook.erscheinungsdatum %></td>
@@ -121,6 +155,9 @@
                 <td><%= @ebook.mimetype %></td>
                 <td><%= @ebook.filesize %></td>
                 <td><%= @ebook.active %></td>
+                <td><button type="submit" name="changeebook" value="changeebook">Bearbeiten</button></td>
+                </form>
+                <%end %>
               </tr>
           <%
           end
