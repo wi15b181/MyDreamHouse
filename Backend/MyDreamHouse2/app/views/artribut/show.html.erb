@@ -19,7 +19,7 @@
           if stmt2 = IBM_DB.exec(conn, sql2)
           wertt2 = IBM_DB.fetch_assoc(stmt2)
           puts wertt2['WERT_ID']
-            addsql = "INSERT INTO HAUSPAKET_ATTRIBUT_REGEL (REGEL_ID, REGEL_ATTRIBUT_LEFT_ID, REGEL_ATTRIBUT_RIGHT_ID, REGEL_PREIS_MODIFIKATOR, REGEL_ERLAUBT, ARCHIVED) VALUES ((select max(REGEL_ID)+1 from hauspaket_attribut_regel),#{ irgend['WERT_ID']},#{ wertt2['WERT_ID']},0.0," + (params[:new_erlaubt].present? ? '1' : '0') + ",'0')"
+            addsql = "INSERT INTO HAUSPAKET_ATTRIBUT_REGEL (REGEL_ID, REGEL_ATTRIBUT_LEFT_ID, REGEL_ATTRIBUT_RIGHT_ID, REGEL_PREIS_MODIFIKATOR, REGEL_ERLAUBT, ARCHIVED) VALUES ((select max(REGEL_ID)+1 from hauspaket_attribut_regel),#{ irgend['WERT_ID']},#{ wertt2['WERT_ID']},#{params[:preismodi]}," + (params[:new_erlaubt].present? ? '1' : '0') + ",'0')"
             if stmt = IBM_DB.exec(conn, addsql)
 
               puts "first statement"

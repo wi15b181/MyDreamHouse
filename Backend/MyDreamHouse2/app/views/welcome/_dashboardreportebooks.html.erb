@@ -1,0 +1,49 @@
+<%
+  #Lokal DB2
+  #conn = IBM_DB.connect("sample", "admin", "admin")
+  conn = $conn
+
+  sql = "SELECT BOOK.TITEL, COUNT(STAT.EBOOK_ID) ANZAHL FROM EBOOK_STATISTIC STAT JOIN EBOOK BOOK ON STAT.EBOOK_ID = BOOK.EBOOK_ID GROUP BY BOOK.TITEL"
+  sqlsum = "SELECT COUNT(*) SUM FROM EBOOK_STATISTIC"
+  begin
+    @stats = ""
+    @summe = 0;
+    if stmt = IBM_DB.exec(conn, sql)
+      while statistic = IBM_DB.fetch_assoc(stmt)
+        @stats += "<tr>"
+        @stats += '<td style="width: 50px"'
+        @stats += ">#{statistic['TITEL']}</td>"
+        @stats += '<td style="width: 50px"'
+        @stats += ">#{statistic['ANZAHL']}</td>"
+        @stats += "</tr>"
+      end
+
+      if sumstmt = IBM_DB.exec(conn, sqlsum)
+        sumrecord = IBM_DB.fetch_assoc(sumstmt)
+        @summe = sumrecord['SUM']
+      end
+      @stats += '<tr><td style="width: 50px"'
+      @stats += '></td><td style="width: 50px"'
+      @stats +="><strong>#{@summe}</strong></td></tr>"
+    end
+  end
+  IBM_DB.free_result(stmt)
+  IBM_DB.free_result(sumstmt)
+  #IBM_DB.close(conn)
+%>
+
+
+<div class="container">
+  <h3>Downloadstatistik Ebooks</h3>
+  <table class="table" style="width: 500px;">
+    <thead>
+    <tr>
+      <th>Titel</th>
+      <th>Anzahl der Downloads</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= @stats.html_safe %>
+    </tbody>
+  </table>
+</div>

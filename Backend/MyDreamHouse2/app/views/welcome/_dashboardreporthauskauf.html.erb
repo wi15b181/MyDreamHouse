@@ -1,0 +1,50 @@
+<%
+  #Lokal DB2
+  #conn = IBM_DB.connect("sample", "admin", "admin")
+  conn = $conn
+
+  sqlhauskauf = "SELECT haus.BEZEICHNUNG, (COUNT(haus.HAUSPAKET_ID) * kauf.KAUFPREIS) SUMME, COUNT(haus.HAUSPAKET_ID) ANZAHL FROM HAUSPAKET haus
+                  JOIN TERMIN term ON haus.HAUSPAKET_ID = term.HAUSPAKET_ID
+                  JOIN HAUSKAUF kauf on term.TERMIN_ID = kauf.TERMIN_ID
+                  WHERE kauf.KAUFDATUM >= TO_DATE('#{params[:beginndatum]}', 'YYYY-MM-DD')
+                    AND kauf.KAUFDATUM <= TO_DATE('#{params[:enddatum]}', 'YYYY-MM-DD')
+                GROUP BY haus.BEZEICHNUNG, KAUFPREIS
+                order by ANZAHL DESC;"
+
+  begin
+    @hauskaufreport = ""
+    @summe = 0;
+    @anzahl = 0;
+    if stmthauskauf = IBM_DB.exec(conn, sqlhauskauf)
+      while reportrow = IBM_DB.fetch_assoc(stmthauskauf)
+        @hauskaufreport += '<tr><td style="width:160px"'
+        @hauskaufreport += ">#{reportrow['BEZEICHNUNG']}</td>"
+        @hauskaufreport += '<td style="width:80px"'
+        @hauskaufreport += ">#{reportrow['ANZAHL']}</td>"
+        @hauskaufreport += "<td>#{reportrow['SUMME']}</td></tr>"
+
+        @summe += reportrow['SUMME']
+        @anzahl += reportrow['ANZAHL']
+      end
+      @hauskaufreport += "<tr><td></td><td><strong>#{@anzahl}</strong></td><td><strong>#{@summe}</strong></td></tr>"
+    end
+  end
+  IBM_DB.free_result(stmthauskauf)
+  #IBM_DB.close(conn)
+%>
+
+
+
+<div class="container">
+  <h3>Hauskäufe</h3>
+  <table class="table" style="width: 500px;">
+    <thead>
+    <th>Hauspaketbezeichnung</th>
+    <th>Anzahl</th>
+    <th>Summe pro Hauspaket</th>
+    </thead>
+    <tbody>
+    <%= @hauskaufreport.html_safe %>
+    </tbody>
+  </table>
+</div>

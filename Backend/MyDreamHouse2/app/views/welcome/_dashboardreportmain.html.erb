@@ -1,0 +1,23 @@
+<form role="form" style="margin-left:40px">
+  <h2>Reporting</h2>
+
+  <div class="form-group" style="width:300px">
+    <label for="beginndatum">Beginndatum:</label>
+    <input type="date" class="form-control" id="beginndatum" name="beginndatum">
+  </div>
+  <div class="form-group" style="width:300px">
+    <label for="enddatum">Enddatum:</label>
+    <input type="date" class="form-control" id="enddatum" name="enddatum">
+  </div>
+  <button type="submit" name="special" value="special" class="btn btn-default">Reports generieren</button>
+
+  <% if params[:special] then %>
+      <div style="margin-top: 40px;">
+        <h4>Statistik <%=" von #{params[:beginndatum]} bis #{params[:enddatum]}"%></h4>
+      </div>
+  <% else %>
+      <div style="margin-top: 40px;">
+        <h4>Monatsstatistik Juni</h4>
+      </div>
+  <% end %>
+</form>
