@@ -27,6 +27,10 @@ include (JPATH_COMPONENT_SITE . '/inc/css/rating.css');
 
 if (isset ( $_GET ['showDetail'] ) && ! empty ( $_GET ['showDetail'] )) {
 	$package = getPackage ( $_GET ['showDetail'] );
+
+
+$pparam =$_GET['PAR_PRICEMULT'];
+
 	?>
 
 <div class="package-detail">
@@ -47,7 +51,13 @@ if (isset ( $_GET ['showDetail'] ) && ! empty ( $_GET ['showDetail'] )) {
 		</div>
 		<div style="text-align: right; font-size: 2em; padding-top: 9px;" class="package-detail-data-header-element elem-price">
 		<span ><?php 
-							echo ' &euro; '.number_format($package->preis,0,',','.').' <small>(UVB)</small>';
+							if(isset($pparam)){
+								$cal = $package->preis * $pparam;
+								echo ' &euro; '.number_format($cal,0,',','.').' <small>(UVB)</small>';
+							}else{
+								echo ' &euro; '.number_format($package->preis,0,',','.').' <small>(UVB)</small>';
+							}
+							
 							?></span>
 		</div>
 		</div>
