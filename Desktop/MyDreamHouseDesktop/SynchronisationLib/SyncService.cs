@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SharedLibrary;
+using SharedLibrary.Entities;
 
 namespace SynchronisationLib
 {
@@ -24,11 +26,24 @@ namespace SynchronisationLib
         public void FullSync()
         {
             //Zuerst lokale Ädnerungen an WS schicken.
-            //wsc.SendChanges(null);
+            //Hauspaket  Attachement   AttrZuord
+
+            List<SyncJnEntity> pendingSyncs = daoc.GetPendingSyncs();
+            foreach (var sync in pendingSyncs)
+            {
+                if (sync.JnTable.ToUpper() == "HAUSPAKET")
+                {
+                    HauspaketEntity hausPaket = daoc.GetHauspaket(sync.JnPk);
+                    List<AttachmentsEntity> attach = daoc.GetAttachments(sync.JnPk);
+                    List<HauspaketAttributZuordEntity> zuords = daoc.GetHauspaketAttributZuordnungen(sync.JnPk);
+                    wsc.SendChanges(hausPaket, attach, zuords, sync.JnOperation);
+                    sync.Synced = true;
+                    daoc.UpdateSyncJournal(sync);
+                }
+            }
 
             //Alle Daten vom WebService abfragen.
             var data = wsc.FullSync();
-
             // Wenn erfolgreich, dann Alle Tabellen Leeren
             /* INSERT ORDER ei Delete umgekehrt!!!
              * 1    hauspaket_attribut              D
@@ -40,15 +55,17 @@ namespace SynchronisationLib
              * 7    attachements                    D
              * 8    hauspaket_attrib_zuord          D
              */
-
-            daoc.ClearHauspaketAttributZuord();
-            daoc.ClearAttachements();
-            daoc.ClearHauspaket();
-            daoc.ClearBerater();
-            daoc.ClearHersteller();
-            daoc.ClearHauspaketAttributRegel();
-            daoc.ClearHauspaketAttributWert();
-            daoc.ClearHauspaketAttribut();
+            if (data != null)
+            {
+                daoc.ClearHauspaketAttributZuord();
+                daoc.ClearAttachements();
+                daoc.ClearHauspaket();
+                daoc.ClearBerater();
+                daoc.ClearHersteller();
+                daoc.ClearHauspaketAttributRegel();
+                daoc.ClearHauspaketAttributWert();
+                daoc.ClearHauspaketAttribut();
+            }
 
             foreach (var item in data.HauspaketAttributTable)
             {

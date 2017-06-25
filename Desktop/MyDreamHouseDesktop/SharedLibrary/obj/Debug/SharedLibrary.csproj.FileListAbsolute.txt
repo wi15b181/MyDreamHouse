@@ -11,3 +11,4 @@ C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SharedLibrary\bin\Debug\SharedL
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SharedLibrary\bin\Debug\SharedLibrary.pdb
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SharedLibrary\obj\Debug\SharedLibrary.dll
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SharedLibrary\obj\Debug\SharedLibrary.pdb
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SharedLibrary\obj\Debug\SharedLibrary.csprojResolveAssemblyReference.cache

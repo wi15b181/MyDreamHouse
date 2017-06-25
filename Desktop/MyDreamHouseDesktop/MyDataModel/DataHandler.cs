@@ -12,6 +12,97 @@ namespace MyDataModel
     {
         private LocalDbEntities db = new LocalDbEntities();
 
+        public List<SyncJnEntity> GetPendingSyncs()
+        {
+            List<SyncJnEntity> ents = new List<SyncJnEntity>();
+            var result = (from x in db.sync_jn
+                          where x.jn_synced == false
+                          select x).ToList();
+
+            foreach (var item in result)
+            {
+                ents.Add(new SyncJnEntity()
+                {
+                    JnChangesetJson = item.jn_changeset_json,
+                    JnId = item.jn_id,
+                    JnOperation = item.jn_operation,
+                    JnPk = Convert.ToInt32(item.jn_pk),
+                    JnTable = item.jn_table,
+                    JnTimestamp = Convert.ToDateTime(item.jn_timestampe),
+                    Synced = Convert.ToBoolean(item.jn_synced)
+                });
+            }
+            return ents;
+        }
+
+        public void UpdateSyncJournal(SyncJnEntity ent)
+        {
+            sync_jn jn = (from x in db.sync_jn
+                          where x.jn_id == ent.JnId
+                          select x).SingleOrDefault();
+            jn.jn_synced = ent.Synced;
+            db.SaveChanges();
+        }
+
+        public List<HauspaketAttributZuordEntity> GetHauspaketAttributZuordnungen(int hid)
+        {
+            List<HauspaketAttributZuordEntity> ents = new List<HauspaketAttributZuordEntity>();
+            var result = (from x in db.hauspaket_attribut_zuord
+                          where x.hauspaket_id == hid
+                          select x).ToList();
+            foreach (var item in result)
+            {
+                ents.Add(new HauspaketAttributZuordEntity()
+                {
+                    HauspaketId = item.hauspaket_id,
+                    WertId = item.wert_id
+                });
+            }
+            return ents;
+        }
+
+        public List<AttachmentsEntity> GetAttachments(int hid)
+        {
+            List<AttachmentsEntity> ents = new List<AttachmentsEntity>();
+            var result = (from x in db.attachements
+                          where x.hauspaket_id == hid
+                          select x).ToList();
+            foreach (var item in result)
+            {
+                ents.Add(
+                    new AttachmentsEntity()
+                    {
+                        AttachementId = item.attachement_id,
+                        Bezeichnung = item.bezeichnung,
+                        Filename = item.filename,
+                        HauspaketId = Convert.ToInt32(item.hauspaket_id),
+                        Mimetype = item.mimetype,
+                        Size = Convert.ToInt32(item.size)
+                    });
+            }
+            return ents;
+        }
+
+        public HauspaketEntity GetHauspaket(int hid)
+        {
+            hauspaket h = (from x in db.hauspaket
+                           where x.hauspaket_id == hid
+                           select x).SingleOrDefault();
+            return new HauspaketEntity()
+            {
+                Archived = Convert.ToBoolean(h.archived),
+                BenutzerId = Convert.ToInt32(h.benutzer_id),
+                BeraterId = Convert.ToInt32(h.berater_id),
+                Bezeichnung = h.bezeichnung,
+                Grundflaeche = Convert.ToDecimal(h.grundflaeche),
+                HauspaketId = h.hauspaket_id,
+                HerstellerId = Convert.ToInt32(h.hersteller_id),
+                Preis = Convert.ToDecimal(h.preis),
+                Stockwerke = Convert.ToInt32(h.stockwerke),
+                Wohnflaeche = Convert.ToDecimal(h.wohnflaeche)
+            };
+        }
+
         public void InsertHauspaket(HauspaketEntity hauspaketEntity)
         {
             hauspaket h = new hauspaket()
@@ -49,7 +140,18 @@ namespace MyDataModel
             result.preis = hauspaketEntity.Preis;
             result.archived = hauspaketEntity.Archived;
 
+
             db.SaveChanges();
+
+            InsertSyncJn(new SyncJnEntity()
+            {
+                JnId = Convert.ToInt32(DateTime.Now.Ticks),
+                JnOperation = "update",
+                JnPk = hauspaketEntity.HauspaketId,
+                JnTable = "hauspaket",
+                Synced = false
+            });
+
 
         }
 

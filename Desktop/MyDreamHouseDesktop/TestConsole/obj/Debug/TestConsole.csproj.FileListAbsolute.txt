@@ -22,3 +22,5 @@ C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\bin\Debug\EntityFra
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\bin\Debug\EntityFramework.SqlServer.dll
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\bin\Debug\EntityFramework.SqlServer.xml
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\bin\Debug\LocalDb.mdf
+C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\TestConsole\bin\Debug\LocalDb_log.ldf
