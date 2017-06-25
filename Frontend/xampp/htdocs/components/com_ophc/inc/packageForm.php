@@ -39,9 +39,6 @@ foreach ($attributeTypes as $attr) {
 </div>
 <?php } ?>
 
-<div class="form-elem" style="width: 200px;">
-</div>
-
 <div class="form-elem slider-elem">
 	<label class="ophc-form-label ">
 		Preis
@@ -83,12 +80,13 @@ foreach ($attributeTypes as $attr) {
 		{
 		?>
 			<div class="checkbox">
-				<label><input id="PAR_<?=strtoupper($xtra->attribut_typ)?>" onchange="calcExtra();" type="checkbox" value="no" class="price_calc"><?=$xtra->attribut_typ_anzeige?></label>
+				<label><input id="PAR_<?=strtoupper($xtra->attribut_typ)?>" type="checkbox" data-attrid="<?= $xtra->wert_id; ?>"  value="no" class="price_calc price_change"><?=$xtra->attribut_typ_anzeige?></label>
 			</div>
 		<?php
 		}
 	?>
 </div>
+<input type="hidden" id="PAR_PRICEMULT" value="1"/>
 <div id="ruleConfig" style="display:none;">
 <?php 
 	$regeln = getRules();
@@ -117,16 +115,18 @@ jQuery( document ).ready(function() {
 	        //jQuery('#packageList').show();
 	    }
 	});
+	jQuery('#PAR_AUSBAUSTUFE').addClass('price_change');
 	jQuery('.price_calc').change(function() {
 		checkRules();
-		getExtras();
-		calcExtra(); // Add by Adnan Jusic related to FST 04; 19.06.2017 //
 	});
-	jQuery( "#extra_group input[type=checkbox]").change(function() {
+	jQuery( "input[type=checkbox]").change(function() {
 		if(this.checked)
-			jQuery(this).val('yes');
+			jQuery(this).val('JA');
 		else
-			jQuery(this).val('no');
+			jQuery(this).val('NEIN');
+	});
+	jQuery('.price_change').change(function() {
+		calcExtra();
 	});
 	jQuery( "#price-slider" ).slider({
 	    range: true,
@@ -241,33 +241,58 @@ function checkRules() {
 
 function calcExtra(){
 	
-	// window.alert("Test Start!");
-	var e1 = document.getElementById("PAR_EXTRA_GARAGE");
-	var e2 = document.getElementById("PAR_EXTRA_AUTOUNTERSTAND");
-	var e3 = document.getElementById("PAR_EXTRA_POOL");
-	var e4 = document.getElementById("PAR_EXTRA_GARTENGESTALTUNG");
-	var e5 = document.getElementById("PAR_EXTRA_KELLER");
-	//var id_att = e.checked;
-	if(e1.checked == true){
-		e1.value = "yes";
-	}
-	if(e2.checked == true){
-		e2.value = "yes";
-	}
-	if(e3.checked == true){
-		e3.value = "yes";
-	}
-	if(e4.checked == true){
-		e4.value = "yes";
-	}
-	if(e5.checked == true){
-		e5.value = "yes";
-	}
-	loadList();
-	
-	// window.alert("Attribut ID: " + id_att);
-	// window.alert("Test Ende!");
+	MULT = 1;
+	jQuery('.price_change').each(function() {
+		var id = jQuery(this).val();
+		if(id == 'JA')
+		{
+			id = jQuery(this).data('attrid');
+		}
+		if(id != null)
+		{
+			jQuery.each(RULES, function( index, rule ) {
+				if(rule.regel_erlaubt == false)
+					return true; // equals continue;
+				if(rule.regel_attribut_left_id == id)
+				{
+					if(rule.regel_attribut_right_id == '' || rule.regel_attribut_right_id == null)
+					{
+						MULT = MULT * rule.regel_preis_modifikator;
+					}
+					else
+					{
+						var found = false;
+						var checkId = rule.regel_attribut_right_id;
+						jQuery('.price_change').each(function() {
+							var subId = jQuery(this).val();
+							if(subId == checkId)
+								found = true;
+						});
+						if(found == true)
+							MULT = MULT * rule.regel_preis_modifikator;
+					}
+				}
+			});
+		}
+	});	
+	jQuery('#PAR_PRICEMULT').val(MULT);
+	var sum = 0;
+	jQuery('.base_price').each(function() {
+		var base = jQuery(this).val();
+		sum = base *MULT;
+		jQuery(this).siblings('.calcPrice').html('&euro;'+ (sum).formatMoney(0, ',', '.'));
+	});
 }
+Number.prototype.formatMoney = function(c, d, t){
+var n = this, 
+    c = isNaN(c = Math.abs(c)) ? 2 : c, 
+    d = d == undefined ? "." : d, 
+    t = t == undefined ? "," : t, 
+    s = n < 0 ? "-" : "", 
+    i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), 
+    j = (j = i.length) > 3 ? j % 3 : 0;
+   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+ };
 
 // END - - Add by Adnan Jusic related to FST 04; 19.06.2017 //
 
@@ -308,6 +333,7 @@ function loadList(){
 			jQuery('.star-container').rating(function(vote, event){
 			     // console.log(vote, event);
 			},true);
+			calcExtra();
 		});	
 }
 
