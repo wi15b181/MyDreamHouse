@@ -36,8 +36,8 @@
     end
 
   elsif params[:change].present? then
-    sqlchange = "UPDATE HAUSPAKET_ATTRIBUT_REGEL SET REGEL_ERLAUBT = #{params[:attrregel].present? ? '1' : '0'} WHERE REGEL_ATTRIBUT_LEFT_ID = #{params[:wert1]} AND REGEL_ATTRIBUT_RIGHT_ID = #{params[:wert2]}"
-
+    sqlchange = "UPDATE HAUSPAKET_ATTRIBUT_REGEL SET REGEL_PREIS_MODIFIKATOR = #{params[:preis]},REGEL_ERLAUBT = #{params[:attrregel].present? ? '1' : '0'} WHERE REGEL_ATTRIBUT_LEFT_ID = #{params[:wert1]} AND REGEL_ATTRIBUT_RIGHT_ID = #{params[:wert2]}"
+    puts sqlchange
     if stmtupdate = IBM_DB.exec(conn, sqlchange)
       if stmtu = IBM_DB.exec(conn, 'COMMIT')
       end
@@ -78,8 +78,8 @@
 
           begin
             if stmt = IBM_DB.exec(conn, sql)
-            @listbox = '<select class="form-control" id="wert1" name="wert1">'
-            @listbox2 = '<select class="form-control" id="wert2"name="wert2">'
+            @listbox = '<select class="form-control" id="wert1" name="wert1" style="width:305px">'
+            @listbox2 = '<select class="form-control" id="wert2"name="wert2" style="width:305px">'
               while rowoben = IBM_DB.fetch_assoc(stmt)
                 @listbox += "<option>#{rowoben['WERT_TEXT']}</option>"
                 @listbox2 += "<option>#{rowoben['WERT_TEXT']}</option>"
@@ -98,10 +98,11 @@
       <label style="margin-left: 5px; margin-right: 5px">in Kombination mit </label>
       <%= @listbox2.html_safe %>
 
-      <label style="margin-left: 5px; margin-right: 5px">erlaubt? </label>
+      <label style="margin-left: 5px; margin-right: 5px">erlaubt?</label>
       <input type="checkbox" name="new_erlaubt">
+      <input type="text" name="preismodi" placeholder="Preismodifikator" style="width:120px"/>
 
-      <button name="add" value="add" type="submit" class="btn btn-default" style="margin-left: 10px;">Hinzufügen</button>
+      <button name="add" value="add" type="submit" class="btn btn-default" style="margin-left: 5px;">Hinzufügen</button>
     </div>
   </form>
 
@@ -131,6 +132,10 @@
                   @record += '<td><input type="checkbox" name="attrregel"'
                   @record += (row['REGEL_ERLAUBT'] == '1' ? "checked" : "")
                   @record += "></td>"
+                  @record += "<td>"
+                  @record += '<input type="text" name="preis" value="'
+                  @record += "#{row['REGEL_PREIS_MODIFIKATOR']}"
+                  @record += '"/></td>'
                   @record += '<td><button name="change" value="change" type="submit" class="btn btn-default">Speichern</button></td>'
                   @record += '<td><button name="del" value="del" type="submit" class="btn btn-default">Löschen</button></td>'
                   @record += "</tr>"
@@ -160,7 +165,7 @@
     # else
     #puts "Statement execution failed: #{IBM_DB.getErrormsg}"
     #end
-    IBM_DB.close(conn)
+    #IBM_DB.close(conn)
     #else
     #  puts "There was an error in the connection: #{IBM_DB.conn_errormsg}"
 
@@ -172,6 +177,7 @@
       <th>Atribut</th>
       <th>In Kombination mit</th>
       <th>Erlaubt</th>
+      <th>Preismodifikator</th>
     </tr>
     </thead>
     <tbody>
