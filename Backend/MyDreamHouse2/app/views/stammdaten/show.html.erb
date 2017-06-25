@@ -1,0 +1,126 @@
+<%
+  if (params[:do].eql? "add") then
+    puts 'add'
+    sql1 = "INSERT INTO MDH_USERS (ID, NAME, USERNAME, EMAIL, PASSWORD, ARCHIVED) VALUES((select max(EBOOK_ID)+1 from MDH_USERS),'#{params[:id]}',
+    '#{params[:name]}','#{params[:username]}','#{params[:email]}','#{params[:password]}','#{params[:archived]}')"
+
+    begin
+      stmt1 = IBM_DB.exec($conn, sql1)
+      stmt2 = IBM_DB.exec($conn, 'COMMIT')
+
+      puts "Add: #{stmt1}"
+      puts "Comit: #{stmt2}"
+      #IBM_DB.free_result(stmt1)
+      #IBM_DB.free_result(stmt2)
+    end
+  end
+%>
+
+<%
+  if (params[:do].eql? "del") then
+
+    sql2 = "DELETE FROM MDH_USERS WHERE EBOOK_ID = #{params[:id]}"
+
+    begin
+      stmt1 = IBM_DB.exec($conn, sql2)
+      stmt2 = IBM_DB.exec($conn, 'COMMIT')
+
+      puts "Del: #{stmt1}"
+      puts "Comit: #{stmt2}"
+      #IBM_DB.free_result(stmt1)
+      #IBM_DB.free_result(stmt2)
+    end
+  end
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<form>
+  <%= render 'welcome/navigation' %>
+</form>
+<div class="container" style="margin-left: 10px">
+  <h2>Stammdaten</h2>
+
+  <div class="container">
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Action</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Archived</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <form class="form-inline">
+        <div class="form-group">
+          <input type="hidden" name="do" value="add">
+          <tr>
+            <td><input type="submit" value="+" class="btn btn-default btn-md" style="margin-left: 10px;"></td>
+            <td></td>
+            <td><input type="text" name="name"></td>
+            <td><input type="text" name="username"></td>
+            <td><input type="email" name="email"></td>
+            <td><input type="password" name="password"></td>
+            <td><input type="text" name="archived"></td>
+          </tr>
+        </div>
+      </form>
+
+
+  <%
+
+    if $conn
+      puts "We're connected!"
+      sql = "SELECT * FROM MDH_USERS"
+
+      begin
+        if stmt = IBM_DB.exec($conn, sql)
+          while row = IBM_DB.fetch_assoc(stmt)
+            @mdh_users = Mdh_users. new( row['ID'], row['NAME'], row['USERNAME'], row['EMAIL'], row['PASSWORD'], row['ARCHIVED'])
+          %>
+              <tr>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <td><input type="submit" value="-" class="btn btn-default btn-md" style="margin-left: 10px;">
+                        <input type="hidden" name="do" value="del">
+                        <input type="hidden" name="id" value="<%= @mdh_users.id %>">
+                    </td>
+                  </div>
+                </form>
+
+                <td><%= @mdh_users.id %></td>
+                <td><%= @mdh_users.name %></td>
+                <td><%= @mdh_users.username %></td>
+                <td><%= @mdh_users.email %></td>
+                <td><%= @mdh_users.password %></td>
+                <td><%= @mdh_users.archived %></td>
+              </tr>
+          <%
+          end
+        end
+        IBM_DB.free_result(stmt)
+      end
+    end
+    IBM_DB.close($conn)
+
+  %>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

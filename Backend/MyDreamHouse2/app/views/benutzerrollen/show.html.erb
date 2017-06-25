@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<form>
+  <%= render 'welcome/navigation' %>
+</form>
+<div class="container" style="margin-left: 10px">
+  <h2>Benutzerrollen</h2>
+
+  <div class="container">
+
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Action</th>
+        <th>Benutzer</th>
+        <%
+
+          if $conn
+
+            sqlU = "SELECT * FROM RROLES"
+
+            begin
+              if stmt = IBM_DB.exec($conn, sqlU)
+                while row = IBM_DB.fetch_assoc(stmt)
+
+                @rroles = Rroles. new( row['ROLE_ID'], row['ROLE_NAME'])
+
+                  %>
+                    <th><%= @rroles.role_name %></th>
+                  <%
+                 end
+            end
+            IBM_DB.free_result(stmt)
+          end
+
+         end
+        %>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr>
+        <form class="form-inline">
+          <div class="form-group">
+      <%
+
+        if $conn
+          puts "We're connected!"
+          sql = "SELECT * FROM MDH_USERS"
+
+          begin
+            if stmt = IBM_DB.exec($conn, sql)
+              while row = IBM_DB.fetch_assoc(stmt)
+
+                #get ROLE_IDs
+                #sqlH = "SELECT ROLE_ID FROM ROLE_USER WHERE USER_ID ='#{row['ID']}'"
+                #stmtH = IBM_DB.exec($conn, sqlH)
+                #role_id = IBM_DB.fetch_assoc(stmtH)
+
+
+%>
+                    <td><input type="submit" value="Save" class="btn btn-default btn-md" style="margin-left: 10px;">
+                      <input type="hidden" name="user_id" value="<%= row['ID'] %>">
+                    </td>
+                    <td><%= row['NAME'] %></td>
+                    <td><input type="checkbox" name="role_id" value="0" checked="true"></td>
+                    <td><input type="checkbox" name="role_id" value="0" checked="true"></td>
+                    <td><input type="checkbox" name="role_id" value="0" checked="true"></td>
+                    <td><input type="checkbox" name="role_id" value="0" checked="true"></td>
+                  </div>
+
+
+                    </form>
+              </tr>
+
+          <%
+
+            end
+            end
+            IBM_DB.free_result(stmt)
+            end
+            end
+
+            IBM_DB.close($conn)
+
+
+          %>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
