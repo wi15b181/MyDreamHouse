@@ -1,24 +1,57 @@
+<%
+  #Lokal DB2
+  #conn = IBM_DB.connect("sample", "admin", "admin")
+  conn = IBM_DB.connect("DRIVER={IBM DB2 ODBC DRIVER};DATABASE=mdh;\
+                       HOSTNAME=wi-gate.technikum-wien.at;PORT=60831;PROTOCOL=TCPIP;\
+                       UID=mydreahmouse;PWD=wi15b;", "", "")
+
+  sqlhauskauf = "SELECT haus.BEZEICHNUNG, (COUNT(haus.HAUSPAKET_ID) * kauf.KAUFPREIS) SUMME, COUNT(haus.HAUSPAKET_ID) ANZAHL FROM HAUSPAKET haus
+                  JOIN TERMIN term ON haus.HAUSPAKET_ID = term.HAUSPAKET_ID
+                  JOIN HAUSKAUF kauf on term.TERMIN_ID = kauf.TERMIN_ID
+                  WHERE kauf.KAUFDATUM >= TO_DATE('#{params[:beginndatum]}', 'YYYY-MM-DD')
+                    AND kauf.KAUFDATUM <= TO_DATE('#{params[:enddatum]}', 'YYYY-MM-DD')
+                GROUP BY haus.BEZEICHNUNG, KAUFPREIS
+                order by ANZAHL DESC;"
+
+  begin
+    @hauskaufreport = ""
+    @summe = 0;
+    @anzahl = 0;
+    if stmthauskauf = IBM_DB.exec(conn, sqlhauskauf)
+      while reportrow = IBM_DB.fetch_assoc(stmthauskauf)
+        @hauskaufreport += "<tr>"
+        @hauskaufreport += "<td>#{reportrow['BEZEICHNUNG']}</td>"
+        @hauskaufreport += "<td>#{reportrow['ANZAHL']}</td>"
+        @hauskaufreport += "<td>#{reportrow['SUMME']}</td>"
+        @hauskaufreport += "</tr>"
+
+        @summe += reportrow['SUMME']
+        @anzahl += reportrow['ANZAHL']
+      end
+
+    end
+  end
+  IBM_DB.free_result(stmthauskauf)
+  IBM_DB.close(conn)
+%>
+
+
+
 <div class="container">
   <h2>Downloadstatistik Hauskäufe</h2>
-  <p>Diese Statistik zeigt die Anzahl der Hauskäufe im Zeitraum von <strong>01.05.2017</strong> bis <strong>31.5.2017</strong>.</p>
+  <p>Diese Statistik zeigt die Anzahl der Hauskäufe im Zeitraum von <strong><%=params[:beginndatum]%></strong> bis <strong><%=params[:enddatum]%></strong>.</p>
   <table class="table" style="margin-left: -8px;">
     <thead>
-    <tr>
-      <th>Haus</th>
-      <th>Anzahl</th>
-    </tr>
+    <th>Hauspaketbezeichnung</th>
+    <th>Anzahl</th>
+    <th>Summe pro Hauspaket</th>
     </thead>
     <tbody>
-    <tr>
-      <td>Haus 1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>Haus 2</td>
-      <td>3</td>
-    </tr>
+    <%= @hauskaufreport.html_safe %>
     </tbody>
   </table>
 
-  <label>Es wurden insgesamt 5 Häuser gekauft.</label>
+  <p>Im Zeitraum von <strong><%=params[:beginndatum]%></strong> bis <strong><%=params[:enddatum]%></strong>
+    wurden <strong><%= @anzahl %></strong> Häuser verkauft.
+    Das entspricht einen Gesamterlös von <strong><%= @summe %></strong>.</p>
 </div>

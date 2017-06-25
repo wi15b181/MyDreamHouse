@@ -47,8 +47,8 @@
       end
     end
 
-    if stmt = IBM_DB.exec(conn, hauspaket)
-      while hausrow = IBM_DB.fetch_assoc(stmt)
+    if stmt2 = IBM_DB.exec(conn, hauspaket)
+      while hausrow = IBM_DB.fetch_assoc(stmt2)
         @hauspakete += '<form>'
         @hauspakete += "<tr>"
         @hauspakete += "<td>#{hausrow['BEZEICHNUNG']}</td>"
@@ -70,6 +70,7 @@
 
 
       #IBM_DB.free_result(stmt)
+      #IBM_DB.free_result(stmt2)
       #IBM_DB.close(conn)
   end
 %>

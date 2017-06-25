@@ -10,8 +10,8 @@
   begin
     @hersteller = ""
 
-    if stmt = IBM_DB.exec(conn, sql)
-      while herstellerrow = IBM_DB.fetch_assoc(stmt)
+    if stmthersteller = IBM_DB.exec(conn, sql)
+      while herstellerrow = IBM_DB.fetch_assoc(stmthersteller)
         @hersteller += '<form action="paket">'
         @hersteller += "<tr>"
         @hersteller += "<td>#{herstellerrow['NAME']}</td>"
@@ -39,9 +39,9 @@
         @hersteller += "</tr></form>"
       end
     end
-    IBM_DB.free_result(stmt)
-    IBM_DB.free_result(hauspaket)
-    IBM_DB.close(conn)
+    #IBM_DB.free_result(stmthersteller)
+    #IBM_DB.free_result(hauspaket)
+    #IBM_DB.close(conn)
   end
 %>
 

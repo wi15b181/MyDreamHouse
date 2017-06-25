@@ -21,7 +21,7 @@
           if stmt2 = IBM_DB.exec(conn, sql2)
           wertt2 = IBM_DB.fetch_assoc(stmt2)
           puts wertt2['WERT_ID']
-            addsql = "INSERT INTO HAUSPAKET_ATTRIBUT_REGEL (REGEL_ID, REGEL_ATTRIBUT_LEFT_ID, REGEL_ATTRIUBT_RIGHT_ID, REGEL_PREIS_MODIFIKATIOR, REGEL_ERLAUBT, ARCHIVED) VALUES ((select max(REGEL_ID)+1 from hauspaket_attribut_regel),#{ irgend['WERT_ID']},#{ wertt2['WERT_ID']},0.0," + (params[:new_erlaubt].present? ? '1' : '0') + ",'0')"
+            addsql = "INSERT INTO HAUSPAKET_ATTRIBUT_REGEL (REGEL_ID, REGEL_ATTRIBUT_LEFT_ID, REGEL_ATTRIBUT_RIGHT_ID, REGEL_PREIS_MODIFIKATOR, REGEL_ERLAUBT, ARCHIVED) VALUES ((select max(REGEL_ID)+1 from hauspaket_attribut_regel),#{ irgend['WERT_ID']},#{ wertt2['WERT_ID']},0.0," + (params[:new_erlaubt].present? ? '1' : '0') + ",'0')"
             if stmt = IBM_DB.exec(conn, addsql)
 
               puts "first statement"
@@ -32,9 +32,9 @@
           end
         end
       end
-      IBM_DB.free_result(stmt)
-      IBM_DB.free_result(stmt1)
-      IBM_DB.free_result(stmt2)
+     # IBM_DB.free_result(stmt)
+      #IBM_DB.free_result(stmt1)
+      #IBM_DB.free_result(stmt2)
     end
   end
 %>
@@ -76,16 +76,16 @@
                @listbox2 += "</select>"
                end
           end
-          IBM_DB.free_result(stmt)
+          #IBM_DB.free_result(stmt)
         end
 
       %>
-      <label for="sel1" style="margin-left: 10px">Attribut </label>
+      <label style="margin-left: 10px">Atribut </label>
       <%= @listbox.html_safe %>
-      <label for="sel1">in Kombination mit </label>
+      <label >in Kombination mit </label>
       <%= @listbox2.html_safe %>
 
-      <label for="sel1">erlaubt? </label>
+      <label >erlaubt? </label>
       <input type="checkbox" name="new_erlaubt">
 
       <input type="submit" value="Hinzufügen" class="btn btn-default" style="margin-left: 10px;">
@@ -104,26 +104,27 @@
         if stmt = IBM_DB.exec(conn, sql)
           @record = ""
           while row = IBM_DB.fetch_assoc(stmt)
-          puts row['REGEL_ERLAUBT']
           sql2 = "SELECT * FROM HAUSPAKET_ATTRIBUT_WERT WHERE WERT_ID = #{row['REGEL_ATTRIBUT_LEFT_ID']}"
-          sql3 = "SELECT * FROM HAUSPAKET_ATTRIBUT_WERT WHERE WERT_ID = #{row['REGEL_ATTRIUBT_RIGHT_ID']}"
-              stmt2 = IBM_DB.exec(conn, sql2)
-              row2 = IBM_DB.fetch_assoc(stmt2)
+          sql3 = "SELECT * FROM HAUSPAKET_ATTRIBUT_WERT WHERE WERT_ID = #{row['REGEL_ATTRIBUT_RIGHT_ID']}"
+              if stmt2 = IBM_DB.exec(conn, sql2)
+                row2 = IBM_DB.fetch_assoc(stmt2)
 
-              stmt3 = IBM_DB.exec(conn, sql3)
-                row3 = IBM_DB.fetch_assoc(stmt3)
+                if stmt3 = IBM_DB.exec(conn, sql3)
+                  row3 = IBM_DB.fetch_assoc(stmt3)
 
-                @record += "<tr>"
-                @record += "<td>#{row2['WERT_TEXT']}</td>"
-                @record += "<td>#{row3['WERT_TEXT']}</td>"
-                @record += '<td><input type="checkbox" name="attrregel"'
-                @record += (row['REGEL_ERLAUBT'] == '1' ? "checked" : "")
-                @record += "></td></tr>"
+                  @record += "<tr>"
+                  @record += "<td>#{row2['WERT_TEXT']}</td>"
+                  @record += "<td>#{row3['WERT_TEXT']}</td>"
+                  @record += '<td><input type="checkbox" name="attrregel"'
+                  @record += (row['REGEL_ERLAUBT'] == '1' ? "checked" : "")
+                  @record += "></td></tr>"
+                end
+              end
           end
         end
-        IBM_DB.free_result(stmt)
-        IBM_DB.free_result(stmt2)
-        IBM_DB.free_result(stmt3)
+        #IBM_DB.free_result(stmt)
+        #IBM_DB.free_result(stmt2)
+       # IBM_DB.free_result(stmt3)
       end
     end
     #format.json render :text => @ebook

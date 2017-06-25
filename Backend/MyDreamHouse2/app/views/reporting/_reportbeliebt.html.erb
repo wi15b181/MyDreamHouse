@@ -1,0 +1,55 @@
+<%
+  #Lokal DB2
+  #conn = IBM_DB.connect("sample", "admin", "admin")
+  conn = IBM_DB.connect("DRIVER={IBM DB2 ODBC DRIVER};DATABASE=mdh;\
+                       HOSTNAME=wi-gate.technikum-wien.at;PORT=60831;PROTOCOL=TCPIP;\
+                       UID=mydreahmouse;PWD=wi15b;", "", "")
+
+  sqlbeliebt = "SELECT haus.BEZEICHNUNG, COUNT(haus.HAUSPAKET_ID) ANZAHL FROM HAUSPAKET haus
+                  JOIN TERMIN term ON haus.HAUSPAKET_ID = term.HAUSPAKET_ID
+                WHERE term.ENDTIME >= TO_DATE('#{params[:beginndatum]}', 'YYYY-MM-DD')
+                AND term.ENDTIME <= TO_DATE('#{params[:enddatum]}', 'YYYY-MM-DD')
+                  GROUP BY haus.BEZEICHNUNG
+                  ORDER BY ANZAHL DESC"
+
+  begin
+    @beliebtreport = ""
+    @beliebt = "";
+    @anzahl = 0;
+    if stmtbeliebt = IBM_DB.exec(conn, sqlbeliebt)
+      while reportbeliebtrow = IBM_DB.fetch_assoc(stmtbeliebt)
+        @beliebtreport += "<tr>"
+        @beliebtreport += "<td>#{reportbeliebtrow['BEZEICHNUNG']}</td>"
+        @beliebtreport += "<td>#{reportbeliebtrow['ANZAHL']}</td>"
+        @beliebtreport += "</tr>"
+
+        if @beliebt.nil? || (!@beliebt.nil?  && @beliebt.empty?) then @beliebt = reportbeliebtrow['BEZEICHNUNG'] end
+        @anzahl += reportbeliebtrow['ANZAHL']
+      end
+
+    end
+  end
+  IBM_DB.free_result(stmtbeliebt)
+  IBM_DB.close(conn)
+%>
+
+
+
+<div class="container">
+  <h2>Downloadstatistik beliebteste Hauspakete</h2>
+  <p>Diese Statistik zeigt die beliebtesten Hauspakete im Zeitraum von <strong><%=params[:beginndatum]%></strong> bis <strong><%=params[:enddatum]%></strong>.</p>
+  <table class="table" style="margin-left: -8px;">
+    <thead>
+    <th>Hauspaketbezeichnung</th>
+    <th>Anzahl der Termine pro Hauspaket</th>
+    </thead>
+    <tbody>
+    <%= @beliebtreport.html_safe %>
+    </tbody>
+  </table>
+
+  <p>Im Zeitraum von <strong><%=params[:beginndatum]%></strong> bis <strong><%=params[:enddatum]%></strong>
+    wurden <strong><%= @anzahl %></strong> Termine vereinbart.
+    Das beliebteste Hauspaket in diesem Zeitraum ist <strong><%= @beliebt %></strong>.
+    </p>
+</div>
