@@ -2,22 +2,8 @@
   if (params[:do].eql? "add") then
     puts 'add'
 
-    #get Benutzer
-    sqlB3 = "SELECT ID FROM MDH_USERS WHERE ID =#{params[:berater_id]}"
-    stmtB3 = IBM_DB.exec($conn, sqlB3)
-    berater = IBM_DB.fetch_assoc(stmtB3)
-
-    sqlB2 = "SELECT BENUTZER_ID FROM BENUTZER WHERE BENUTZER_ID =#{berater['ID']}"
-    stmtB2 = IBM_DB.exec($conn, sqlB2)
-    joomla = IBM_DB.fetch_assoc(stmtB2)
-
-    sqlB1 = "SELECT BERATER_ID FROM BERATER WHERE BERATER_ID ='#{joomla['BENUTZER_ID']}'"
-    stmtB1 = IBM_DB.exec($conn, sqlB1)
-    benutzer = IBM_DB.fetch_assoc(stmtB1)
-
-
     sql1 = "INSERT INTO HAUSPAKET (HAUSPAKET_ID, HERSTELLER_ID, BERATER_ID, BEZEICHNUNG, PREIS, GRUNDFLAECHE, WOHNFLAECHE, STOCKWERKE, BENUTZER_ID, ARCHIVED)
-    VALUES((select max(HAUSPAKET_ID)+1 from HAUSPAKET),#{params[:hersteller_id]}, #{benutzer['ID']},
+    VALUES((select max(HAUSPAKET_ID)+1 from HAUSPAKET),#{params[:hersteller_id]}, #{params[:berater_id]},
     '#{params[:bezeichnung]}',#{params[:preis]},#{params[:grundflaeche]},#{params[:wohnflaeche]},
     #{params[:stockwerke]},#{params[:benutzer_id]},'#{params[:archived]}')"
 
@@ -124,7 +110,16 @@
                     if stmt = IBM_DB.exec($conn, sqlU)
                     @listbox2 = '<select class="form-control" name="berater_id">'
                       while rowoben = IBM_DB.fetch_assoc(stmt)
-                        @listbox2 += "<option value='#{rowoben['BERATER_ID']}'>#{rowoben['NAME']}</option>"
+
+                          sqlB2 = "SELECT BENUTZER_ID FROM BENUTZER WHERE JOOMLA_USER_ID =#{rowoben['ID']}"
+                          stmtB2 = IBM_DB.exec($conn, sqlB2)
+                          joomla2 = IBM_DB.fetch_assoc(stmtB2)
+
+                          sqlB1 = "SELECT BERATER_ID FROM BERATER WHERE BENUTZER_ID =#{joomla2['BENUTZER_ID']}"
+                          stmtB1 = IBM_DB.exec($conn, sqlB1)
+                          benutzer = IBM_DB.fetch_assoc(stmtB1)
+
+                        @listbox2 += "<option value='#{benutzer['BERATER_ID']}'>#{rowoben['NAME']}</option>"
                        end
                        @listbox2 += "</select>"
                        end
