@@ -5,3 +5,10 @@ C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb.pdb
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.dll
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.pdb
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.csprojResolveAssemblyReference.cache
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb.mdf
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb_log.ldf
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\LocalDb\bin\Debug\LocalDb.pdb
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.csprojResolveAssemblyReference.cache
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\LocalDb\obj\Debug\LocalDb.pdb

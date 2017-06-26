@@ -12,6 +12,82 @@ namespace MyDataModel
     {
         private LocalDbEntities db = new LocalDbEntities();
 
+        public List<BeraterEntity> GetBeraterListe()
+        {
+            List<BeraterEntity> berater = new List<BeraterEntity>();
+            var result = (from x in db.berater join hp in db.hauspaket on x.berater_id equals hp.berater_id 
+                          select x).ToList();
+
+            List<int> filter = new List<int>();
+
+            foreach (var item in result)
+            {
+                if (!filter.Contains(item.berater_id))
+                {
+                    berater.Add(new BeraterEntity()
+                    {
+                        BenutzerId = item.benutzer_id,
+                        BeraterId = item.berater_id,
+                        HerstellerId = item.hersteller_id,
+                        Bild = item.bild
+                    });
+                    filter.Add(item.berater_id);
+                }
+               
+            }
+            return berater;
+        }
+        public List<int> GetBenutzerForBerater(int beraterId)
+        {
+            List<int> hauspaket = new List<int>();
+            var result = (from x in db.hauspaket
+                          where x.berater_id == (beraterId)
+                          select x).ToList();
+
+            List<int> filter = new List<int>();
+
+            foreach (var item in result)
+            {
+                if (!filter.Contains(item.benutzer_id.GetValueOrDefault()))
+                {
+                   if(0 != item.benutzer_id.GetValueOrDefault())
+                    {
+                        filter.Add(item.benutzer_id.GetValueOrDefault());
+                    }
+                }
+
+            }
+            return filter;
+        }
+        public List<HauspaketEntity> GetHauspaketeForBenutzer(int benutzerId)
+        {
+            List<HauspaketEntity> hauspakete = new List<HauspaketEntity>();
+            var result = (from x in db.hauspaket
+                          where x.benutzer_id == (benutzerId)
+                          select x).ToList();
+
+          
+
+            foreach (var h in result)
+            {
+                hauspakete.Add(new HauspaketEntity()
+                {
+                    Archived = Convert.ToBoolean(h.archived),
+                    BenutzerId = Convert.ToInt32(h.benutzer_id),
+                    BeraterId = Convert.ToInt32(h.berater_id),
+                    Bezeichnung = h.bezeichnung,
+                    Grundflaeche = Convert.ToDecimal(h.grundflaeche),
+                    HauspaketId = h.hauspaket_id,
+                    HerstellerId = Convert.ToInt32(h.hersteller_id),
+                    Preis = Convert.ToDecimal(h.preis),
+                    Stockwerke = Convert.ToInt32(h.stockwerke),
+                    Wohnflaeche = Convert.ToDecimal(h.wohnflaeche)
+                });
+            }
+            return hauspakete;
+        }
+
+
         public List<SyncJnEntity> GetPendingSyncs()
         {
             List<SyncJnEntity> ents = new List<SyncJnEntity>();

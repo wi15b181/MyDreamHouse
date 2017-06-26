@@ -23,3 +23,17 @@ C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\En
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\MyDataModel.pdb
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SharedLibrary.pdb
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\EntityFramework.xml
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\LocalDb.mdf
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\LocalDb_log.ldf
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.dll.config
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SynchronisationLib.pdb
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\MyDataModel.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SharedLibrary.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\EntityFramework.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\MyDataModel.pdb
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\SharedLibrary.pdb
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\bin\Debug\EntityFramework.xml
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.csprojResolveAssemblyReference.cache
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\SynchronisationLib\obj\Debug\SynchronisationLib.pdb

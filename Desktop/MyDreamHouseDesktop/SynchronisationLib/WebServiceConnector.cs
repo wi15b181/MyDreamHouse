@@ -9,7 +9,7 @@ using SynchronisationLib.SynchronisationService;
 
 namespace SynchronisationLib
 {
-    class WebServiceConnector
+    public class WebServiceConnector
     {
         SynchronisationWCFClient client = new SynchronisationService.SynchronisationWCFClient();
 

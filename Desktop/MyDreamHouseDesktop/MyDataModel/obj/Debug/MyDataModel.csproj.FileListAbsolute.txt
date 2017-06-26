@@ -12,3 +12,17 @@ C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\EntityFra
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\EntityFramework.SqlServer.xml
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\MyDataModel\obj\Debug\MyDataModel.dll
 C:\Repo\MyDreamHouse\Desktop\MyDreamHouseDesktop\MyDataModel\obj\Debug\MyDataModel.pdb
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\LocalDb.mdf
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\LocalDb_log.ldf
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\MyDataModel.dll.config
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\MyDataModel.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\MyDataModel.pdb
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\EntityFramework.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\SharedLibrary.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\SharedLibrary.pdb
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\EntityFramework.xml
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\obj\Debug\MyDataModel.csprojResolveAssemblyReference.cache
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\obj\Debug\MyDataModel.dll
+D:\MDHTEMP\Desktop\MyDreamHouseDesktop\MyDataModel\obj\Debug\MyDataModel.pdb
