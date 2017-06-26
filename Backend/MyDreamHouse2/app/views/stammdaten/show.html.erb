@@ -1,7 +1,7 @@
 <%
   if (params[:do].eql? "add") then
     puts 'add'
-    sql1 = "INSERT INTO MDH_USERS (ID, NAME, USERNAME, EMAIL, PASSWORD, ARCHIVED) VALUES((select max(ID)+1 from MDH_USERS),
+    sql1 = "INSERT INTO MDH_USERS (ID, NAME, USERNAME, EMAIL, PASSWORD, ARCHIVED) VALUES((NEXT VALUE FOR MDH_SEQ),
     '#{params[:name]}','#{params[:username]}','#{params[:email]}','#{params[:password]}','#{params[:archived]}')"
 
     begin

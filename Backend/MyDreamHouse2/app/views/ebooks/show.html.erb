@@ -1,6 +1,6 @@
 <%
   if (params[:do].eql? "add") then
-    sql1 = "INSERT INTO EBOOK (EBOOK_ID, TITEL, AUTOR, ERSCHEINUNGSDATUM, AUFLAGE, BILD, CONTENT, MIMETYPE, FILESIZE, ACTIVE) VALUES((select max(EBOOK_ID)+1 from EBOOK),'#{params[:titel]}',
+    sql1 = "INSERT INTO EBOOK (EBOOK_ID, TITEL, AUTOR, ERSCHEINUNGSDATUM, AUFLAGE, BILD, CONTENT, MIMETYPE, FILESIZE, ACTIVE) VALUES((NEXT VALUE FOR MDH_SEQ),'#{params[:titel]}',
     '#{params[:autor]}','#{params[:erscheinungsdatum]}','#{params[:auflage]}','#{params[:bild]}','#{params[:content]}',
     '#{params[:mimetype]}',#{params[:filesize]},'#{params[:active]}')"
 

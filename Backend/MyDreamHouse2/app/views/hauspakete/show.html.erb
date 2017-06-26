@@ -3,7 +3,7 @@
     puts 'add'
 
     sql1 = "INSERT INTO HAUSPAKET (HAUSPAKET_ID, HERSTELLER_ID, BERATER_ID, BEZEICHNUNG, PREIS, GRUNDFLAECHE, WOHNFLAECHE, STOCKWERKE, BENUTZER_ID, ARCHIVED)
-    VALUES((select max(HAUSPAKET_ID)+1 from HAUSPAKET),#{params[:hersteller_id]}, #{params[:berater_id]},
+    VALUES((NEXT VALUE FOR MDH_SEQ),#{params[:hersteller_id]}, #{params[:berater_id]},
     '#{params[:bezeichnung]}',#{params[:preis]},#{params[:grundflaeche]},#{params[:wohnflaeche]},
     #{params[:stockwerke]},#{params[:benutzer_id]},'#{params[:archived]}')"
 
